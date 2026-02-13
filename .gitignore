@@ -1,0 +1,4 @@
+# Compiled binaries
+*.o
+*.out
+test/software/test_CDCL
