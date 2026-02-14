@@ -35,7 +35,7 @@ static inline int lit_var(int code) {
     return code / 2;
 }
 
-/* Return the negation of an internal literal code. */
+/* Return the negation of an internal literal code. Does this by flipping least significant bit (+1/-1). */
 static inline int lit_neg(int code) {
     return code ^ 1;
 }
@@ -46,16 +46,18 @@ static inline int lit_neg(int code) {
 
 CDCLSolver *cdcl_create(int num_vars) {
     CDCLSolver *s = (CDCLSolver *)calloc(1, sizeof(CDCLSolver));
+    // calloc zero-initializes.
     s->num_vars = num_vars;
     /* Internal literal codes range from 2..2*num_vars+1.  Allocate 2*n+2. */
     int lits = 2 * num_vars + 2;
 
     /* Variable-indexed arrays (index 0 unused). */
+    // Store assignment, decision level, reason (Clause that implied 'v'), and activity (VSIDS) for each variable (1-indexed).
     s->assigns    = (int *)malloc((num_vars + 1) * sizeof(int));
     s->levels     = (int *)malloc((num_vars + 1) * sizeof(int));
     s->reasons    = (int *)malloc((num_vars + 1) * sizeof(int));
     s->activity   = (double *)calloc(num_vars + 1, sizeof(double));
-    memset(s->assigns, 0xFF, (num_vars + 1) * sizeof(int)); /* UNASSIGNED = -1 */
+    memset(s->assigns, 0xFF, (num_vars + 1) * sizeof(int)); /* UNASSIGNED = -1 (Two's complement: 0xFF)*/
     memset(s->levels, 0, (num_vars + 1) * sizeof(int));
     for (int i = 0; i <= num_vars; i++) s->reasons[i] = -1;
 
@@ -75,7 +77,7 @@ CDCLSolver *cdcl_create(int num_vars) {
     s->clause_count = 0;
     s->clauses = (Clause **)calloc(s->clause_cap, sizeof(Clause *));
 
-    /* VSIDS decay factor. */
+    /* VSIDS decay factor. (Baseline Conflict Bump) */
     s->var_inc = 1.0;
 
     return s;
@@ -104,11 +106,14 @@ void cdcl_destroy(CDCLSolver *s) {
 
 /* Add clause index `ci` to the watch list of literal `lit`. */
 static void watch_add(CDCLSolver *s, int lit, int ci) {
+    // Dynamically grows the watch list if needed. Starts w/ capacity 4 and doubles as needed.
     if (s->watch_size[lit] == s->watch_cap[lit]) {
         s->watch_cap[lit] = s->watch_cap[lit] ? s->watch_cap[lit] * 2 : 4;
+        // reallocates, preserving existing contents.
         s->watches[lit] = (int *)realloc(s->watches[lit],
                                          s->watch_cap[lit] * sizeof(int));
     }
+    // Add the clause index to the watch list and increment the size.
     s->watches[lit][s->watch_size[lit]++] = ci;
 }
 
@@ -158,7 +163,8 @@ static inline int lit_value(CDCLSolver *s, int code) {
     int var = lit_var(code);
     if (s->assigns[var] == UNASSIGNED) return UNASSIGNED;
     /* Positive literal (even code): value matches assignment.
-       Negative literal (odd code): value is flipped. */
+       Negative literal (odd code): value is flipped.
+       Returns 0 for FALSE, 1 for TRUE, -1 for UNASSIGNED */
     if (code & 1)
         return s->assigns[var] ^ 1; /* flip 0<->1 */
     else
@@ -192,13 +198,19 @@ static int propagate(CDCLSolver *s) {
 
         int *wlist = s->watches[false_lit];
         int  wlen  = s->watch_size[false_lit];
+        // Optimization: Defer Watch List Update to after processing all clauses (Removes Loop Dependency). Source: FYalSAT (Choi & Kim, 2024) — Section III-B, deferred break score aggregation as a general technique for decoupling dependent writes from parallel reads.
         int  j = 0; /* write pointer for compacting the watch list */
 
+        // Optimization: Parallelization (Unroll Loop Completely). Source: SAT-Accel (Lo et al., 2025) — Section IV-B, multiple BCP Processing Elements (PEs) operating in parallel on different clauses
+        // Optimization: Conflict-Free Partitioning of Watch Lists to avoid bank access conflicts. Source: FYalSAT (Choi & Kim, 2024) — Section III-A, modulo-P conflict-free occurrence list rearrangement.
         for (int i = 0; i < wlen; i++) {
-            int ci = wlist[i];
-            Clause *c = s->clauses[ci];
+            // Pipeline 1 and 2 by prefetching the next clause index while the current clause is being processed. Source: FYalSAT (Choi & Kim, 2024) — Section III-C, unsatisfied clause prefetching to overlap DRAM access with computation.
+            int ci = wlist[i]; // 1
+            Clause *c = s->clauses[ci]; //2 
 
-            /* Make sure the false literal is in position 1. */
+            /* Make sure the false literal is in position 1. Always check first literal and swap the two literals.
+            (Simplifies logic so we never need to iterate over the clause) */
+            // Optimization: Remove Swap and utilize hardware multiplexer to select the other watched literal: Source: SAT-Accel (Lo et al., 2025) — Section V, signature-based clause representation eliminates positional literal dependency entirely, removing the need for this normalization.
             if (c->lits[0] == false_lit) {
                 int tmp = c->lits[0];
                 c->lits[0] = c->lits[1];
@@ -206,12 +218,15 @@ static int propagate(CDCLSolver *s) {
             }
 
             /* If the other watched literal is already true, clause is satisfied. */
+            // Optimization: Remove in favor of a satisfaction bit we store with the clause in memory to avoid checking literal value. Source: FYalSAT (Choi & Kim, 2024) — Section IV-B, Partial SAT Evaluator module (Stage C) using precomputed satisfaction status per clause.
             if (lit_value(s, c->lits[0]) == 1) {
                 wlist[j++] = ci; /* keep watching */
                 continue;
             }
 
             /* Try to find a new literal to watch in place of lits[1]. */
+            // Optimization Option 1: Compute each in parallel (Unroll Loop Fully). Source: FYalSAT (Choi & Kim, 2024) — Section IV-B3, Sub Clause Evaluator units evaluating all literals in a clause simultaneously.
+            // Optimization Option 2: Use state-based approach (ucnt + XOR signature) eliminates this search entirely. Source: SAT-Accel (Lo et al., 2025) — Section V-A, signature-based clause representation with ucnt and XOR of unassigned variable indices.
             bool found = false;
             for (int k = 2; k < c->size; k++) {
                 if (lit_value(s, c->lits[k]) != 0) { /* not false */
@@ -227,19 +242,23 @@ static int propagate(CDCLSolver *s) {
             if (found) continue; /* don't keep in this watch list */
 
             /* No replacement found — clause is either unit or conflicting. */
+            // Optimization: Defer Watch List Update to after processing all clauses (Removes Loop Dependency). Source: FYalSAT (Choi & Kim, 2024) — Section III-B, deferred break score aggregation as a general technique for decoupling dependent writes from parallel reads.
             wlist[j++] = ci;
 
             if (lit_value(s, c->lits[0]) == 0) {
                 /* CONFLICT: all literals are false. */
                 /* Copy remaining watches and update size. */
+                // Optimization: priority-encoded reduction — all clauses evaluate simultaneously, and a conflict anywhere triggers a single combined result without sequential drain. Source: SAT-Accel (Lo et al., 2025) — Section IV-B, conflict detection unit operating across all parallel processing elements with priority encoding.  
                 while (i + 1 < wlen) {
                     wlist[j++] = wlist[++i];
                 }
+                // Optimization: Defer Watch List Update to after processing all clauses (Removes Loop Dependency). Source: FYalSAT (Choi & Kim, 2024) — Section III-B, deferred break score aggregation as a general technique for decoupling dependent writes from parallel reads.
                 s->watch_size[false_lit] = j;
                 return ci;
             }
 
             /* Unit clause: lits[0] is the only unassigned literal. */
+            // Optimization: Implement as FIFO in hardware to pipeline with (Prefetch, Evaluation, Enqueue). Source: SAT-Accel (Lo et al., 2025) — Section IV-B, pipelined BCP with overlapped implication propagation and clause evaluation.
             enqueue(s, c->lits[0], ci);
         }
 
