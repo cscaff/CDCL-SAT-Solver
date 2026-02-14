@@ -301,19 +301,23 @@ static void var_decay_activity(CDCLSolver *s) {
 static int analyze(CDCLSolver *s, int conflict_ci,
                    int *learnt_buf, int *out_bt_level) {
     int current_level = s->num_decisions;
+    // Logs variables we have already processed in the current analysis.
     bool *seen = (bool *)calloc(s->num_vars + 1, sizeof(bool));
 
+    // Size of learned clause.
     int learnt_count = 0;
     int counter = 0; /* number of literals at current decision level still to resolve */
 
-    /* Start with the conflict clause. */
+    /* Start with the conflict clause. (Fetches clause with only false literals) */
     Clause *c = s->clauses[conflict_ci];
     for (int i = 0; i < c->size; i++) {
         int var = lit_var(c->lits[i]);
         if (!seen[var]) {
             seen[var] = true;
+            // Variable activity bumps as it is involved in more conflicts (VSIDS).
             var_bump_activity(s, var);
             if (s->levels[var] == current_level) {
+                // If the variable occurred at the current decision level, it is part of the reason for the conflict. We add to the count of needed resolutions and do not add to the learned clause.
                 counter++;
             } else if (s->levels[var] > 0) {
                 learnt_buf[learnt_count++] = c->lits[i];
@@ -325,10 +329,12 @@ static int analyze(CDCLSolver *s, int conflict_ci,
     int trail_idx = s->trail_size - 1;
     int uip_lit = 0;
 
+    // Iterate until resolution: One literal.
     while (counter > 0) {
         /* Find the next literal on the trail that was seen. */
         while (!seen[lit_var(s->trail[trail_idx])]) trail_idx--;
         int p = s->trail[trail_idx--];
+        // First unseen variable we encounter.
         int var = lit_var(p);
         seen[var] = false;
         counter--;
@@ -337,7 +343,7 @@ static int analyze(CDCLSolver *s, int conflict_ci,
             /* This is the first UIP — negate it for the learned clause. */
             uip_lit = lit_neg(p);
         } else {
-            /* Resolve with the reason clause. */
+            /* Resolve with the reason clause. Same as conflict loop earlier at line 311. */
             int reason_ci = s->reasons[var];
             assert(reason_ci >= 0);
             Clause *rc = s->clauses[reason_ci];
