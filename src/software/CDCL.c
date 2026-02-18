@@ -191,11 +191,13 @@ static void enqueue(CDCLSolver *s, int code, int reason) {
  */
 static int propagate(CDCLSolver *s) {
     /* Process from the current propagation pointer to the end of the trail. */
-    while (s->prop_head < s->trail_size) {
+    while (s->prop_head < s->trail_size) 
+    {
         /* The literal that just became true; we need to look at watchers of
          * its negation (those clauses might now be unit or conflicting). */
         int false_lit = lit_neg(s->trail[s->prop_head++]);
 
+        /* ============== HARDWARE CALLED HERE ==============*/
         int *wlist = s->watches[false_lit];
         int  wlen  = s->watch_size[false_lit];
         // Optimization: Defer Watch List Update to after processing all clauses (Removes Loop Dependency). Source: FYalSAT (Choi & Kim, 2024) — Section III-B, deferred break score aggregation as a general technique for decoupling dependent writes from parallel reads.
@@ -263,6 +265,7 @@ static int propagate(CDCLSolver *s) {
         }
 
         s->watch_size[false_lit] = j;
+        /* ============== HARDWARE CALLED HERE ==============*/
     }
     return -1; /* no conflict */
 }
