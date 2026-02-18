@@ -2,3 +2,13 @@
 *.o
 *.out
 test/software/test_CDCL
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# VCD waveform dumps
+*.vcd
