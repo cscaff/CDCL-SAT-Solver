@@ -1,0 +1,1 @@
+"""BCP Accelerator hardware package."""

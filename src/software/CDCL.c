@@ -21,6 +21,10 @@
 
 #include "CDCL.h"
 
+#ifdef USE_HW_BCP
+#include "hw_interface.h"
+#endif
+
 /* ========================================================================= */
 /*  Utility helpers                                                          */
 /* ========================================================================= */
@@ -496,13 +500,29 @@ int cdcl_solve(CDCLSolver *s) {
     /* Buffer for learned clauses (max possible size = num_vars). */
     int *learnt_buf = (int *)malloc((s->num_vars + 1) * sizeof(int));
 
+#ifdef USE_HW_BCP
+    if (hw_open(hw_port) < 0) {
+        fprintf(stderr, "cdcl_solve: failed to open hardware interface\n");
+        free(learnt_buf);
+        return UNSAT;
+    }
+    hw_init(s);
+#endif
+
     while (true) {
+#ifdef USE_HW_BCP
+        int conflict = hw_propagate(s);
+#else
         int conflict = propagate(s);
+#endif
 
         if (conflict >= 0) {
             /* CONFLICT */
             if (s->num_decisions == 0) {
                 /* Conflict at decision level 0 — formula is UNSAT. */
+#ifdef USE_HW_BCP
+                hw_close();
+#endif
                 free(learnt_buf);
                 return UNSAT;
             }
@@ -513,6 +533,9 @@ int cdcl_solve(CDCLSolver *s) {
 
             /* Backtrack to the computed level. */
             backtrack(s, bt_level);
+#ifdef USE_HW_BCP
+            hw_sync_assigns(s, bt_level);
+#endif
 
             /* Add the learned clause and propagate the asserting literal. */
             if (learnt_len == 1) {
@@ -527,6 +550,9 @@ int cdcl_solve(CDCLSolver *s) {
             int dec_var = pick_decision_var(s);
             if (dec_var == 0) {
                 /* All variables assigned — formula is SAT. */
+#ifdef USE_HW_BCP
+                hw_close();
+#endif
                 free(learnt_buf);
                 return SAT;
             }
@@ -538,6 +564,9 @@ int cdcl_solve(CDCLSolver *s) {
             /* Decide: assign the variable to FALSE (arbitrary polarity). */
             int dec_lit = lit_to_code(-dec_var); /* negative literal = assign FALSE */
             enqueue(s, dec_lit, -1);
+#ifdef USE_HW_BCP
+            hw_write_assign(dec_var, s->assigns[dec_var]);
+#endif
         }
     }
 }
