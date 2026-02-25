@@ -207,7 +207,7 @@ def test_bcp_accelerator():
 
     sim.add_testbench(testbench)
 
-    with sim.write_vcd("bcp_accelerator.vcd"):
+    with sim.write_vcd(os.path.join(os.path.dirname(__file__), "..", "..", "logs", "bcp_accelerator.vcd")):
         sim.run()
 
 

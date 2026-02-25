@@ -22,10 +22,10 @@ Protocol — 128-bit DR register accessed via ER1 (IR=0x32):
 
   New command (JTAG only): CMD_ACK_IMPL = 0x07 -- pops implication FIFO.
 
-Clock domain crossing (2-FF synchronizer, adopted from proven bcp_engine.py):
+Clock domain crossing (Amaranth FFSynchronizer CDC):
   - Command path (jtck -> sync): jce1 & jupdate latches rx_shift into a
-    stable register and asserts a valid flag.  A 2-FF synchronizer with
-    edge detection in the sync domain picks up the new command.  Data is
+    stable register and toggles a flag.  An FFSynchronizer (2-FF by default)
+    with edge detection in the sync domain picks up the new command.  Data is
     safe to sample because it was stable for many jtck cycles before the
     edge propagates.
   - Response path (sync -> jtck): a shadow register in the sync domain
@@ -57,6 +57,7 @@ Constructor parameter use_jtagg_primitive (default True):
 
 from amaranth import *
 from amaranth.hdl import *
+from amaranth.lib.cdc import FFSynchronizer
 
 from memory.clause_memory import MAX_CLAUSES, LIT_WIDTH
 from memory.watch_list_memory import (NUM_LITERALS, MAX_WATCH_LEN,
@@ -147,18 +148,18 @@ class JTAGHostInterface(Elaboratable):
         # =====================================================================
         # JTAG interface
         # =====================================================================
-        jtck = Signal()
         jtdi = Signal()
         jshift = Signal()
         jupdate = Signal()
         jrstn = Signal()
         jce1 = Signal()
-        jce2 = Signal()
-        jrti1 = Signal()
-        jrti2 = Signal()
         jtdo1 = Signal()
 
         if self.use_jtagg_primitive:
+            jtck = Signal()
+            jce2 = Signal()
+            jrti1 = Signal()
+            jrti2 = Signal()
             m.submodules.jtagg = Instance("JTAGG",
                 o_JTCK=jtck, o_JTDI=jtdi, o_JSHIFT=jshift,
                 o_JUPDATE=jupdate, o_JRSTN=jrstn,
@@ -166,9 +167,15 @@ class JTAGHostInterface(Elaboratable):
                 o_JRTI1=jrti1, o_JRTI2=jrti2,
                 i_JTDO1=jtdo1, i_JTDO2=0,
             )
+            # Create a local clock domain driven by JTAGG's JTCK output
+            jd = "jtag"
+            m.domains += ClockDomain(jd, local=True)
+            m.d.comb += ClockSignal(jd).eq(jtck)
+            m.d.comb += ResetSignal(jd).eq(~jrstn)
         else:
+            # Simulation mode: use the "jtck" domain provided by the testbench
+            jd = "jtck"
             m.d.comb += [
-                jtck.eq(ClockSignal("jtck")),
                 jshift.eq(self.jtag_shift),
                 jupdate.eq(self.jtag_update),
                 jtdi.eq(self.jtag_tdi),
@@ -203,19 +210,27 @@ class JTAGHostInterface(Elaboratable):
         # JTAG read shift register
         shift_reg = Signal(REG_WIDTH)
         jshift_prev = Signal()
-        m.domains += ClockDomain("jtag", local=True)
-        m.d.comb += ClockSignal("jtag").eq(jtck)
-        m.d.jtag += jshift_prev.eq(jshift)
+        m.d[jd] += jshift_prev.eq(jshift)
 
-        with m.If(jce1):
-            with m.If(jshift & ~jshift_prev):
-                m.d.comb += jtdo1.eq(jtag_shadow[0])
-                m.d.jtag += shift_reg.eq(Cat(jtag_shadow[1:], jtag_shadow[0]))
-            with m.Elif(jshift):
-                m.d.comb += jtdo1.eq(shift_reg[0])
-                m.d.jtag += shift_reg.eq(Cat(shift_reg[1:], shift_reg[0]))
-            with m.Elif(~jshift & jshift_prev):
-                m.d.jtag += shift_reg.eq(jtag_shadow)
+        # On ECP5 hardware, JSHIFT goes HIGH one cycle before JCE1 (during Capture-DR).
+        # The rising-edge branch therefore fires in Capture-DR, not Shift-DR.
+        # By loading shift_reg = jtag_shadow (without rotation) here, and reloading
+        # on the falling edge of JSHIFT outside the jce1 gate (so it fires at
+        # Exit1-DR even when JCE1 has already gone low), TDO[0] = jtag_shadow[0]
+        # at the first actual Shift-DR clock when jce1 & jshift_prev are both 1.
+        with m.If(jshift & ~jshift_prev):
+            # Rising edge of JSHIFT (Capture-DR on hardware; pre-load in simulation).
+            # Load shadow WITHOUT rotation so the first Shift-DR clock outputs jtag_shadow[0].
+            m.d.comb += jtdo1.eq(jtag_shadow[0])
+            m.d[jd] += shift_reg.eq(jtag_shadow)
+        with m.Elif(jce1 & jshift):
+            # Subsequent Shift-DR clocks (jshift_prev=1, jce1=1): rotate and output.
+            m.d.comb += jtdo1.eq(shift_reg[0])
+            m.d[jd] += shift_reg.eq(Cat(shift_reg[1:], shift_reg[0]))
+        with m.Elif(~jshift & jshift_prev):
+            # Falling edge of JSHIFT: reload shift_reg for the next scan.
+            # Outside jce1 so this fires at Exit1-DR even when JCE1 has gone low.
+            m.d[jd] += shift_reg.eq(jtag_shadow)
 
 
         # JTAG write path
@@ -226,33 +241,33 @@ class JTAGHostInterface(Elaboratable):
         # Track whether ER1 was selected during the shift phase
         er1_was_selected = Signal()
         with m.If(jce1 & jshift):
-            m.d.jtag += er1_was_selected.eq(1)
+            m.d[jd] += er1_was_selected.eq(1)
         with m.Elif(jupdate):
-            m.d.jtag += er1_was_selected.eq(0)
+            m.d[jd] += er1_was_selected.eq(0)
 
         # Shift: gate with jce1
         with m.If(jce1 & jshift):
-            m.d.jtag += rx_shift.eq(Cat(rx_shift[1:], jtdi))
+            m.d[jd] += rx_shift.eq(Cat(rx_shift[1:], jtdi))
 
         # Latch: jupdate + ER1 was selected (NOT gated by jce1)
         with m.If(jupdate & er1_was_selected):
-            m.d.jtag += [
+            m.d[jd] += [
                 jtag_rx.eq(rx_shift),
                 jtag_rx_toggle.eq(~jtag_rx_toggle),
             ]
 
         # Synchronize rx into sync domain (toggle-based CDC)
-        toggle_sync1 = Signal()
-        toggle_sync2 = Signal()
+        toggle_synced = Signal()
+        m.submodules.toggle_sync = FFSynchronizer(
+            jtag_rx_toggle, toggle_synced, o_domain="sync"
+        )
         toggle_prev = Signal()
         rx_data_latched = Signal(REG_WIDTH)
 
-        m.d.sync += toggle_sync1.eq(jtag_rx_toggle)
-        m.d.sync += toggle_sync2.eq(toggle_sync1)
-        m.d.sync += toggle_prev.eq(toggle_sync2)
+        m.d.sync += toggle_prev.eq(toggle_synced)
 
         cmd_pending = Signal()
-        with m.If(toggle_sync2 ^ toggle_prev):
+        with m.If(toggle_synced ^ toggle_prev):
             m.d.sync += [
                 cmd_pending.eq(1),
                 rx_data_latched.eq(jtag_rx),
@@ -495,9 +510,9 @@ class JTAGHostInterface(Elaboratable):
         # # ── LED 6: jupdate latch flash (jtck domain) ───────────────────────
         # dbg_latch_pulse = Signal(26)
         # with m.If(jupdate & er1_was_selected):
-        #     m.d.jtag += dbg_latch_pulse.eq(PULSE_LEN)
+        #     m.d[jd] += dbg_latch_pulse.eq(PULSE_LEN)
         # with m.Elif(dbg_latch_pulse != 0):
-        #     m.d.jtag += dbg_latch_pulse.eq(dbg_latch_pulse - 1)
+        #     m.d[jd] += dbg_latch_pulse.eq(dbg_latch_pulse - 1)
 
         # # ── LED 5: cmd_pending flash (sync domain) ─────────────────────────
         # cmd_pending_prev = Signal()
@@ -512,9 +527,9 @@ class JTAGHostInterface(Elaboratable):
         # # ── LED 4: JTAG shift-out flash (jtck domain) ──────────────────────
         # dbg_shift_pulse = Signal(26)
         # with m.If(jce1 & jshift):
-        #     m.d.jtag += dbg_shift_pulse.eq(PULSE_LEN)
+        #     m.d[jd] += dbg_shift_pulse.eq(PULSE_LEN)
         # with m.Elif(dbg_shift_pulse != 0):
-        #     m.d.jtag += dbg_shift_pulse.eq(dbg_shift_pulse - 1)
+        #     m.d[jd] += dbg_shift_pulse.eq(dbg_shift_pulse - 1)
 
         # # ── LED 3: command processed flash (sync domain) ──────────────────
         # dbg_proc_pulse = Signal(26)
@@ -538,35 +553,67 @@ class JTAGHostInterface(Elaboratable):
         #     ]
 
         # return m
+    # ==================================================================
+        # LED Control (8 LEDs)
+        #   LED 7 — heartbeat (always)
+        #   LED 6 — flash on jupdate latch  (jtck domain pulse)
+        #   LED 5 — flash on cmd_pending    (sync domain pulse)
+        #   LED 4 — flash on JTAG shift-out (jtck domain pulse)
+        #   LED 3 — flash on cmd processed  (sync domain pulse)
+        #   LED 2 — lit in BCP_WAIT state
+        #   LED 1 — lit in IMPL_READY state
+        #   LED 0 — lit in DONE_READY state
         # ==================================================================
-        # LED Control — Display command byte in binary (with hold time)
-        # ==================================================================
-        # Store the command byte from the last received command
-        last_cmd_byte = Signal(8)
-        cmd_hold_counter = Signal(28)  # ~2.6 seconds @ 100MHz
-        
-        # When command arrives, latch it and start hold counter
-        with m.If(cmd_pending):
-            m.d.sync += [
-                last_cmd_byte.eq(cmd_byte),
-                cmd_hold_counter.eq(268_435_455),  # Max value for 28-bit signal
-            ]
-        # Otherwise, decrement hold counter
-        with m.Elif(cmd_hold_counter != 0):
-            m.d.sync += cmd_hold_counter.eq(cmd_hold_counter - 1)
-        
-        # ── LED assignments — binary display of command byte ──────────────
+
+        PULSE_LEN = 50_000_000  # ~0.5 s @ 100 MHz
+
+        # ── Heartbeat ──────────────────────────────────────────────────────
+        heartbeat = Signal(24)
+        m.d.sync += heartbeat.eq(heartbeat + 1)
+
+        # ── LED 6: jupdate latch flash (jtck domain) ───────────────────────
+        dbg_latch_pulse = Signal(26)
+        with m.If(jupdate & er1_was_selected):
+            m.d[jd] += dbg_latch_pulse.eq(PULSE_LEN)
+        with m.Elif(dbg_latch_pulse != 0):
+            m.d[jd] += dbg_latch_pulse.eq(dbg_latch_pulse - 1)
+
+        # ── LED 5: cmd_pending flash (sync domain) ─────────────────────────
+        cmd_pending_prev = Signal()
+        m.d.sync += cmd_pending_prev.eq(cmd_pending)
+
+        dbg_cmd_pulse = Signal(26)
+        with m.If(cmd_pending & ~cmd_pending_prev):
+            m.d.sync += dbg_cmd_pulse.eq(PULSE_LEN)
+        with m.Elif(dbg_cmd_pulse != 0):
+            m.d.sync += dbg_cmd_pulse.eq(dbg_cmd_pulse - 1)
+
+        # ── LED 4: JTAG shift-out flash (jtck domain) ──────────────────────
+        dbg_shift_pulse = Signal(26)
+        with m.If(jce1 & jshift):
+            m.d[jd] += dbg_shift_pulse.eq(PULSE_LEN)
+        with m.Elif(dbg_shift_pulse != 0):
+            m.d[jd] += dbg_shift_pulse.eq(dbg_shift_pulse - 1)
+
+        # ── LED 3: command processed flash (sync domain) ──────────────────
+        dbg_proc_pulse = Signal(26)
+        with m.If(any_cmd_processed):
+            m.d.sync += dbg_proc_pulse.eq(PULSE_LEN)
+        with m.Elif(dbg_proc_pulse != 0):
+            m.d.sync += dbg_proc_pulse.eq(dbg_proc_pulse - 1)
+
+        # ── LED assignments ────────────────────────────────────────────────
         if platform is not None:
             leds = [platform.request("led", i) for i in range(8)]
             m.d.comb += [
-                leds[7].o.eq(last_cmd_byte[7] & (cmd_hold_counter != 0)),  # MSB (only on if holding)
-                leds[6].o.eq(last_cmd_byte[6] & (cmd_hold_counter != 0)),
-                leds[5].o.eq(last_cmd_byte[5] & (cmd_hold_counter != 0)),
-                leds[4].o.eq(last_cmd_byte[4] & (cmd_hold_counter != 0)),
-                leds[3].o.eq(last_cmd_byte[3] & (cmd_hold_counter != 0)),
-                leds[2].o.eq(last_cmd_byte[2] & (cmd_hold_counter != 0)),
-                leds[1].o.eq(last_cmd_byte[1] & (cmd_hold_counter != 0)),
-                leds[0].o.eq(last_cmd_byte[0] & (cmd_hold_counter != 0)),  # LSB
+                leds[7].o.eq(heartbeat[23]),         # heartbeat
+                leds[6].o.eq(dbg_latch_pulse != 0),  # jupdate latch
+                leds[5].o.eq(dbg_cmd_pulse != 0),    # cmd_pending
+                leds[4].o.eq(dbg_shift_pulse != 0),  # JTAG shift-out
+                leds[3].o.eq(dbg_proc_pulse != 0),   # cmd processed
+                leds[2].o.eq(in_bcp_wait),            # BCP_WAIT state
+                leds[1].o.eq(in_impl_ready),          # IMPL_READY state
+                leds[0].o.eq(in_done_ready),          # DONE_READY state
             ]
 
         return m

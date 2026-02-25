@@ -365,7 +365,7 @@ def test_bcp_end_to_end():
 
     sim.add_testbench(testbench)
 
-    with sim.write_vcd("bcp_end_to_end.vcd"):
+    with sim.write_vcd(os.path.join(os.path.dirname(__file__), "..", "..", "logs", "bcp_end_to_end.vcd")):
         sim.run()
 
 

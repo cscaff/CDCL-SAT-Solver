@@ -81,13 +81,19 @@ async def jtag_scan(dut, ctx, cmd_byte, payload_bytes, seq_num):
     cmd_bits = build_command(cmd_byte, payload_bytes, seq_num)
     response = 0
 
-    # Capture-DR: sel=1, shift=0 for one cycle (pre-loads shift_reg)
+    # Capture-DR: sel=1, shift=0 for one cycle
     ctx.set(dut.jtag_sel, 1)
     ctx.set(dut.jtag_shift, 0)
     await ctx.tick("jtck")
 
-    # Shift-DR: shift 128 bits in/out
+    # Simulate ECP5 JTAGG: JSHIFT asserts one cycle before JCE1 (Capture-DR).
+    # sel=0 (jce1=0) prevents spurious rx_shift capture while shift_reg pre-loads.
+    ctx.set(dut.jtag_sel, 0)
     ctx.set(dut.jtag_shift, 1)
+    await ctx.tick("jtck")   # branch A fires: shift_reg = jtag_shadow, no TDI capture
+    ctx.set(dut.jtag_sel, 1)
+
+    # Shift-DR: shift 128 bits in/out (jshift_prev=1, so branch B fires for all)
     for i in range(REG_WIDTH):
         ctx.set(dut.jtag_tdi, (cmd_bits >> i) & 1)
         tdo_bit = ctx.get(dut.jtag_tdo)
@@ -288,7 +294,7 @@ def test_jtag_host_interface():
     sim.add_testbench(testbench)
 
     vcd_path = os.path.join(os.path.dirname(__file__),
-                            "jtag_host_interface_sim.vcd")
+                            "..", "..", "logs", "jtag_host_interface_sim.vcd")
     with sim.write_vcd(vcd_path):
         sim.run()
 

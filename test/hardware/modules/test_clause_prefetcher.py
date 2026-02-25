@@ -207,7 +207,7 @@ def test_clause_prefetcher():
 
     sim.add_testbench(testbench)
 
-    with sim.write_vcd("clause_prefetcher.vcd"):
+    with sim.write_vcd(os.path.join(os.path.dirname(__file__), "..", "..", "logs", "clause_prefetcher.vcd")):
         sim.run()
 
 

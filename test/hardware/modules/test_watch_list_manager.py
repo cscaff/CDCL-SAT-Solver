@@ -138,7 +138,7 @@ def test_watch_list_manager():
 
     sim.add_testbench(testbench)
 
-    with sim.write_vcd("watch_list_manager.vcd"):
+    with sim.write_vcd(os.path.join(os.path.dirname(__file__), "..", "..", "logs", "watch_list_manager.vcd")):
         sim.run()
 
 

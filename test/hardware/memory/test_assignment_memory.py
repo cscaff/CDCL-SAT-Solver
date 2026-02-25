@@ -100,7 +100,7 @@ def test_assignment_memory():
 
     sim.add_testbench(testbench)
 
-    with sim.write_vcd("assignment_memory.vcd"):
+    with sim.write_vcd(os.path.join(os.path.dirname(__file__), "..", "..", "logs", "assignment_memory.vcd")):
         sim.run()
 
 

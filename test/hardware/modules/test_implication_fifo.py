@@ -163,7 +163,7 @@ def test_implication_fifo():
 
     sim.add_testbench(testbench)
 
-    with sim.write_vcd("implication_fifo.vcd"):
+    with sim.write_vcd(os.path.join(os.path.dirname(__file__), "..", "..", "logs", "implication_fifo.vcd")):
         sim.run()
 
 

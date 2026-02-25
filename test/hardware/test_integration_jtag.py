@@ -62,13 +62,19 @@ class JTAGDriver:
         cmd_bits = build_command(cmd_byte, payload_bytes, self.seq)
         response = 0
 
-        # Capture-DR: sel=1, shift=0 for one cycle (pre-loads shift_reg)
+        # Capture-DR: sel=1, shift=0 for one cycle
         ctx.set(self.host_if.jtag_sel, 1)
         ctx.set(self.host_if.jtag_shift, 0)
         await ctx.tick("jtck")
 
-        # Shift-DR: shift 128 bits in/out
+        # Simulate ECP5 JTAGG: JSHIFT asserts one cycle before JCE1.
+        # sel=0 prevents spurious rx_shift capture while shift_reg pre-loads.
+        ctx.set(self.host_if.jtag_sel, 0)
         ctx.set(self.host_if.jtag_shift, 1)
+        await ctx.tick("jtck")
+        ctx.set(self.host_if.jtag_sel, 1)
+
+        # Shift-DR: shift 128 bits in/out
         for i in range(REG_WIDTH):
             ctx.set(self.host_if.jtag_tdi, (cmd_bits >> i) & 1)
             tdo_bit = ctx.get(self.host_if.jtag_tdo)
@@ -275,7 +281,7 @@ def test_integration_jtag_implication_chain():
     sim.add_testbench(testbench)
 
     vcd_path = os.path.join(os.path.dirname(__file__),
-                            "integration_jtag_impl_chain.vcd")
+                            "..", "logs", "integration_jtag_impl_chain.vcd")
     with sim.write_vcd(vcd_path):
         sim.run()
 
@@ -370,7 +376,7 @@ def test_integration_jtag_conflict():
     sim.add_testbench(testbench)
 
     vcd_path = os.path.join(os.path.dirname(__file__),
-                            "integration_jtag_conflict.vcd")
+                            "..", "logs", "integration_jtag_conflict.vcd")
     with sim.write_vcd(vcd_path):
         sim.run()
 
