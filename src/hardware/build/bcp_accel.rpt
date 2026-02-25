@@ -3013,6 +3013,6 @@ Found and reported 0 problems.
 
 3. Executing JSON backend.
 
-End of script. Logfile hash: 8660e8842d, CPU: user 2.18s system 0.05s, MEM: 208.30 MB peak
+End of script. Logfile hash: 8660e8842d, CPU: user 2.18s system 0.06s, MEM: 211.92 MB peak
 Yosys 0.62+91 (git sha1 fb653c418-dirty, aarch64-apple-darwin23.5-clang++ 18.1.8 -fPIC -O3)
 Time spent: 22% 29x opt_clean (0 sec), 11% 33x opt_expr (0 sec), ...

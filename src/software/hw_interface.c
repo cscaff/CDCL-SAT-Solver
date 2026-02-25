@@ -27,6 +27,10 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h>
+#include <sys/ioctl.h>
+#ifdef __APPLE__
+#include <IOKit/serial/ioss.h>
+#endif
 
 #include "CDCL.h"
 #include "hw_interface.h"
@@ -144,8 +148,9 @@ int hw_open(const char *port) {
     tty.c_cflag &= ~(CSTOPB | CRTSCTS);
     tty.c_cflag |= CS8 | CLOCAL | CREAD;
 
-    /* 1 Mbaud (macOS supports custom baud rates via cfsetspeed) */
-    cfsetspeed(&tty, 1000000);
+    /* Set a placeholder baud rate for tcsetattr (will override below on macOS) */
+    cfsetispeed(&tty, B115200);
+    cfsetospeed(&tty, B115200);
 
     /* Non-blocking reads with 100ms timeout */
     tty.c_cc[VMIN]  = 0;
@@ -157,6 +162,18 @@ int hw_open(const char *port) {
         serial_fd = -1;
         return -1;
     }
+
+#ifdef __APPLE__
+    /* macOS: set 1 Mbaud via IOSSIOSPEED ioctl (FTDI doesn't support
+     * non-standard rates through cfsetspeed/tcsetattr) */
+    speed_t speed = 1000000;
+    if (ioctl(serial_fd, IOSSIOSPEED, &speed) < 0) {
+        perror("hw_interface: IOSSIOSPEED");
+        close(serial_fd);
+        serial_fd = -1;
+        return -1;
+    }
+#endif
 
     /* Flush any stale data */
     tcflush(serial_fd, TCIOFLUSH);

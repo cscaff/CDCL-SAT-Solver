@@ -20,6 +20,9 @@ ENTRY_WIDTH = 23
 DEFAULT_FIFO_DEPTH = 16
 
 
+
+# TODO: I THINK THIS CAN BE REPLACED WITH AN AMARANTH FIFO?
+
 class ImplicationFIFO(Elaboratable):
     """
     Implication FIFO.

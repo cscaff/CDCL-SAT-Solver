@@ -4,7 +4,7 @@ attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-La
 attribute \top 1
 module \bcp_accel
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:37"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:37"
   wire width 1 \rx_pin
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1091"
@@ -13,7 +13,7 @@ module \bcp_accel
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
   wire width 1 \uart_0__tx__o
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:36"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:36"
   wire width 1 \tx_pin
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
@@ -23,202 +23,202 @@ module \bcp_accel
   attribute \init 23'00000000000000000000000
   wire width 23 \heartbeat
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:99"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:99"
   wire width 8 \rx_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:38"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:38"
   wire width 8 \rx_data$12
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:100"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:100"
   wire width 1 \rx_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:39"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:39"
   wire width 1 \rx_valid$14
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:37"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:37"
   wire width 8 \tx_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:101"
   wire width 8 \tx_data$16
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:38"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:38"
   wire width 1 \tx_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:102"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:102"
   wire width 1 \tx_valid$18
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:103"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:103"
   wire width 1 \tx_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:39"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:39"
   wire width 1 \tx_ready$20
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:57"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:57"
   wire width 1 \start
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:106"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:106"
   wire width 1 \bcp_start
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:58"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:58"
   wire width 10 \false_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:107"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:107"
   wire width 10 \bcp_false_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:108"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:108"
   wire width 1 \bcp_done
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:59"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:59"
   wire width 1 \done
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:109"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:109"
   wire width 1 \bcp_conflict
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:63"
   wire width 1 \conflict
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:110"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:110"
   wire width 13 \bcp_conflict_id
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:64"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:64"
   wire width 13 \conflict_clause_id
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:113"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:113"
   wire width 1 \impl_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:67"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:67"
   wire width 1 \impl_valid$32
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:114"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:114"
   wire width 9 \impl_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:68"
   wire width 9 \impl_var$34
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:115"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:115"
   wire width 1 \impl_value
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:69"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:69"
   wire width 1 \impl_value$36
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:116"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:116"
   wire width 13 \impl_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:70"
   wire width 13 \impl_reason$38
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:71"
   wire width 1 \impl_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:117"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:117"
   wire width 1 \impl_ready$40
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:76"
   wire width 13 \clause_wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:120"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:120"
   wire width 13 \clause_wr_addr$42
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:77"
   wire width 1 \clause_wr_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:121"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:121"
   wire width 1 \clause_wr_sat_bit$44
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:78"
   wire width 3 \clause_wr_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:122"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:122"
   wire width 3 \clause_wr_size$46
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:79"
   wire width 16 \clause_wr_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:123"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:123"
   wire width 16 \clause_wr_lit0$48
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:80"
   wire width 16 \clause_wr_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:124"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:124"
   wire width 16 \clause_wr_lit1$50
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:81"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:81"
   wire width 16 \clause_wr_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:125"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:125"
   wire width 16 \clause_wr_lit2$52
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:82"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:82"
   wire width 16 \clause_wr_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:126"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:126"
   wire width 16 \clause_wr_lit3$54
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:83"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:83"
   wire width 16 \clause_wr_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:127"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:127"
   wire width 16 \clause_wr_lit4$56
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:84"
   wire width 1 \clause_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:128"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:128"
   wire width 1 \clause_wr_en$58
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:87"
   wire width 10 \wl_wr_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:131"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:131"
   wire width 10 \wl_wr_lit$60
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:88"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:88"
   wire width 7 \wl_wr_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:132"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:132"
   wire width 7 \wl_wr_idx$62
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:89"
   wire width 13 \wl_wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:133"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:133"
   wire width 13 \wl_wr_data$64
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:90"
   wire width 7 \wl_wr_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:134"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:134"
   wire width 7 \wl_wr_len$66
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:91"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:91"
   wire width 1 \wl_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:135"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:135"
   wire width 1 \wl_wr_en$68
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:92"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:92"
   wire width 1 \wl_wr_len_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:136"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:136"
   wire width 1 \wl_wr_len_en$70
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:95"
   wire width 9 \assign_wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:139"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:139"
   wire width 9 \assign_wr_addr$72
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:96"
   wire width 2 \assign_wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:140"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:140"
   wire width 2 \assign_wr_data$74
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:97"
   wire width 1 \assign_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:141"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:141"
   wire width 1 \assign_wr_en$76
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
@@ -412,18 +412,18 @@ connect \assign_wr_en$76 \assign_wr_en [0]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:43"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:43"
 module \bcp_accel.uart_rx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:49"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:49"
   attribute \init 1'1
   wire width 1 \rx_sync0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:50"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:50"
   attribute \init 1'1
   wire width 1 \rx_sync1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:51"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:51"
   attribute \init 1'1
   wire width 1 \rx_prev
 
@@ -431,32 +431,32 @@ module \bcp_accel.uart_rx
   attribute \init 2'00
   wire width 2 \fsm_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:59"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:59"
   attribute \init 4'0000
   wire width 4 \bit_timer
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:60"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:60"
   attribute \init 4'0000
   wire width 4 \bit_count
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:38"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:38"
   attribute \init 8'00000000
   wire width 8 \rx_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:40"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:40"
   wire width 1 \rx_err
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 0  \clk
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:37"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:37"
   wire width 1 input 1  \rx_pin
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:38"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:38"
   attribute \init 8'00000000
   wire width 8 output 2  \shift_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:39"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:39"
   wire width 1 output 3  \rx_valid
 
   wire width 1 $1
@@ -497,7 +497,7 @@ module \bcp_accel.uart_rx
 
   wire width 8 $19
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:63"
   cell $not $20
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -506,7 +506,7 @@ module \bcp_accel.uart_rx
     connect \Y $1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:63"
   cell $and $21
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -518,7 +518,7 @@ module \bcp_accel.uart_rx
     connect \Y $2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:78"
   cell $eq $22
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -530,7 +530,7 @@ module \bcp_accel.uart_rx
     connect \Y $3
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:90"
   cell $sub $23
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -542,7 +542,7 @@ module \bcp_accel.uart_rx
     connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:93"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:93"
   cell $eq $24
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -554,7 +554,7 @@ module \bcp_accel.uart_rx
     connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:98"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:98"
   cell $add $25
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -566,7 +566,7 @@ module \bcp_accel.uart_rx
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:100"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:100"
   cell $eq $26
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -578,7 +578,7 @@ module \bcp_accel.uart_rx
     connect \Y $7
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:103"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:103"
   cell $sub $27
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -590,7 +590,7 @@ module \bcp_accel.uart_rx
     connect \Y $8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:106"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:106"
   cell $eq $28
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -602,7 +602,7 @@ module \bcp_accel.uart_rx
     connect \Y $9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:115"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:115"
   cell $sub $29
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -614,7 +614,7 @@ module \bcp_accel.uart_rx
     connect \Y $10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:106"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:106"
   cell $eq $30
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -674,7 +674,7 @@ module \bcp_accel.uart_rx
     connect \Y $15
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:49"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:49"
   cell $dff $35
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -683,7 +683,7 @@ module \bcp_accel.uart_rx
     connect \Q \rx_sync0
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:50"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:50"
   cell $dff $36
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -692,7 +692,7 @@ module \bcp_accel.uart_rx
     connect \Q \rx_sync1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:51"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:51"
   cell $dff $37
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -701,7 +701,7 @@ module \bcp_accel.uart_rx
     connect \Q \rx_prev
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:59"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:59"
   process $38
     assign $16 [3:0] \bit_timer [3:0]
     switch \fsm_state [1:0]
@@ -737,7 +737,7 @@ module \bcp_accel.uart_rx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:59"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:59"
   cell $dff $39
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -793,7 +793,7 @@ module \bcp_accel.uart_rx
     connect \Q \fsm_state
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:60"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:60"
   process $42
     assign $18 [3:0] \bit_count [3:0]
     switch \fsm_state [1:0]
@@ -818,7 +818,7 @@ module \bcp_accel.uart_rx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:60"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:60"
   cell $dff $43
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -827,7 +827,7 @@ module \bcp_accel.uart_rx
     connect \Q \bit_count
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:61"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:61"
   process $44
     assign $19 [7:0] \shift_reg [7:0]
     switch \fsm_state [1:0]
@@ -843,7 +843,7 @@ module \bcp_accel.uart_rx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:61"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:61"
   cell $dff $45
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -852,7 +852,7 @@ module \bcp_accel.uart_rx
     connect \Q \shift_reg
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:39"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:39"
   process $46
     assign \rx_valid [0] 1'0
     switch \fsm_state [1:0]
@@ -872,7 +872,7 @@ module \bcp_accel.uart_rx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_rx.py:40"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_rx.py:40"
   process $47
     assign \rx_err [0] 1'0
     switch \fsm_state [1:0]
@@ -897,38 +897,38 @@ connect \rx_data \shift_reg [7:0]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:42"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:42"
 module \bcp_accel.uart_tx
 
   attribute \src "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/contextlib.py:148"
   attribute \init 2'00
   wire width 2 \fsm_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:48"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:48"
   attribute \init 8'00000000
   wire width 8 \shift_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:46"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:46"
   attribute \init 4'0000
   wire width 4 \bit_timer
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:47"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:47"
   attribute \init 4'0000
   wire width 4 \bit_count
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 0  \clk
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:39"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:39"
   wire width 1 output 1  \tx_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:36"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:36"
   wire width 1 output 2  \tx_pin
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:37"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:37"
   wire width 8 input 3  \tx_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:38"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:38"
   wire width 1 input 4  \tx_valid
 
   wire width 1 $1
@@ -1011,7 +1011,7 @@ module \bcp_accel.uart_tx
     connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:66"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:66"
   cell $eq $21
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1023,7 +1023,7 @@ module \bcp_accel.uart_tx
     connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:70"
   cell $sub $22
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1035,7 +1035,7 @@ module \bcp_accel.uart_tx
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:75"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:75"
   cell $eq $23
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1047,7 +1047,7 @@ module \bcp_accel.uart_tx
     connect \Y $7
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:79"
   cell $add $24
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1059,7 +1059,7 @@ module \bcp_accel.uart_tx
     connect \Y $8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:81"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:81"
   cell $eq $25
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1071,7 +1071,7 @@ module \bcp_accel.uart_tx
     connect \Y $9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:84"
   cell $sub $26
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1083,7 +1083,7 @@ module \bcp_accel.uart_tx
     connect \Y $10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:89"
   cell $eq $27
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1095,7 +1095,7 @@ module \bcp_accel.uart_tx
     connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:92"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:92"
   cell $sub $28
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1107,7 +1107,7 @@ module \bcp_accel.uart_tx
     connect \Y $12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:39"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:39"
   process $29
     assign \tx_ready [0] 1'0
     switch \fsm_state [1:0]
@@ -1119,7 +1119,7 @@ module \bcp_accel.uart_tx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:36"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:36"
   process $30
     assign \tx_pin [0] 1'1
     switch \fsm_state [1:0]
@@ -1134,7 +1134,7 @@ module \bcp_accel.uart_tx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:48"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:48"
   process $31
     assign $13 [7:0] \shift_reg [7:0]
     switch \fsm_state [1:0]
@@ -1154,7 +1154,7 @@ module \bcp_accel.uart_tx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:48"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:48"
   cell $dff $32
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -1163,7 +1163,7 @@ module \bcp_accel.uart_tx
     connect \Q \shift_reg
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:46"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:46"
   process $33
     assign $14 [3:0] \bit_timer [3:0]
     switch \fsm_state [1:0]
@@ -1195,7 +1195,7 @@ module \bcp_accel.uart_tx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:46"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:46"
   cell $dff $34
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -1204,7 +1204,7 @@ module \bcp_accel.uart_tx
     connect \Q \bit_timer
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:47"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:47"
   process $35
     assign $15 [3:0] \bit_count [3:0]
     switch \fsm_state [1:0]
@@ -1224,7 +1224,7 @@ module \bcp_accel.uart_tx
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/uart_tx.py:47"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/uart_tx.py:47"
   cell $dff $36
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -1278,131 +1278,131 @@ module \bcp_accel.uart_tx
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:144"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:144"
 module \bcp_accel.host_if
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:166"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:166"
   wire width 8 \impl_b1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:114"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:114"
   wire width 9 \impl_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:167"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:167"
   wire width 8 \impl_b2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:168"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:168"
   wire width 8 \impl_b3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:115"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:115"
   wire width 1 \impl_value
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:169"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:169"
   wire width 8 \impl_b4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:116"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:116"
   wire width 13 \impl_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:170"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:170"
   wire width 8 \impl_b5
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:180"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:180"
   wire width 8 \done_b0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:161"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:161"
   attribute \init 1'0
   wire width 1 \conflict_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:181"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:181"
   wire width 8 \done_b1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:162"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:162"
   attribute \init 13'0000000000000
   wire width 13 \conflict_id_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:182"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:182"
   wire width 8 \done_b2
 
   attribute \src "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/contextlib.py:148"
   attribute \init 3'000
   wire width 3 \fsm_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:149"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:149"
   attribute \init 8'00000000
   wire width 8 \cmd
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_5
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_7
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_6
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_9
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_8
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_11
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_10
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_13
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   attribute \init 8'00000000
   wire width 8 \buf_12
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:157"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:157"
   attribute \init 48'000000000000000000000000000000000000000000000000
   wire width 48 \tx_shift
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:158"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:158"
   attribute \init 3'000
   wire width 3 \tx_count
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:151"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:151"
   attribute \init 4'0000
   wire width 4 \buf_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:150"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:150"
   attribute \init 4'0000
   wire width 4 \payload_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:113"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:113"
   wire width 1 input 0  \impl_valid
 
   wire width 23 input 1  \port$318$0
@@ -1410,91 +1410,91 @@ module \bcp_accel.host_if
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 2  \clk
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:99"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:99"
   wire width 8 input 3  \rx_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:100"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:100"
   wire width 1 input 4  \rx_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:103"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:103"
   wire width 1 input 5  \tx_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:120"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:120"
   wire width 13 output 6  \clause_wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:122"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:122"
   wire width 3 output 7  \clause_wr_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:121"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:121"
   wire width 1 output 8  \clause_wr_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:123"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:123"
   wire width 16 output 9  \clause_wr_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:124"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:124"
   wire width 16 output 10  \clause_wr_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:125"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:125"
   wire width 16 output 11  \clause_wr_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:126"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:126"
   wire width 16 output 12  \clause_wr_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:127"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:127"
   wire width 16 output 13  \clause_wr_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:128"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:128"
   wire width 1 output 14  \clause_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:131"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:131"
   wire width 10 output 15  \wl_wr_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:132"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:132"
   wire width 7 output 16  \wl_wr_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:133"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:133"
   wire width 13 output 17  \wl_wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:135"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:135"
   wire width 1 output 18  \wl_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:134"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:134"
   wire width 7 output 19  \wl_wr_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:136"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:136"
   wire width 1 output 20  \wl_wr_len_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:139"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:139"
   wire width 9 output 21  \assign_wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:140"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:140"
   wire width 2 output 22  \assign_wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:141"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:141"
   wire width 1 output 23  \assign_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:107"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:107"
   wire width 10 output 24  \bcp_false_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:106"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:106"
   wire width 1 output 25  \bcp_start
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:101"
   wire width 8 output 26  \tx_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:102"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:102"
   wire width 1 output 27  \tx_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:117"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:117"
   wire width 1 output 28  \impl_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:108"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:108"
   wire width 1 input 29  \bcp_done
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:109"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:109"
   wire width 1 input 30  \bcp_conflict
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:110"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:110"
   wire width 13 input 31  \bcp_conflict_id
 
   wire width 1 $1
@@ -1571,7 +1571,7 @@ module \bcp_accel.host_if
 
   wire width 3 $37
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:184"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:184"
   cell $mux $38
     parameter \WIDTH 8
     connect \S \conflict_reg [0]
@@ -1580,7 +1580,7 @@ module \bcp_accel.host_if
     connect \Y \done_b0
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:344"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:344"
   cell $eq $39
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1676,7 +1676,7 @@ module \bcp_accel.host_if
     connect \Y $8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:225"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:225"
   cell $add $47
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1688,7 +1688,7 @@ module \bcp_accel.host_if
     connect \Y $9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:225"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:225"
   cell $ge $48
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1700,7 +1700,7 @@ module \bcp_accel.host_if
     connect \Y $10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:228"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:228"
   cell $add $49
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1712,7 +1712,7 @@ module \bcp_accel.host_if
     connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:342"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:342"
   cell $sub $50
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1724,7 +1724,7 @@ module \bcp_accel.host_if
     connect \Y $12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:344"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:344"
   cell $eq $51
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1736,7 +1736,7 @@ module \bcp_accel.host_if
     connect \Y $13
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:360"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:360"
   cell $sub $52
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1748,7 +1748,7 @@ module \bcp_accel.host_if
     connect \Y $14
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:362"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:362"
   cell $eq $53
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -1760,7 +1760,7 @@ module \bcp_accel.host_if
     connect \Y $15
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:120"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:120"
   process $54
     assign \clause_wr_addr [12:0] 13'0000000000000
     switch \fsm_state [2:0]
@@ -1783,7 +1783,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:122"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:122"
   process $55
     assign \clause_wr_size [2:0] 3'000
     switch \fsm_state [2:0]
@@ -1806,7 +1806,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:121"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:121"
   process $56
     assign \clause_wr_sat_bit [0] 1'0
     switch \fsm_state [2:0]
@@ -1829,7 +1829,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:123"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:123"
   process $57
     assign \clause_wr_lit0 [15:0] 16'0000000000000000
     switch \fsm_state [2:0]
@@ -1852,7 +1852,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:124"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:124"
   process $58
     assign \clause_wr_lit1 [15:0] 16'0000000000000000
     switch \fsm_state [2:0]
@@ -1875,7 +1875,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:125"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:125"
   process $59
     assign \clause_wr_lit2 [15:0] 16'0000000000000000
     switch \fsm_state [2:0]
@@ -1898,7 +1898,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:126"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:126"
   process $60
     assign \clause_wr_lit3 [15:0] 16'0000000000000000
     switch \fsm_state [2:0]
@@ -1921,7 +1921,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:127"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:127"
   process $61
     assign \clause_wr_lit4 [15:0] 16'0000000000000000
     switch \fsm_state [2:0]
@@ -1944,7 +1944,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:128"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:128"
   process $62
     assign \clause_wr_en [0] 1'0
     switch \fsm_state [2:0]
@@ -1967,7 +1967,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:131"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:131"
   process $63
     assign \wl_wr_lit [9:0] 10'0000000000
     switch \fsm_state [2:0]
@@ -1991,7 +1991,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:132"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:132"
   process $64
     assign \wl_wr_idx [6:0] 7'0000000
     switch \fsm_state [2:0]
@@ -2014,7 +2014,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:133"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:133"
   process $65
     assign \wl_wr_data [12:0] 13'0000000000000
     switch \fsm_state [2:0]
@@ -2037,7 +2037,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:135"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:135"
   process $66
     assign \wl_wr_en [0] 1'0
     switch \fsm_state [2:0]
@@ -2060,7 +2060,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:134"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:134"
   process $67
     assign \wl_wr_len [6:0] 7'0000000
     switch \fsm_state [2:0]
@@ -2083,7 +2083,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:136"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:136"
   process $68
     assign \wl_wr_len_en [0] 1'0
     switch \fsm_state [2:0]
@@ -2106,7 +2106,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:139"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:139"
   process $69
     assign \assign_wr_addr [8:0] 9'000000000
     switch \fsm_state [2:0]
@@ -2129,7 +2129,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:140"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:140"
   process $70
     assign \assign_wr_data [1:0] 2'00
     switch \fsm_state [2:0]
@@ -2152,7 +2152,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:141"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:141"
   process $71
     assign \assign_wr_en [0] 1'0
     switch \fsm_state [2:0]
@@ -2175,7 +2175,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:107"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:107"
   process $72
     assign \bcp_false_lit [9:0] 10'0000000000
     switch \fsm_state [2:0]
@@ -2198,7 +2198,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:106"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:106"
   process $73
     assign \bcp_start [0] 1'0
     switch \fsm_state [2:0]
@@ -2221,7 +2221,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:101"
   process $74
     assign \tx_data [7:0] 8'00000000
     switch \fsm_state [2:0]
@@ -2237,7 +2237,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:102"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:102"
   process $75
     assign \tx_valid [0] 1'0
     switch \fsm_state [2:0]
@@ -2253,7 +2253,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:117"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:117"
   process $76
     assign \impl_ready [0] 1'0
     switch \fsm_state [2:0]
@@ -2274,7 +2274,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:149"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:149"
   process $77
     assign $16 [7:0] \cmd [7:0]
     switch \fsm_state [2:0]
@@ -2292,7 +2292,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:149"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:149"
   cell $dff $78
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2301,7 +2301,7 @@ module \bcp_accel.host_if
     connect \Q \cmd
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:151"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:151"
   process $79
     assign $17 [3:0] \buf_idx [3:0]
     switch \fsm_state [2:0]
@@ -2327,7 +2327,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:151"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:151"
   cell $dff $80
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -2336,7 +2336,7 @@ module \bcp_accel.host_if
     connect \Q \buf_idx
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:150"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:150"
   process $81
     assign $18 [3:0] \payload_len [3:0]
     switch \fsm_state [2:0]
@@ -2365,7 +2365,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:150"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:150"
   cell $dff $82
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -2458,7 +2458,7 @@ module \bcp_accel.host_if
     connect \Q \fsm_state
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $85
     assign $20 [7:0] \buf_0 [7:0]
     switch \fsm_state [2:0]
@@ -2492,7 +2492,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $86
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2501,7 +2501,7 @@ module \bcp_accel.host_if
     connect \Q \buf_0
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $87
     assign $21 [7:0] \buf_1 [7:0]
     switch \fsm_state [2:0]
@@ -2535,7 +2535,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $88
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2544,7 +2544,7 @@ module \bcp_accel.host_if
     connect \Q \buf_1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $89
     assign $22 [7:0] \buf_2 [7:0]
     switch \fsm_state [2:0]
@@ -2578,7 +2578,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $90
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2587,7 +2587,7 @@ module \bcp_accel.host_if
     connect \Q \buf_2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $91
     assign $23 [7:0] \buf_3 [7:0]
     switch \fsm_state [2:0]
@@ -2621,7 +2621,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $92
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2630,7 +2630,7 @@ module \bcp_accel.host_if
     connect \Q \buf_3
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $93
     assign $24 [7:0] \buf_4 [7:0]
     switch \fsm_state [2:0]
@@ -2664,7 +2664,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $94
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2673,7 +2673,7 @@ module \bcp_accel.host_if
     connect \Q \buf_4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $95
     assign $25 [7:0] \buf_5 [7:0]
     switch \fsm_state [2:0]
@@ -2707,7 +2707,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $96
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2716,7 +2716,7 @@ module \bcp_accel.host_if
     connect \Q \buf_5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $97
     assign $26 [7:0] \buf_6 [7:0]
     switch \fsm_state [2:0]
@@ -2750,7 +2750,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $98
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2759,7 +2759,7 @@ module \bcp_accel.host_if
     connect \Q \buf_6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $99
     assign $27 [7:0] \buf_7 [7:0]
     switch \fsm_state [2:0]
@@ -2793,7 +2793,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $100
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2802,7 +2802,7 @@ module \bcp_accel.host_if
     connect \Q \buf_7
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $101
     assign $28 [7:0] \buf_8 [7:0]
     switch \fsm_state [2:0]
@@ -2836,7 +2836,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $102
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2845,7 +2845,7 @@ module \bcp_accel.host_if
     connect \Q \buf_8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $103
     assign $29 [7:0] \buf_9 [7:0]
     switch \fsm_state [2:0]
@@ -2879,7 +2879,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $104
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2888,7 +2888,7 @@ module \bcp_accel.host_if
     connect \Q \buf_9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $105
     assign $30 [7:0] \buf_10 [7:0]
     switch \fsm_state [2:0]
@@ -2922,7 +2922,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $106
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2931,7 +2931,7 @@ module \bcp_accel.host_if
     connect \Q \buf_10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $107
     assign $31 [7:0] \buf_11 [7:0]
     switch \fsm_state [2:0]
@@ -2965,7 +2965,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $108
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -2974,7 +2974,7 @@ module \bcp_accel.host_if
     connect \Q \buf_11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $109
     assign $32 [7:0] \buf_12 [7:0]
     switch \fsm_state [2:0]
@@ -3008,7 +3008,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $110
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -3017,7 +3017,7 @@ module \bcp_accel.host_if
     connect \Q \buf_12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   process $111
     assign $33 [7:0] \buf_13 [7:0]
     switch \fsm_state [2:0]
@@ -3051,7 +3051,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:148"
   cell $dff $112
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
@@ -3060,7 +3060,7 @@ module \bcp_accel.host_if
     connect \Q \buf_13
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:161"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:161"
   process $113
     assign $34 [0] \conflict_reg [0]
     switch \fsm_state [2:0]
@@ -3078,7 +3078,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:161"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:161"
   cell $dff $114
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -3087,7 +3087,7 @@ module \bcp_accel.host_if
     connect \Q \conflict_reg
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:162"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:162"
   process $115
     assign $35 [12:0] \conflict_id_reg [12:0]
     switch \fsm_state [2:0]
@@ -3105,7 +3105,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:162"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:162"
   cell $dff $116
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
@@ -3114,7 +3114,7 @@ module \bcp_accel.host_if
     connect \Q \conflict_id_reg
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:157"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:157"
   process $117
     assign $36 [47:0] \tx_shift [47:0]
     switch \fsm_state [2:0]
@@ -3142,7 +3142,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:157"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:157"
   cell $dff $118
     parameter \WIDTH 48
     parameter \CLK_POLARITY 1
@@ -3151,7 +3151,7 @@ module \bcp_accel.host_if
     connect \Q \tx_shift
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:158"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:158"
   process $119
     assign $37 [2:0] \tx_count [2:0]
     switch \fsm_state [2:0]
@@ -3179,7 +3179,7 @@ module \bcp_accel.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/host_interface.py:158"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/host_interface.py:158"
   cell $dff $120
     parameter \WIDTH 3
     parameter \CLK_POLARITY 1
@@ -3202,290 +3202,290 @@ connect \done_b2 \conflict_id_reg [7:0]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:109"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:109"
 module \bcp_accel.bcp
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:58"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:58"
   wire width 10 \false_lit$1
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:72"
   wire width 10 \rd_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:76"
   wire width 10 \wl_rd_lit
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:73"
   wire width 7 \rd_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:77"
   wire width 7 \wl_rd_idx
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:74"
   wire width 1 \rd_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:80"
   wire width 1 \wl_rd_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:78"
   wire width 13 \wl_rd_data
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:76"
   wire width 13 \rd_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:79"
   wire width 7 \wl_rd_len
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:75"
   wire width 7 \rd_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:56"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:56"
   wire width 13 \clause_id_in
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:71"
   wire width 13 \clause_id
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:57"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:57"
   wire width 1 \clause_id_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:72"
   wire width 1 \clause_id_valid$15
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:63"
   wire width 13 \rd_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:71"
   wire width 13 \clause_rd_addr
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:64"
   wire width 1 \rd_en$18
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:72"
   wire width 1 \clause_rd_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:73"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:73"
   wire width 1 \clause_rd_valid
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:72"
   wire width 1 \rd_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:74"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:74"
   wire width 1 \clause_rd_sat_bit
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:65"
   wire width 1 \rd_data_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:75"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:75"
   wire width 3 \clause_rd_size
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:66"
   wire width 3 \rd_data_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:76"
   wire width 16 \clause_rd_lit0
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:67"
   wire width 16 \rd_data_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:77"
   wire width 16 \clause_rd_lit1
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:68"
   wire width 16 \rd_data_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:78"
   wire width 16 \clause_rd_lit2
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:69"
   wire width 16 \rd_data_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:79"
   wire width 16 \clause_rd_lit3
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:70"
   wire width 16 \rd_data_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:80"
   wire width 16 \clause_rd_lit4
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/clause_memory.py:71"
   wire width 16 \rd_data_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:68"
   wire width 13 \clause_id_in$36
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:60"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:60"
   wire width 13 \clause_id_out
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:69"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:69"
   wire width 1 \meta_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:61"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:61"
   wire width 1 \meta_valid$39
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:70"
   wire width 1 \sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:62"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:62"
   wire width 1 \out_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:71"
   wire width 3 \size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:63"
   wire width 3 \out_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:72"
   wire width 16 \lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:64"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:64"
   wire width 16 \out_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:73"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:73"
   wire width 16 \lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:65"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:65"
   wire width 16 \out_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:74"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:74"
   wire width 16 \lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:66"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:66"
   wire width 16 \out_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:75"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:75"
   wire width 16 \lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:67"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:67"
   wire width 16 \out_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:76"
   wire width 16 \lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:68"
   wire width 16 \out_lit4
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/assignment_memory.py:50"
   wire width 9 \rd_addr$54
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:79"
   wire width 9 \assign_rd_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:80"
   wire width 2 \assign_rd_data
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/assignment_memory.py:51"
   wire width 2 \rd_data$57
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:62"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:62"
   wire width 1 \push_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:87"
   wire width 1 \result_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:83"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:83"
   wire width 2 \result_status
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:63"
   wire width 9 \push_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:84"
   wire width 9 \result_implied_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:64"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:64"
   wire width 1 \push_value
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:85"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:85"
   wire width 1 \result_implied_val
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:65"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:65"
   wire width 13 \push_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:86"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:86"
   wire width 13 \result_clause_id
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:68"
   wire width 1 \pop_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:68"
   wire width 9 \impl_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:69"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:69"
   wire width 9 \pop_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:69"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:69"
   wire width 1 \impl_value
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:70"
   wire width 1 \pop_value
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:70"
   wire width 13 \impl_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:71"
   wire width 13 \pop_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:71"
   wire width 1 \impl_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:76"
   wire width 13 \clause_wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:77"
   wire width 1 \clause_wr_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:78"
   wire width 3 \clause_wr_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:79"
   wire width 16 \clause_wr_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:80"
   wire width 16 \clause_wr_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:81"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:81"
   wire width 16 \clause_wr_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:82"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:82"
   wire width 16 \clause_wr_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:83"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:83"
   wire width 16 \clause_wr_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:84"
   wire width 1 \clause_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:87"
   wire width 10 \wl_wr_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:88"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:88"
   wire width 7 \wl_wr_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:89"
   wire width 13 \wl_wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:90"
   wire width 7 \wl_wr_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:91"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:91"
   wire width 1 \wl_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:92"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:92"
   wire width 1 \wl_wr_len_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:95"
   wire width 9 \assign_wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:96"
   wire width 2 \assign_wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:97"
   wire width 1 \assign_wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:237"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:237"
   attribute \init 1'0
   wire width 1 \conflict_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:238"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:238"
   attribute \init 13'0000000000000
   wire width 13 \conflict_cid_reg
 
@@ -3493,27 +3493,27 @@ module \bcp_accel.bcp
   attribute \init 2'00
   wire width 2 \fsm_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:240"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:240"
   wire width 1 \fsm_starting
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:67"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:67"
   wire width 1 \start$120
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:60"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:60"
   wire width 1 \busy
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:236"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:236"
   attribute \init 7'0000000
   wire width 7 \in_flight
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:73"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:73"
   wire width 1 \done$125
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:239"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:239"
   attribute \init 1'0
   wire width 1 \wlm_done_seen
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:68"
   wire width 1 output 0  \impl_valid
 
   wire width 23 output 1  \port$318$0
@@ -3521,77 +3521,77 @@ module \bcp_accel.bcp
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 2  \clk
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:76"
   wire width 13 input 3  \wr_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:78"
   wire width 3 input 4  \wr_data_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:77"
   wire width 1 input 5  \wr_data_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:79"
   wire width 16 input 6  \wr_data_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:80"
   wire width 16 input 7  \wr_data_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:81"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:81"
   wire width 16 input 8  \wr_data_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:82"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:82"
   wire width 16 input 9  \wr_data_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:83"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:83"
   wire width 16 input 10  \wr_data_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:84"
   wire width 1 input 11  \wr_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:87"
   wire width 10 input 12  \wr_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:88"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:88"
   wire width 7 input 13  \wr_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:89"
   wire width 13 input 14  \wr_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:91"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:91"
   wire width 1 input 15  \wr_en$103
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:90"
   wire width 7 input 16  \wr_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:92"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:92"
   wire width 1 input 17  \wr_len_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:95"
   wire width 9 input 18  \wr_addr$107
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:96"
   wire width 2 input 19  \wr_data$109
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:97"
   wire width 1 input 20  \wr_en$111
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:58"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:58"
   wire width 10 input 21  \false_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:57"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:57"
   wire width 1 input 22  \start
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:71"
   wire width 1 input 23  \pop_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:59"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:59"
   wire width 1 output 24  \done
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:237"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:237"
   attribute \init 1'0
   wire width 1 output 25  \conflict
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:238"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:238"
   attribute \init 13'0000000000000
   wire width 13 output 26  \conflict_clause_id
 
@@ -3649,7 +3649,7 @@ module \bcp_accel.bcp
 
   wire width 23 $27
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:120"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:120"
   cell \bcp_accel.bcp.clause_mem \clause_mem
     connect \clk \clk [0]
     connect \wr_port__addr \wr_addr [12:0]
@@ -3667,7 +3667,7 @@ module \bcp_accel.bcp
     connect \rd_port__en \clause_id_valid [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:121"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:121"
   cell \bcp_accel.bcp.watch_mem \watch_mem
     connect \clk \clk [0]
     connect \wr_lit \wr_lit [9:0]
@@ -3683,7 +3683,7 @@ module \bcp_accel.bcp
     connect \len_rd__en \rd_en [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:122"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:122"
   cell \bcp_accel.bcp.assign_mem \assign_mem
     connect \rd_data \assign_rd_data [1:0]
     connect \rd_port__addr \rd_addr$54 [8:0]
@@ -3693,7 +3693,7 @@ module \bcp_accel.bcp
     connect \wr_port__en \wr_en$111 [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:123"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:123"
   cell \bcp_accel.bcp.watch_mgr \watch_mgr
     connect \clk \clk [0]
     connect \false_lit \false_lit [9:0]
@@ -3708,7 +3708,7 @@ module \bcp_accel.bcp
     connect \done \done$125 [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:124"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:124"
   cell \bcp_accel.bcp.prefetcher \prefetcher
     connect \clk \clk [0]
     connect \port$441$0 $26 [83:0]
@@ -3718,7 +3718,7 @@ module \bcp_accel.bcp
     connect \meta_valid \meta_valid [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:125"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:125"
   cell \bcp_accel.bcp.evaluator \evaluator
     connect \assign_rd_data \assign_rd_data [1:0]
     connect \assign_rd_addr \rd_addr$54 [8:0]
@@ -3733,7 +3733,7 @@ module \bcp_accel.bcp
     connect \result_implied_val \push_value [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:126"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:126"
   cell \bcp_accel.bcp.impl_fifo \impl_fifo
     connect \push_valid \push_valid [0]
     connect \pop_valid \impl_valid [0]
@@ -3745,7 +3745,7 @@ module \bcp_accel.bcp
     connect \push_value \push_value [0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:187"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:187"
   cell $eq $28
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3757,7 +3757,7 @@ module \bcp_accel.bcp
     connect \Y $1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:187"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:187"
   cell $and $29
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3805,7 +3805,7 @@ module \bcp_accel.bcp
     connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:248"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:248"
   cell $not $33
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -3814,7 +3814,7 @@ module \bcp_accel.bcp
     connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:248"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:248"
   cell $and $34
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3826,7 +3826,7 @@ module \bcp_accel.bcp
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:250"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:250"
   cell $not $35
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -3835,7 +3835,7 @@ module \bcp_accel.bcp
     connect \Y $7
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:250"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:250"
   cell $and $36
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3847,7 +3847,7 @@ module \bcp_accel.bcp
     connect \Y $8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:249"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:249"
   cell $add $37
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3859,7 +3859,7 @@ module \bcp_accel.bcp
     connect \Y $9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:251"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:251"
   cell $sub $38
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3871,7 +3871,7 @@ module \bcp_accel.bcp
     connect \Y $10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:260"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:260"
   cell $eq $39
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3883,7 +3883,7 @@ module \bcp_accel.bcp
     connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:259"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:259"
   cell $and $40
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3895,7 +3895,7 @@ module \bcp_accel.bcp
     connect \Y $12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:261"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:261"
   cell $not $41
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -3904,7 +3904,7 @@ module \bcp_accel.bcp
     connect \Y $13
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:259"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:259"
   cell $and $42
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3916,7 +3916,7 @@ module \bcp_accel.bcp
     connect \Y $14
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:280"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:280"
   cell $eq $43
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3928,7 +3928,7 @@ module \bcp_accel.bcp
     connect \Y $15
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:279"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:279"
   cell $and $44
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3940,7 +3940,7 @@ module \bcp_accel.bcp
     connect \Y $16
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:294"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:294"
   cell $or $45
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3952,7 +3952,7 @@ module \bcp_accel.bcp
     connect \Y $17
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:296"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:296"
   cell $or $46
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3964,7 +3964,7 @@ module \bcp_accel.bcp
     connect \Y $18
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:297"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:297"
   cell $eq $47
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3976,7 +3976,7 @@ module \bcp_accel.bcp
     connect \Y $19
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:296"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:296"
   cell $and $48
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -3988,7 +3988,7 @@ module \bcp_accel.bcp
     connect \Y $20
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:240"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:240"
   process $49
     assign \fsm_starting [0] 1'0
     switch \fsm_state [1:0]
@@ -4002,7 +4002,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:67"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:67"
   process $50
     assign \start$120 [0] 1'0
     switch \fsm_state [1:0]
@@ -4016,7 +4016,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:60"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:60"
   process $51
     assign \busy [0] 1'0
     switch \fsm_state [1:0]
@@ -4027,7 +4027,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:59"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:59"
   process $52
     assign \done [0] 1'0
     switch \fsm_state [1:0]
@@ -4038,7 +4038,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:236"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:236"
   process $53
     assign $21 [6:0] \in_flight [6:0]
     switch { $8 [0] $6 [0] \fsm_starting [0] }
@@ -4051,7 +4051,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:236"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:236"
   cell $dff $54
     parameter \WIDTH 7
     parameter \CLK_POLARITY 1
@@ -4060,7 +4060,7 @@ module \bcp_accel.bcp
     connect \Q \in_flight
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:237"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:237"
   process $55
     assign $22 [0] \conflict [0]
     switch { $14 [0] \fsm_starting [0] }
@@ -4071,7 +4071,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:237"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:237"
   cell $dff $56
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -4080,7 +4080,7 @@ module \bcp_accel.bcp
     connect \Q \conflict
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:238"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:238"
   process $57
     assign $23 [12:0] \conflict_clause_id [12:0]
     switch { $14 [0] \fsm_starting [0] }
@@ -4091,7 +4091,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:238"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:238"
   cell $dff $58
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
@@ -4100,7 +4100,7 @@ module \bcp_accel.bcp
     connect \Q \conflict_clause_id
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:239"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:239"
   process $59
     assign $24 [0] \wlm_done_seen [0]
     switch { \done$125 [0] \fsm_starting [0] }
@@ -4111,7 +4111,7 @@ module \bcp_accel.bcp
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/bcp_accelerator.py:239"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:239"
   cell $dff $60
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -4847,60 +4847,60 @@ connect \wr_en \wr_port__en [0]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:83"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:83"
 module \bcp_accel.bcp.watch_mgr
 
   attribute \src "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/contextlib.py:148"
   attribute \init 2'00
   wire width 2 \fsm_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:85"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:85"
   attribute \init 10'0000000000
   wire width 10 \stored_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:87"
   attribute \init 7'0000000
   wire width 7 \pipe_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:88"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:88"
   attribute \init 7'0000000
   wire width 7 \output_count
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:86"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:86"
   attribute \init 7'0000000
   wire width 7 \watch_len
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 0  \clk
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:68"
   wire width 10 input 1  \false_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:67"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:67"
   wire width 1 input 2  \start
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:79"
   wire width 7 input 3  \wl_rd_len
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:78"
   wire width 13 input 4  \wl_rd_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:76"
   wire width 10 output 5  \wl_rd_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:77"
   wire width 7 output 6  \wl_rd_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:80"
   wire width 1 output 7  \wl_rd_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:71"
   wire width 13 output 8  \clause_id
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:72"
   wire width 1 output 9  \clause_id_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:73"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:73"
   wire width 1 output 10  \done
 
   wire width 1 $1
@@ -4957,7 +4957,7 @@ module \bcp_accel.bcp.watch_mgr
 
   wire width 7 $27
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:124"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:124"
   cell $eq $28
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -4969,7 +4969,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:126"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:126"
   cell $eq $29
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -4981,7 +4981,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:137"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:137"
   cell $eq $30
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -4993,7 +4993,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $3
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:141"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:141"
   cell $lt $31
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5005,7 +5005,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:155"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155"
   cell $add $32
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5017,7 +5017,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:155"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155"
   cell $ge $33
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5029,7 +5029,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:158"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:158"
   cell $lt $34
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5089,7 +5089,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:117"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:117"
   cell $add $39
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5101,7 +5101,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:124"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:124"
   cell $eq $40
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5113,7 +5113,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $13
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:126"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:126"
   cell $eq $41
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5125,7 +5125,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $14
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:137"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:137"
   cell $eq $42
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5137,7 +5137,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $15
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:141"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:141"
   cell $lt $43
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5149,7 +5149,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $16
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:147"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:147"
   cell $add $44
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5161,7 +5161,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $17
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:154"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:154"
   cell $add $45
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5173,7 +5173,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $18
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:155"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155"
   cell $add $46
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5185,7 +5185,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $19
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:155"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155"
   cell $ge $47
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5197,7 +5197,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $20
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:158"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:158"
   cell $lt $48
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5209,7 +5209,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $21
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:164"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:164"
   cell $add $49
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5221,7 +5221,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Y $22
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:76"
   process $50
     assign \wl_rd_lit [9:0] 10'0000000000
     switch \fsm_state [1:0]
@@ -5261,7 +5261,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:77"
   process $51
     assign \wl_rd_idx [6:0] 7'0000000
     switch \fsm_state [1:0]
@@ -5301,7 +5301,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:80"
   process $52
     assign \wl_rd_en [0] 1'0
     switch \fsm_state [1:0]
@@ -5341,7 +5341,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:71"
   process $53
     assign \clause_id [12:0] 13'0000000000000
     switch \fsm_state [1:0]
@@ -5362,7 +5362,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:72"
   process $54
     assign \clause_id_valid [0] 1'0
     switch \fsm_state [1:0]
@@ -5383,7 +5383,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:73"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:73"
   process $55
     assign \done [0] 1'0
     switch \fsm_state [1:0]
@@ -5395,7 +5395,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:85"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:85"
   process $56
     assign $23 [9:0] \stored_lit [9:0]
     switch \fsm_state [1:0]
@@ -5410,7 +5410,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:85"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:85"
   cell $dff $57
     parameter \WIDTH 10
     parameter \CLK_POLARITY 1
@@ -5419,7 +5419,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Q \stored_lit
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:87"
   process $58
     assign $24 [6:0] \pipe_idx [6:0]
     switch \fsm_state [1:0]
@@ -5459,7 +5459,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:87"
   cell $dff $59
     parameter \WIDTH 7
     parameter \CLK_POLARITY 1
@@ -5468,7 +5468,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Q \pipe_idx
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:88"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:88"
   process $60
     assign $25 [6:0] \output_count [6:0]
     switch \fsm_state [1:0]
@@ -5493,7 +5493,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:88"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:88"
   cell $dff $61
     parameter \WIDTH 7
     parameter \CLK_POLARITY 1
@@ -5547,7 +5547,7 @@ module \bcp_accel.bcp.watch_mgr
     connect \Q \fsm_state
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:86"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:86"
   process $64
     assign $27 [6:0] \watch_len [6:0]
     switch \fsm_state [1:0]
@@ -5567,7 +5567,7 @@ module \bcp_accel.bcp.watch_mgr
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/watch_list_manager.py:86"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:86"
   cell $dff $65
     parameter \WIDTH 7
     parameter \CLK_POLARITY 1
@@ -5579,70 +5579,70 @@ module \bcp_accel.bcp.watch_mgr
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:83"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:83"
 module \bcp_accel.bcp.prefetcher
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:56"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:56"
   wire width 13 \clause_id_in
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:57"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:57"
   wire width 1 \clause_id_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:95"
   attribute \init 1'0
   wire width 1 \stage2_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:94"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:94"
   attribute \init 13'0000000000000
   wire width 13 \stage2_cid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:62"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:62"
   wire width 1 \out_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:74"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:74"
   wire width 1 \clause_rd_sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:63"
   wire width 3 \out_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:75"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:75"
   wire width 3 \clause_rd_size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:64"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:64"
   wire width 16 \out_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:76"
   wire width 16 \clause_rd_lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:65"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:65"
   wire width 16 \out_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:77"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:77"
   wire width 16 \clause_rd_lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:66"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:66"
   wire width 16 \out_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:78"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:78"
   wire width 16 \clause_rd_lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:67"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:67"
   wire width 16 \out_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:79"
   wire width 16 \clause_rd_lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:68"
   wire width 16 \out_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:80"
   wire width 16 \clause_rd_lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:92"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:92"
   attribute \init 13'0000000000000
   wire width 13 \stage1_cid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:93"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:93"
   attribute \init 1'0
   wire width 1 \stage1_valid
 
@@ -5651,21 +5651,21 @@ module \bcp_accel.bcp.prefetcher
 
   wire width 84 input 1  \port$441$0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:56"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:56"
   wire width 13 input 2  \clause_rd_addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:57"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:57"
   wire width 1 input 3  \clause_rd_en
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:94"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:94"
   attribute \init 13'0000000000000
   wire width 13 output 4  \clause_id_out
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:95"
   attribute \init 1'0
   wire width 1 output 5  \meta_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:92"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:92"
   cell $dff $1
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
@@ -5674,7 +5674,7 @@ module \bcp_accel.bcp.prefetcher
     connect \Q \stage1_cid
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:93"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:93"
   cell $dff $2
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -5683,7 +5683,7 @@ module \bcp_accel.bcp.prefetcher
     connect \Q \stage1_valid
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:94"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:94"
   cell $dff $3
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
@@ -5692,7 +5692,7 @@ module \bcp_accel.bcp.prefetcher
     connect \Q \clause_id_out
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_prefetcher.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:95"
   cell $dff $4
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -5723,33 +5723,33 @@ connect \clause_rd_lit4 \port$441$0 [83:68]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:90"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:90"
 module \bcp_accel.bcp.evaluator
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:102"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:102"
   wire width 16 \current_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:98"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:98"
   attribute \init 3'000
   wire width 3 \lit_idx
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   attribute \init 16'0000000000000000
   wire width 16 \lit_reg0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   attribute \init 16'0000000000000000
   wire width 16 \lit_reg1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   attribute \init 16'0000000000000000
   wire width 16 \lit_reg2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   attribute \init 16'0000000000000000
   wire width 16 \lit_reg3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   attribute \init 16'0000000000000000
   wire width 16 \lit_reg4
 
@@ -5757,57 +5757,57 @@ module \bcp_accel.bcp.evaluator
   attribute \init 2'00
   wire width 2 \eval_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:150"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:150"
   wire width 1 \lit_true
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:156"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:156"
   wire width 1 \lit_unassigned
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:93"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:93"
   attribute \init 13'0000000000000
   wire width 13 \clause_id_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:95"
   attribute \init 1'0
   wire width 1 \satisfied
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:96"
   attribute \init 3'000
   wire width 3 \unassigned_count
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:97"
   attribute \init 16'0000000000000000
   wire width 16 \last_unassigned_lit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:94"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:94"
   attribute \init 3'000
   wire width 3 \size_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:71"
   wire width 3 \size
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:72"
   wire width 16 \lit0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:73"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:73"
   wire width 16 \lit1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:74"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:74"
   wire width 16 \lit2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:75"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:75"
   wire width 16 \lit3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:76"
   wire width 16 \lit4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:70"
   wire width 1 \sat_bit
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:80"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:80"
   wire width 2 input 0  \assign_rd_data
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:79"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:79"
   wire width 9 output 1  \assign_rd_addr
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
@@ -5815,25 +5815,25 @@ module \bcp_accel.bcp.evaluator
 
   wire width 84 input 3  \port$441$0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:68"
   wire width 13 input 4  \clause_id_in
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:69"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:69"
   wire width 1 input 5  \meta_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:87"
   wire width 1 output 6  \result_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:86"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:86"
   wire width 13 output 7  \result_clause_id
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:83"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:83"
   wire width 2 output 8  \result_status
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:84"
   wire width 9 output 9  \result_implied_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:85"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:85"
   wire width 1 output 10  \result_implied_val
 
   wire width 16 $1
@@ -5898,7 +5898,7 @@ module \bcp_accel.bcp.evaluator
 
   wire width 3 $31
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:103"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:103"
   process $32
     assign \current_lit [15:0] 16'0000000000000000
     switch \lit_idx [2:0]
@@ -5915,7 +5915,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:107"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:107"
   cell $shr $33
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5927,7 +5927,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:152"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:152"
   cell $not $34
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -5936,7 +5936,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:152"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:152"
   cell $eq $35
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5948,7 +5948,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $3
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:152"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:152"
   cell $and $36
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5960,7 +5960,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:153"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:153"
   cell $eq $37
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5972,7 +5972,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:153"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:153"
   cell $and $38
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5984,7 +5984,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:152"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:152"
   cell $or $39
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -5996,7 +5996,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $7
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:157"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:157"
   cell $eq $40
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6008,7 +6008,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:181"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:181"
   cell $eq $41
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6020,7 +6020,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:183"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:183"
   cell $eq $42
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6032,7 +6032,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:186"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:186"
   cell $shr $43
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6044,7 +6044,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:189"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:189"
   cell $not $44
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -6089,7 +6089,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $15
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:163"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:163"
   cell $add $48
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6101,7 +6101,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $16
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:168"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:168"
   cell $sub $49
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6113,7 +6113,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $17
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:168"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:168"
   cell $eq $50
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6125,7 +6125,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $18
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:171"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:171"
   cell $add $51
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6137,7 +6137,7 @@ module \bcp_accel.bcp.evaluator
     connect \Y $19
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:87"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:87"
   process $52
     assign \result_valid [0] 1'0
     switch \eval_state [1:0]
@@ -6149,7 +6149,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:150"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:150"
   process $53
     assign \lit_true [0] 1'0
     switch \eval_state [1:0]
@@ -6160,7 +6160,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:156"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:156"
   process $54
     assign \lit_unassigned [0] 1'0
     switch \eval_state [1:0]
@@ -6171,7 +6171,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:86"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:86"
   process $55
     assign \result_clause_id [12:0] 13'0000000000000
     switch \eval_state [1:0]
@@ -6182,7 +6182,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:83"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:83"
   process $56
     assign \result_status [1:0] 2'00
     switch \eval_state [1:0]
@@ -6202,7 +6202,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:84"
   process $57
     assign \result_implied_var [8:0] 9'000000000
     switch \eval_state [1:0]
@@ -6219,7 +6219,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:85"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:85"
   process $58
     assign \result_implied_val [0] 1'0
     switch \eval_state [1:0]
@@ -6236,7 +6236,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:93"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:93"
   process $59
     assign $20 [12:0] \clause_id_reg [12:0]
     switch \eval_state [1:0]
@@ -6250,7 +6250,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:93"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:93"
   cell $dff $60
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
@@ -6259,7 +6259,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \clause_id_reg
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:94"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:94"
   process $61
     assign $21 [2:0] \size_reg [2:0]
     switch \eval_state [1:0]
@@ -6273,7 +6273,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:94"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:94"
   cell $dff $62
     parameter \WIDTH 3
     parameter \CLK_POLARITY 1
@@ -6282,7 +6282,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \size_reg
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   process $63
     assign $22 [15:0] \lit_reg0 [15:0]
     switch \eval_state [1:0]
@@ -6296,7 +6296,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   cell $dff $64
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
@@ -6305,7 +6305,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \lit_reg0
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   process $65
     assign $23 [15:0] \lit_reg1 [15:0]
     switch \eval_state [1:0]
@@ -6319,7 +6319,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   cell $dff $66
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
@@ -6328,7 +6328,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \lit_reg1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   process $67
     assign $24 [15:0] \lit_reg2 [15:0]
     switch \eval_state [1:0]
@@ -6342,7 +6342,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   cell $dff $68
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
@@ -6351,7 +6351,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \lit_reg2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   process $69
     assign $25 [15:0] \lit_reg3 [15:0]
     switch \eval_state [1:0]
@@ -6365,7 +6365,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   cell $dff $70
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
@@ -6374,7 +6374,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \lit_reg3
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   process $71
     assign $26 [15:0] \lit_reg4 [15:0]
     switch \eval_state [1:0]
@@ -6388,7 +6388,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:101"
   cell $dff $72
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
@@ -6397,7 +6397,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \lit_reg4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:96"
   process $73
     assign $27 [2:0] \unassigned_count [2:0]
     switch \eval_state [1:0]
@@ -6415,7 +6415,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:96"
   cell $dff $74
     parameter \WIDTH 3
     parameter \CLK_POLARITY 1
@@ -6424,7 +6424,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \unassigned_count
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:97"
   process $75
     assign $28 [15:0] \last_unassigned_lit [15:0]
     switch \eval_state [1:0]
@@ -6442,7 +6442,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:97"
   cell $dff $76
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
@@ -6451,7 +6451,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \last_unassigned_lit
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:95"
   process $77
     assign $29 [0] \satisfied [0]
     switch \eval_state [1:0]
@@ -6474,7 +6474,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:95"
   cell $dff $78
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
@@ -6517,7 +6517,7 @@ module \bcp_accel.bcp.evaluator
     connect \Q \eval_state
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:98"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:98"
   process $81
     assign $31 [2:0] \lit_idx [2:0]
     switch \eval_state [1:0]
@@ -6540,7 +6540,7 @@ module \bcp_accel.bcp.evaluator
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/clause_evaluator.py:98"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:98"
   cell $dff $82
     parameter \WIDTH 3
     parameter \CLK_POLARITY 1
@@ -6561,36 +6561,36 @@ connect \assign_rd_addr $1 [8:0]
 end
 
 attribute \generator "Amaranth"
-attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:79"
+attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:79"
 module \bcp_accel.bcp.impl_fifo
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:84"
   memory width 23 size 16 \mem
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:75"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:75"
   wire width 1 \fifo_empty
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:91"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:91"
   attribute \init 5'00000
   wire width 5 \count
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:76"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:76"
   wire width 1 \fifo_full
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:101"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:101"
   wire width 1 \do_push
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:102"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:102"
   wire width 1 \do_pop
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:110"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:110"
   wire width 23 \push_word
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/memory.py:401"
   attribute \init 4'0000
   wire width 4 \wr_port__addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:89"
   attribute \init 4'0000
   wire width 4 \wr_ptr
 
@@ -6604,23 +6604,23 @@ module \bcp_accel.bcp.impl_fifo
   attribute \init 4'0000
   wire width 4 \rd_port__addr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:90"
   attribute \init 4'0000
   wire width 4 \rd_ptr
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:69"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:69"
   wire width 9 \pop_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:70"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:70"
   wire width 1 \pop_value
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:71"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:71"
   wire width 13 \pop_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:62"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:62"
   wire width 1 input 0  \push_valid
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:68"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:68"
   wire width 1 output 1  \pop_valid
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/memory.py:241"
@@ -6629,16 +6629,16 @@ module \bcp_accel.bcp.impl_fifo
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 3  \clk
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:72"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:72"
   wire width 1 input 4  \pop_ready
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:65"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:65"
   wire width 13 input 5  \push_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:63"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:63"
   wire width 9 input 6  \push_var
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:64"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:64"
   wire width 1 input 7  \push_value
 
   wire width 1 $1
@@ -6671,7 +6671,7 @@ module \bcp_accel.bcp.impl_fifo
 
   wire width 4 $15
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:95"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:95"
   cell $eq $16
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6683,7 +6683,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y \fifo_empty
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:96"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:96"
   cell $eq $17
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6695,7 +6695,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y \fifo_full
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:97"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:97"
   cell $not $18
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -6704,7 +6704,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y \pop_valid
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:104"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:104"
   cell $not $19
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -6713,7 +6713,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:104"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:104"
   cell $and $20
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6725,7 +6725,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y \do_push
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:105"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:105"
   cell $not $21
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -6734,7 +6734,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:105"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:105"
   cell $and $22
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6746,7 +6746,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y \do_pop
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:132"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:132"
   cell $not $23
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -6755,7 +6755,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $3
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:132"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:132"
   cell $and $24
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6767,7 +6767,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:134"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:134"
   cell $not $25
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
@@ -6776,7 +6776,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:134"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:134"
   cell $and $26
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6788,7 +6788,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:133"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:133"
   cell $add $27
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6800,7 +6800,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $7
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:135"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:135"
   cell $sub $28
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6812,7 +6812,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $8
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:139"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:139"
   cell $eq $29
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6824,7 +6824,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $9
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:142"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:142"
   cell $add $30
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6836,7 +6836,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $10
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:145"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:145"
   cell $eq $31
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6848,7 +6848,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:148"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:148"
   cell $add $32
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
@@ -6860,7 +6860,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Y $12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:84"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:84"
   cell $meminit_v2 $33
     parameter \MEMID "\\mem"
     parameter \ABITS 0
@@ -6908,7 +6908,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \CLK 1'0
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:110"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:110"
   process $36
     assign \push_word [22:0] 23'00000000000000000000000
     assign \push_word [8:0] \push_var [8:0]
@@ -6916,7 +6916,7 @@ module \bcp_accel.bcp.impl_fifo
     assign \push_word [22:10] \push_reason [12:0]
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:91"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:91"
   process $37
     assign $13 [4:0] \count [4:0]
     switch { $6 [0] $4 [0] }
@@ -6927,7 +6927,7 @@ module \bcp_accel.bcp.impl_fifo
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:91"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:91"
   cell $dff $38
     parameter \WIDTH 5
     parameter \CLK_POLARITY 1
@@ -6936,7 +6936,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Q \count
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:89"
   process $39
     assign $14 [3:0] \wr_port__addr [3:0]
     switch \do_push [0]
@@ -6950,7 +6950,7 @@ module \bcp_accel.bcp.impl_fifo
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:89"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:89"
   cell $dff $40
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
@@ -6959,7 +6959,7 @@ module \bcp_accel.bcp.impl_fifo
     connect \Q \wr_port__addr
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:90"
   process $41
     assign $15 [3:0] \rd_port__addr [3:0]
     switch \do_pop [0]
@@ -6973,7 +6973,7 @@ module \bcp_accel.bcp.impl_fifo
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/implication_fifo.py:90"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:90"
   cell $dff $42
     parameter \WIDTH 4
     parameter \CLK_POLARITY 1
