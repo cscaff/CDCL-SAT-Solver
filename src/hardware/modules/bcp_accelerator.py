@@ -1,14 +1,18 @@
 """
-BCP Hardware Accelerator — Top-Level Module.
+BCP Hardware Accelerator -- Top-Level Module.
 
-Integrates the full BCP pipeline: Watch List Manager → Clause Prefetcher →
-Clause Evaluator → Implication FIFO, backed by the three memory modules
+Integrates the full BCP pipeline: Watch List Manager -> Clause Prefetcher ->
+Clause Evaluator -> Implication FIFO, backed by the three memory modules
 (Clause Database, Watch Lists, Variable Assignments).
+
+Uses elastic valid/ready handshaking at every stage boundary with a global
+pipeline_stall signal for immediate freeze on FIFO-full or conflict.
 
 Provides a clean interface to the software CDCL controller: start with a
 false_lit, receive implications and/or a conflict, wait for done.
 
 See: Hardware Description/BCP_Accelerator_System_Architecture.md
+     Notes/bcp_elastic_pipeline_spec.md
 """
 
 from amaranth import *
@@ -26,30 +30,31 @@ from .implication_fifo import ImplicationFIFO
 
 class BCPAccelerator(Elaboratable):
     """
-    BCP Hardware Accelerator — Top Level.
+    BCP Hardware Accelerator -- Top Level.
 
     Replaces the inner loop of CDCL propagate().  Processes all clauses
     watching a literal that became false.
 
-    Ports — control
+    Ports -- control
     ----------------
-    start     : Signal(), in   — pulse to begin BCP
-    false_lit : Signal(), in   — literal that became false
-    done      : Signal(), out  — pulsed when BCP completes
-    busy      : Signal(), out  — high while processing
+    start     : Signal(), in   -- pulse to begin BCP
+    false_lit : Signal(), in   -- literal that became false
+    done      : Signal(), out  -- pulsed when BCP completes
+    busy      : Signal(), out  -- high while processing
 
-    Ports — conflict
+    Ports -- conflict
     -----------------
-    conflict           : Signal(), out
-    conflict_clause_id : Signal(), out
+    conflict           : Signal(), out  -- held until conflict_ack
+    conflict_clause_id : Signal(), out  -- held stable
+    conflict_ack       : Signal(), in   -- software acknowledges conflict
 
-    Ports — implication stream (from FIFO)
+    Ports -- implication stream (from FIFO)
     ---------------------------------------
     impl_valid  : Signal(), out
     impl_var    : Signal(), out
     impl_value  : Signal(), out
     impl_reason : Signal(), out
-    impl_ready  : Signal(), in  — software acknowledges / pops
+    impl_ready  : Signal(), in  -- software acknowledges / pops
     """
 
     def __init__(self):
@@ -62,6 +67,7 @@ class BCPAccelerator(Elaboratable):
         # --- Conflict interface ---
         self.conflict = Signal()
         self.conflict_clause_id = Signal(range(MAX_CLAUSES))
+        self.conflict_ack = Signal()
 
         # --- Implication interface ---
         self.impl_valid = Signal()
@@ -126,14 +132,26 @@ class BCPAccelerator(Elaboratable):
         m.submodules.impl_fifo = impl_fifo
 
         # =============================================================
-        # Pipeline wiring
+        # Pipeline stall logic
         # =============================================================
 
-        # Top-level → Watch List Manager
+        pipeline_stall = Signal()
+        conflict_reg = Signal()
+        conflict_cid_reg = Signal(range(MAX_CLAUSES))
+
+        m.d.comb += pipeline_stall.eq(
+            impl_fifo.fifo_full | (conflict_reg & ~self.conflict_ack)
+        )
+
+        # =============================================================
+        # Pipeline wiring (elastic valid/ready)
+        # =============================================================
+
+        # Top-level -> Watch List Manager
         m.d.comb += watch_mgr.false_lit.eq(self.false_lit)
         # watch_mgr.start is driven by the FSM below
 
-        # Watch List Manager ↔ Watch List Memory
+        # Watch List Manager <-> Watch List Memory
         m.d.comb += [
             watch_mem.rd_lit.eq(watch_mgr.wl_rd_lit),
             watch_mem.rd_idx.eq(watch_mgr.wl_rd_idx),
@@ -142,13 +160,16 @@ class BCPAccelerator(Elaboratable):
             watch_mgr.wl_rd_len.eq(watch_mem.rd_len),
         ]
 
-        # Watch List Manager → Clause Prefetcher
+        # Watch List Manager -> Clause Prefetcher (with backpressure)
         m.d.comb += [
             prefetcher.clause_id_in.eq(watch_mgr.clause_id),
             prefetcher.clause_id_valid.eq(watch_mgr.clause_id_valid),
+            # Backpressure: prefetcher ready, gated by pipeline_stall
+            watch_mgr.clause_id_ready.eq(
+                prefetcher.clause_id_ready & ~pipeline_stall),
         ]
 
-        # Clause Prefetcher ↔ Clause Memory
+        # Clause Prefetcher <-> Clause Memory
         m.d.comb += [
             clause_mem.rd_addr.eq(prefetcher.clause_rd_addr),
             clause_mem.rd_en.eq(prefetcher.clause_rd_en),
@@ -162,7 +183,7 @@ class BCPAccelerator(Elaboratable):
             prefetcher.clause_rd_lit4.eq(clause_mem.rd_data_lit4),
         ]
 
-        # Clause Prefetcher → Clause Evaluator
+        # Clause Prefetcher -> Clause Evaluator (with backpressure)
         m.d.comb += [
             evaluator.clause_id_in.eq(prefetcher.clause_id_out),
             evaluator.meta_valid.eq(prefetcher.meta_valid),
@@ -173,24 +194,38 @@ class BCPAccelerator(Elaboratable):
             evaluator.lit2.eq(prefetcher.out_lit2),
             evaluator.lit3.eq(prefetcher.out_lit3),
             evaluator.lit4.eq(prefetcher.out_lit4),
+            # Backpressure: evaluator ready, gated by pipeline_stall
+            prefetcher.meta_ready.eq(
+                evaluator.meta_ready & ~pipeline_stall),
         ]
 
-        # Clause Evaluator ↔ Assignment Memory
+        # Clause Evaluator <-> Assignment Memory
         m.d.comb += [
             assign_mem.rd_addr.eq(evaluator.assign_rd_addr),
             evaluator.assign_rd_data.eq(assign_mem.rd_data),
         ]
 
-        # Clause Evaluator → Implication FIFO (UNIT results)
+        # Clause Evaluator result_ready mux:
+        # UNIT results need FIFO space; others are always accepted
+        evaluator_result_ready = Signal()
+        with m.If(evaluator.result_status == UNIT):
+            m.d.comb += evaluator_result_ready.eq(~impl_fifo.fifo_full)
+        with m.Else():
+            m.d.comb += evaluator_result_ready.eq(1)
+        m.d.comb += evaluator.result_ready.eq(evaluator_result_ready)
+
+        # Clause Evaluator -> Implication FIFO (UNIT results only)
         m.d.comb += [
             impl_fifo.push_valid.eq(
-                evaluator.result_valid & (evaluator.result_status == UNIT)),
+                evaluator.result_valid
+                & (evaluator.result_status == UNIT)
+                & evaluator.result_ready),
             impl_fifo.push_var.eq(evaluator.result_implied_var),
             impl_fifo.push_value.eq(evaluator.result_implied_val),
             impl_fifo.push_reason.eq(evaluator.result_clause_id),
         ]
 
-        # Implication FIFO → Top-level interface
+        # Implication FIFO -> Top-level interface
         m.d.comb += [
             self.impl_valid.eq(impl_fifo.pop_valid),
             self.impl_var.eq(impl_fifo.pop_var),
@@ -200,7 +235,7 @@ class BCPAccelerator(Elaboratable):
         ]
 
         # =============================================================
-        # Memory write port pass-through (host interface → memories)
+        # Memory write port pass-through (host interface -> memories)
         # =============================================================
 
         m.d.comb += [
@@ -234,13 +269,12 @@ class BCPAccelerator(Elaboratable):
         # =============================================================
 
         in_flight = Signal(range(MAX_WATCH_LEN + 1))
-        conflict_reg = Signal()
-        conflict_cid_reg = Signal(range(MAX_CLAUSES))
         wlm_done_seen = Signal()
         fsm_starting = Signal()
 
-        do_inc = watch_mgr.clause_id_valid
-        do_dec = evaluator.result_valid
+        # Transaction signals for in-flight counting
+        do_inc = watch_mgr.clause_id_valid & watch_mgr.clause_id_ready
+        do_dec = evaluator.result_valid & evaluator.result_ready
 
         # --- In-flight counter ---
         with m.If(fsm_starting):
@@ -250,7 +284,7 @@ class BCPAccelerator(Elaboratable):
         with m.Elif(do_dec & ~do_inc):
             m.d.sync += in_flight.eq(in_flight - 1)
 
-        # --- Conflict latch ---
+        # --- Conflict latch (held until conflict_ack) ---
         with m.If(fsm_starting):
             m.d.sync += [
                 conflict_reg.eq(0),
@@ -258,6 +292,7 @@ class BCPAccelerator(Elaboratable):
             ]
         with m.Elif(evaluator.result_valid
                      & (evaluator.result_status == CONFLICT)
+                     & evaluator.result_ready
                      & ~conflict_reg):
             m.d.sync += [
                 conflict_reg.eq(1),
@@ -275,10 +310,13 @@ class BCPAccelerator(Elaboratable):
         with m.Elif(watch_mgr.done):
             m.d.sync += wlm_done_seen.eq(1)
 
-        # --- Top-level FSM ---
-        detect_conflict = (evaluator.result_valid
-                           & (evaluator.result_status == CONFLICT))
+        # --- Flush signal to pipeline stages on new BCP start ---
+        m.d.comb += [
+            prefetcher.flush.eq(fsm_starting),
+            evaluator.flush.eq(fsm_starting),
+        ]
 
+        # --- Top-level FSM ---
         with m.FSM():
             with m.State("IDLE"):
                 with m.If(self.start):
@@ -291,14 +329,20 @@ class BCPAccelerator(Elaboratable):
             with m.State("ACTIVE"):
                 m.d.comb += self.busy.eq(1)
 
-                with m.If(conflict_reg | detect_conflict):
+                # Conflict detected: freeze pipeline, go to DONE
+                with m.If(conflict_reg):
                     m.next = "DONE"
+                # Normal completion: WLM done and all clauses drained
                 with m.Elif((wlm_done_seen | watch_mgr.done)
                             & (in_flight == 0)):
                     m.next = "DONE"
 
             with m.State("DONE"):
                 m.d.comb += self.done.eq(1)
-                m.next = "IDLE"
+                # If conflict, wait for ack before returning to IDLE
+                with m.If(conflict_reg & ~self.conflict_ack):
+                    pass  # stay in DONE
+                with m.Else():
+                    m.next = "IDLE"
 
         return m

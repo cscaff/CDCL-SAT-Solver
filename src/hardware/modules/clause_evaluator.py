@@ -5,12 +5,19 @@ Receives a prefetched clause and evaluates it against current variable
 assignments to determine clause status: SATISFIED, UNIT, CONFLICT, or
 UNRESOLVED.  This is Module 3 in the BCP pipeline.
 
-FSM: IDLE → EVAL → OUTPUT
+FSM: IDLE -> EVAL -> OUTPUT
 
-Latency: 1 cycle (latch) + size cycles (eval) + 1 cycle (output).
-Sat-bit early exit: 2 cycles total.
+Uses valid/ready handshaking:
+  - Upstream:   meta_valid (in) / meta_ready (out)
+  - Downstream: result_valid (out) / result_ready (in)
+
+OUTPUT state holds the result stable until result_ready fires.
+
+Latency: 1 cycle (latch) + size cycles (eval) + 1+ cycle (output).
+Sat-bit early exit: 2+ cycles total.
 
 See: Hardware Description/BCP_Accelerator_System_Architecture.md, Module 3
+     Notes/bcp_elastic_pipeline_spec.md, Section 3
 """
 
 from amaranth import *
@@ -31,33 +38,38 @@ class ClauseEvaluator(Elaboratable):
     """
     Clause Evaluator.
 
-    Parameters
-    ----------
-    max_clauses : int
-        Maximum number of clauses (default 8192).
-    max_vars : int
-        Maximum number of variables (default 512).
-
-    Ports — inputs (from Clause Prefetcher)
-    ----------------------------------------
+    Ports -- inputs (from Clause Prefetcher)
+    -----------------------------------------
     clause_id_in : Signal(range(max_clauses)), in
     meta_valid   : Signal(), in
     sat_bit      : Signal(), in
     size         : Signal(3), in
-    lit0–lit4    : Signal(LIT_WIDTH), in
+    lit0-lit4    : Signal(LIT_WIDTH), in
 
-    Ports — assignment memory interface
+    Ports -- backpressure to Prefetcher
     ------------------------------------
+    meta_ready   : Signal(), out  -- high only when state == IDLE
+
+    Ports -- assignment memory interface
+    -------------------------------------
     assign_rd_addr : Signal(range(max_vars)), out
     assign_rd_data : Signal(2), in
 
-    Ports — outputs (evaluation result)
-    ------------------------------------
+    Ports -- outputs (evaluation result)
+    -------------------------------------
     result_status      : Signal(2), out
     result_implied_var : Signal(range(max_vars)), out
     result_implied_val : Signal(), out
     result_clause_id   : Signal(range(max_clauses)), out
     result_valid       : Signal(), out
+
+    Ports -- backpressure from downstream
+    --------------------------------------
+    result_ready : Signal(), in  -- from FIFO / conflict output mux
+
+    Ports -- control
+    -----------------
+    flush : Signal(), in  -- force return to IDLE on new BCP start
     """
 
     def __init__(self, max_clauses=MAX_CLAUSES, max_vars=MAX_VARS):
@@ -75,6 +87,9 @@ class ClauseEvaluator(Elaboratable):
         self.lit3 = Signal(LIT_WIDTH)
         self.lit4 = Signal(LIT_WIDTH)
 
+        # Backpressure to Prefetcher
+        self.meta_ready = Signal()
+
         # Assignment memory read interface
         self.assign_rd_addr = Signal(range(max_vars))
         self.assign_rd_data = Signal(2)
@@ -85,6 +100,12 @@ class ClauseEvaluator(Elaboratable):
         self.result_implied_val = Signal()
         self.result_clause_id = Signal(range(max_clauses))
         self.result_valid = Signal()
+
+        # Backpressure from downstream
+        self.result_ready = Signal()
+
+        # Control
+        self.flush = Signal()
 
     def elaborate(self, platform):
         m = Module()
@@ -108,8 +129,13 @@ class ClauseEvaluator(Elaboratable):
 
         with m.FSM(name="eval"):
             with m.State("IDLE"):
-                m.d.comb += self.result_valid.eq(0)
-                with m.If(self.meta_valid):
+                m.d.comb += [
+                    self.result_valid.eq(0),
+                    self.meta_ready.eq(1),
+                ]
+                with m.If(self.flush):
+                    pass  # stay in IDLE
+                with m.Elif(self.meta_valid):
                     # Latch all clause fields
                     m.d.sync += [
                         clause_id_reg.eq(self.clause_id_in),
@@ -135,42 +161,42 @@ class ClauseEvaluator(Elaboratable):
                         m.next = "EVAL"
 
             with m.State("EVAL"):
-                # current_lit is driven combinationally from lit_regs[lit_idx]
-                # assign_rd_addr is driven combinationally from current_lit >> 1
-                # assign_rd_data is available combinationally (comb read port)
-
-                # Determine expected truth value for this literal
-                # Literal encoding: bit[0] = polarity (0 = positive, 1 = negative)
-                # Positive literal is TRUE when variable is TRUE
-                # Negative literal is TRUE when variable is FALSE
-                lit_polarity = current_lit[0]
-                assign_val = self.assign_rd_data
-
-                # Check if literal is satisfied
-                lit_true = Signal()
-                m.d.comb += lit_true.eq(
-                    ((~lit_polarity) & (assign_val == TRUE)) |
-                    (lit_polarity & (assign_val == FALSE))
-                )
-
-                lit_unassigned = Signal()
-                m.d.comb += lit_unassigned.eq(assign_val == UNASSIGNED)
-
-                with m.If(lit_true):
-                    m.d.sync += satisfied.eq(1)
-                with m.If(lit_unassigned):
-                    m.d.sync += [
-                        unassigned_count.eq(unassigned_count + 1),
-                        last_unassigned_lit.eq(current_lit),
-                    ]
-
-                # Advance or finish
-                with m.If(lit_idx == size_reg - 1):
-                    m.next = "OUTPUT"
+                with m.If(self.flush):
+                    m.next = "IDLE"
                 with m.Else():
-                    m.d.sync += lit_idx.eq(lit_idx + 1)
+                    # current_lit is driven combinationally from lit_regs[lit_idx]
+                    # assign_rd_addr is driven combinationally from current_lit >> 1
+                    # assign_rd_data is available combinationally (comb read port)
+
+                    lit_polarity = current_lit[0]
+                    assign_val = self.assign_rd_data
+
+                    # Check if literal is satisfied
+                    lit_true = Signal()
+                    m.d.comb += lit_true.eq(
+                        ((~lit_polarity) & (assign_val == TRUE)) |
+                        (lit_polarity & (assign_val == FALSE))
+                    )
+
+                    lit_unassigned = Signal()
+                    m.d.comb += lit_unassigned.eq(assign_val == UNASSIGNED)
+
+                    with m.If(lit_true):
+                        m.d.sync += satisfied.eq(1)
+                    with m.If(lit_unassigned):
+                        m.d.sync += [
+                            unassigned_count.eq(unassigned_count + 1),
+                            last_unassigned_lit.eq(current_lit),
+                        ]
+
+                    # Advance or finish
+                    with m.If(lit_idx == size_reg - 1):
+                        m.next = "OUTPUT"
+                    with m.Else():
+                        m.d.sync += lit_idx.eq(lit_idx + 1)
 
             with m.State("OUTPUT"):
+                # Hold result stable until result_ready fires
                 m.d.comb += [
                     self.result_valid.eq(1),
                     self.result_clause_id.eq(clause_id_reg),
@@ -184,13 +210,15 @@ class ClauseEvaluator(Elaboratable):
                     m.d.comb += [
                         self.result_status.eq(UNIT),
                         self.result_implied_var.eq(last_unassigned_lit >> 1),
-                        # Positive literal (pol=0) → assign TRUE (1)
-                        # Negative literal (pol=1) → assign FALSE (0)
+                        # Positive literal (pol=0) -> assign TRUE (1)
+                        # Negative literal (pol=1) -> assign FALSE (0)
                         self.result_implied_val.eq(~last_unassigned_lit[0]),
                     ]
                 with m.Else():
                     m.d.comb += self.result_status.eq(UNRESOLVED)
 
-                m.next = "IDLE"
+                # Only return to IDLE when downstream accepts the result
+                with m.If(self.flush | self.result_ready):
+                    m.next = "IDLE"
 
         return m

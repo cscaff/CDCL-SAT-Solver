@@ -1,13 +1,13 @@
 Info: constraining clock net 'clk12_0__io' to 12.00 MHz
 
 Info: Logic utilisation before packing:
-Info:     Total LUT4s:      1290/83640     1%
-Info:         logic LUTs:    930/83640     1%
-Info:         carry LUTs:    132/83640     0%
+Info:     Total LUT4s:      1474/83640     1%
+Info:         logic LUTs:   1006/83640     1%
+Info:         carry LUTs:    240/83640     0%
 Info:           RAM LUTs:    152/10455     1%
 Info:          RAMW LUTs:     76/20910     0%
 
-Info:      Total DFFs:      1262/83640     1%
+Info:      Total DFFs:      1358/83640     1%
 
 Info: Packing IOs..
 Info: rst_0__io feeds TRELLIS_IO cd_sync.rst_buf.buf.buf0, removing $nextpnr_ibuf rst_0__io.
@@ -35,12 +35,12 @@ Info: Packing carries...
 Info: Packing LUTs...
 Info: Packing LUT5-7s...
 Info: Packing FFs...
-Info:     362 FFs paired with LUTs.
+Info:     491 FFs paired with LUTs.
 Info: Generating derived timing constraints...
 Info: Promoting globals...
 Info:     promoting clock net clk to global network
 Info:     promoting clock net host_if.jtag_clk to global network
-Info: Checksum: 0xe4274096
+Info: Checksum: 0x1a934d5b
 
 Info: Device utilisation:
 Info: 	          TRELLIS_IO:      10/    365     2%
@@ -68,303 +68,324 @@ Info: 	             DQSBUFM:       0/     14     0%
 Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
 Info: 	        ECLKBRIDGECS:       0/      2     0%
 Info: 	                DCSC:       0/      2     0%
-Info: 	          TRELLIS_FF:    1262/  83640     1%
-Info: 	        TRELLIS_COMB:    1344/  83640     1%
+Info: 	          TRELLIS_FF:    1358/  83640     1%
+Info: 	        TRELLIS_COMB:    1548/  83640     1%
 Info: 	        TRELLIS_RAMW:      38/  10455     0%
 
 Info: Placed 11 cells based on constraints.
-Info: Creating initial analytic placement for 1911 cells, random placement wirelen = 204171.
-Info:     at initial placer iter 0, wirelen = 695
-Info:     at initial placer iter 1, wirelen = 551
-Info:     at initial placer iter 2, wirelen = 562
-Info:     at initial placer iter 3, wirelen = 556
-Info: Running main analytical placer, max placement attempts per cell = 971618.
-Info:     at iteration #1, type ALL: wirelen solved = 568, spread = 73808, legal = 79547; time = 0.07s
-Info:     at iteration #2, type ALL: wirelen solved = 1491, spread = 53445, legal = 58300; time = 0.06s
-Info:     at iteration #3, type ALL: wirelen solved = 2383, spread = 52470, legal = 57601; time = 0.07s
-Info:     at iteration #4, type ALL: wirelen solved = 3133, spread = 50340, legal = 55939; time = 0.05s
-Info:     at iteration #5, type ALL: wirelen solved = 3654, spread = 47247, legal = 55741; time = 0.06s
-Info:     at iteration #6, type ALL: wirelen solved = 4012, spread = 45022, legal = 51862; time = 0.04s
-Info:     at iteration #7, type ALL: wirelen solved = 4112, spread = 45388, legal = 55474; time = 0.06s
-Info:     at iteration #8, type ALL: wirelen solved = 4266, spread = 46000, legal = 53657; time = 0.06s
-Info:     at iteration #9, type ALL: wirelen solved = 4909, spread = 43017, legal = 52929; time = 0.05s
-Info:     at iteration #10, type ALL: wirelen solved = 5839, spread = 41394, legal = 49494; time = 0.05s
-Info:     at iteration #11, type ALL: wirelen solved = 6307, spread = 41443, legal = 47183; time = 0.03s
-Info:     at iteration #12, type ALL: wirelen solved = 7232, spread = 41997, legal = 43757; time = 0.02s
-Info:     at iteration #13, type ALL: wirelen solved = 9008, spread = 41838, legal = 42982; time = 0.02s
-Info:     at iteration #14, type ALL: wirelen solved = 9729, spread = 41145, legal = 42564; time = 0.02s
-Info:     at iteration #15, type ALL: wirelen solved = 11656, spread = 39978, legal = 41891; time = 0.02s
-Info:     at iteration #16, type ALL: wirelen solved = 11878, spread = 39309, legal = 42238; time = 0.02s
-Info:     at iteration #17, type ALL: wirelen solved = 12433, spread = 39970, legal = 42327; time = 0.02s
-Info:     at iteration #18, type ALL: wirelen solved = 13164, spread = 39394, legal = 40443; time = 0.02s
-Info:     at iteration #19, type ALL: wirelen solved = 13076, spread = 39631, legal = 41013; time = 0.02s
-Info:     at iteration #20, type ALL: wirelen solved = 13632, spread = 40443, legal = 42379; time = 0.02s
-Info:     at iteration #21, type ALL: wirelen solved = 14656, spread = 41471, legal = 44954; time = 0.04s
-Info:     at iteration #22, type ALL: wirelen solved = 14786, spread = 40324, legal = 42252; time = 0.03s
-Info:     at iteration #23, type ALL: wirelen solved = 15491, spread = 41693, legal = 43975; time = 0.03s
-Info: HeAP Placer Time: 1.10s
-Info:   of which solving equations: 0.41s
+Info: Creating initial analytic placement for 1942 cells, random placement wirelen = 213606.
+Info:     at initial placer iter 0, wirelen = 982
+Info:     at initial placer iter 1, wirelen = 613
+Info:     at initial placer iter 2, wirelen = 592
+Info:     at initial placer iter 3, wirelen = 574
+Info: Running main analytical placer, max placement attempts per cell = 1191968.
+Info:     at iteration #1, type ALL: wirelen solved = 639, spread = 69659, legal = 74432; time = 0.07s
+Info:     at iteration #2, type ALL: wirelen solved = 1581, spread = 51787, legal = 56575; time = 0.06s
+Info:     at iteration #3, type ALL: wirelen solved = 2642, spread = 51351, legal = 57511; time = 0.05s
+Info:     at iteration #4, type ALL: wirelen solved = 3111, spread = 51103, legal = 56690; time = 0.07s
+Info:     at iteration #5, type ALL: wirelen solved = 3521, spread = 50741, legal = 56707; time = 0.05s
+Info:     at iteration #6, type ALL: wirelen solved = 3930, spread = 46886, legal = 53240; time = 0.06s
+Info:     at iteration #7, type ALL: wirelen solved = 4295, spread = 41779, legal = 49937; time = 0.06s
+Info:     at iteration #8, type ALL: wirelen solved = 5171, spread = 41986, legal = 48329; time = 0.05s
+Info:     at iteration #9, type ALL: wirelen solved = 6085, spread = 41353, legal = 45282; time = 0.04s
+Info:     at iteration #10, type ALL: wirelen solved = 6504, spread = 42673, legal = 45207; time = 0.03s
+Info:     at iteration #11, type ALL: wirelen solved = 7243, spread = 39891, legal = 41479; time = 0.02s
+Info:     at iteration #12, type ALL: wirelen solved = 7871, spread = 39476, legal = 42843; time = 0.03s
+Info:     at iteration #13, type ALL: wirelen solved = 8874, spread = 39369, legal = 41562; time = 0.02s
+Info:     at iteration #14, type ALL: wirelen solved = 9953, spread = 37665, legal = 39435; time = 0.02s
+Info:     at iteration #15, type ALL: wirelen solved = 10029, spread = 38216, legal = 40215; time = 0.02s
+Info:     at iteration #16, type ALL: wirelen solved = 11045, spread = 38281, legal = 40166; time = 0.02s
+Info:     at iteration #17, type ALL: wirelen solved = 11711, spread = 38331, legal = 40067; time = 0.02s
+Info:     at iteration #18, type ALL: wirelen solved = 12657, spread = 39492, legal = 43005; time = 0.03s
+Info:     at iteration #19, type ALL: wirelen solved = 13105, spread = 39169, legal = 42451; time = 0.03s
+Info: HeAP Placer Time: 0.96s
+Info:   of which solving equations: 0.40s
 Info:   of which spreading cells: 0.08s
-Info:   of which strict legalisation: 0.47s
+Info:   of which strict legalisation: 0.35s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 2413, wirelen = 40443
-Info:   at iteration #5: temp = 0.000000, timing cost = 1460, wirelen = 33598
-Info:   at iteration #10: temp = 0.000000, timing cost = 975, wirelen = 31805
-Info:   at iteration #15: temp = 0.000000, timing cost = 1102, wirelen = 30714
-Info:   at iteration #20: temp = 0.000000, timing cost = 1055, wirelen = 30375
-Info:   at iteration #25: temp = 0.000000, timing cost = 1059, wirelen = 30274
-Info:   at iteration #26: temp = 0.000000, timing cost = 1074, wirelen = 30255 
-Info: SA placement time 0.92s
+Info:   at iteration #1: temp = 0.000000, timing cost = 2381, wirelen = 39435
+Info:   at iteration #5: temp = 0.000000, timing cost = 1177, wirelen = 33387
+Info:   at iteration #10: temp = 0.000000, timing cost = 1292, wirelen = 31062
+Info:   at iteration #15: temp = 0.000000, timing cost = 1131, wirelen = 30199
+Info:   at iteration #20: temp = 0.000000, timing cost = 1063, wirelen = 29625
+Info:   at iteration #25: temp = 0.000000, timing cost = 1111, wirelen = 29528
+Info:   at iteration #30: temp = 0.000000, timing cost = 1137, wirelen = 29474
+Info:   at iteration #30: temp = 0.000000, timing cost = 1133, wirelen = 29482 
+Info: SA placement time 1.22s
 
-Info: Max frequency for clock '$glbnet$host_if.jtag_clk': 249.94 MHz (PASS at 12.00 MHz)
-Info: Max frequency for clock              '$glbnet$clk': 48.46 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$host_if.jtag_clk': 246.67 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock              '$glbnet$clk': 49.50 MHz (PASS at 12.00 MHz)
 
-Info: Max delay <async>                          -> <async>                         : 18.83 ns
+Info: Max delay <async>                          -> <async>                         : 19.56 ns
 Info: Max delay <async>                          -> posedge $glbnet$clk             : 1.33 ns
-Info: Max delay <async>                          -> posedge $glbnet$host_if.jtag_clk: 13.23 ns
-Info: Max delay posedge $glbnet$clk              -> <async>                         : 10.29 ns
-Info: Max delay posedge $glbnet$clk              -> posedge $glbnet$host_if.jtag_clk: 1.82 ns
-Info: Max delay posedge $glbnet$host_if.jtag_clk -> <async>                         : 11.61 ns
+Info: Max delay <async>                          -> posedge $glbnet$host_if.jtag_clk: 13.76 ns
+Info: Max delay posedge $glbnet$clk              -> <async>                         : 9.62 ns
+Info: Max delay posedge $glbnet$clk              -> posedge $glbnet$host_if.jtag_clk: 0.98 ns
+Info: Max delay posedge $glbnet$host_if.jtag_clk -> <async>                         : 10.71 ns
 Info: Max delay posedge $glbnet$host_if.jtag_clk -> posedge $glbnet$clk             : 0.84 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 19 endpoint(s)
 Info:          + represents [1,19) endpoint(s)
-Info: [ 62699,  63709) |+
-Info: [ 63709,  64719) |+
-Info: [ 64719,  65729) |***********+
-Info: [ 65729,  66739) |*******************+
-Info: [ 66739,  67749) |*****************+
-Info: [ 67749,  68759) |*****+
-Info: [ 68759,  69769) |+
-Info: [ 69769,  70779) |+
-Info: [ 70779,  71789) |*+
-Info: [ 71789,  72799) |**+
-Info: [ 72799,  73809) |***+
-Info: [ 73809,  74819) |**********+
-Info: [ 74819,  75829) |************+
-Info: [ 75829,  76839) |********************+
-Info: [ 76839,  77849) |*************************+
-Info: [ 77849,  78859) |**************************************+
-Info: [ 78859,  79869) |******************************+
-Info: [ 79869,  80879) |************************************************************ 
-Info: [ 80879,  81889) |******************************************************+
-Info: [ 81889,  82899) |*****************************************+
-Info: Checksum: 0x51ba2a36
+Info: [ 63129,  64117) |+
+Info: [ 64117,  65105) |**+
+Info: [ 65105,  66093) |*********+
+Info: [ 66093,  67081) |******************+
+Info: [ 67081,  68069) |******************+
+Info: [ 68069,  69057) |******+
+Info: [ 69057,  70045) |*+
+Info: [ 70045,  71033) |*+
+Info: [ 71033,  72021) |*+
+Info: [ 72021,  73009) |**+
+Info: [ 73009,  73997) |*****+
+Info: [ 73997,  74985) |*********+
+Info: [ 74985,  75973) |************+
+Info: [ 75973,  76961) |******************+
+Info: [ 76961,  77949) |***********************************+
+Info: [ 77949,  78937) |**********************************+
+Info: [ 78937,  79925) |*********************************************+
+Info: [ 79925,  80913) |************************************************************ 
+Info: [ 80913,  81901) |************************************************+
+Info: [ 81901,  82889) |************************************************+
+Info: Checksum: 0x6b7eb959
 Info: Routing globals...
 Info:     routing clock net $glbnet$host_if.jtag_clk using global 0
 Info:     routing clock net $glbnet$clk using global 1
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 11093 arcs.
+Info: Routing 11834 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |      690        309 |  690   309 |     10967|       0.33       0.33|
-Info:       2000 |     1101        898 |  411   589 |     10514|       0.30       0.63|
-Info:       3000 |     1376       1623 |  275   725 |      9968|       0.32       0.96|
-Info:       4000 |     1611       2388 |  235   765 |      9438|       0.35       1.31|
-Info:       5000 |     1713       3286 |  102   898 |      8578|       0.32       1.63|
-Info:       6000 |     1904       4095 |  191   809 |      8217|       0.34       1.97|
-Info:       7000 |     1963       5036 |   59   941 |      7402|       0.26       2.23|
-Info:       8000 |     2180       5819 |  217   783 |      7078|       0.27       2.50|
-Info:       9000 |     2270       6729 |   90   910 |      6205|       0.19       2.70|
-Info:      10000 |     2404       7562 |  134   833 |      5361|       0.13       2.82|
-Info:      11000 |     2530       8399 |  126   837 |      4488|       0.10       2.92|
-Info:      12000 |     2610       9309 |   80   910 |      3766|       0.13       3.05|
-Info:      13000 |     2656      10249 |   46   940 |      2812|       0.08       3.14|
-Info:      14000 |     2696      11205 |   40   956 |      1855|       0.06       3.20|
-Info:      15000 |     2717      12154 |   21   949 |       878|       0.06       3.26|
-Info:      15889 |     2729      12980 |   12   826 |         0|       0.08       3.34|
+Info:       1000 |      644        355 |  644   355 |     11675|       0.32       0.32|
+Info:       2000 |      981       1018 |  337   663 |     11119|       0.29       0.62|
+Info:       3000 |     1232       1767 |  251   749 |     10549|       0.30       0.92|
+Info:       4000 |     1487       2512 |  255   745 |     10214|       0.34       1.26|
+Info:       5000 |     1623       3376 |  136   864 |      9419|       0.32       1.59|
+Info:       6000 |     1834       4165 |  211   789 |      9157|       0.33       1.91|
+Info:       7000 |     2217       4782 |  383   617 |      8942|       0.45       2.36|
+Info:       8000 |     2434       5565 |  217   783 |      8675|       0.32       2.68|
+Info:       9000 |     2526       6473 |   92   908 |      7837|       0.24       2.92|
+Info:      10000 |     2666       7333 |  140   860 |      7111|       0.20       3.13|
+Info:      11000 |     2884       8115 |  218   782 |      6697|       0.30       3.42|
+Info:      12000 |     3160       8807 |  276   692 |      5988|       0.11       3.54|
+Info:      13000 |     3324       9622 |  164   815 |      5175|       0.11       3.65|
+Info:      14000 |     3465      10446 |  141   824 |      4572|       0.18       3.83|
+Info:      15000 |     3525      11357 |   60   911 |      3638|       0.10       3.93|
+Info:      16000 |     3574      12305 |   49   948 |      2687|       0.09       4.02|
+Info:      17000 |     3607      13262 |   33   957 |      1725|       0.05       4.07|
+Info:      18000 |     3630      14182 |   23   920 |       757|       0.08       4.15|
+Info:      18760 |     3634      14884 |    4   702 |         0|       0.07       4.22|
 Info: Routing complete.
-Info: Router1 time 3.34s
-Info: Checksum: 0x2dc34fbc
+Info: Router1 time 4.22s
+Info: Checksum: 0x61302444
 
 Info: Critical path report for clock '$glbnet$host_if.jtag_clk' (posedge -> posedge):
 Info:       type curr  total name
-Info:   clk-to-q  0.31  0.31 Source host_if.er1_was_selected_TRELLIS_FF_Q.Q
-Info:    routing  0.91  1.22 Net host_if.er1_was_selected (95,7) -> (106,8)
-Info:                          Sink host_if.jupdate_LUT4_C.D
+Info:   clk-to-q  0.31  0.31 Source host_if.dbg_shift_pulse_TRELLIS_FF_Q_4.Q
+Info:    routing  0.62  0.93 Net host_if.dbg_shift_pulse[4] (112,2) -> (112,3)
+Info:                          Sink host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2_D_LUT4_Z_1_D_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:587
+Info:      logic  0.14  1.07 Source host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2_D_LUT4_Z_1_D_LUT4_Z.F
+Info:    routing  0.03  1.10 Net host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2_D_LUT4_Z_1_D[2] (112,3) -> (112,3)
+Info:                          Sink host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2_D_LUT4_Z_1.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  1.36 Source host_if.jupdate_LUT4_C.F
-Info:    routing  1.51  2.87 Net host_if.jupdate_LUT4_C_Z (106,8) -> (80,5)
-Info:                          Sink host_if.jtag_rx_toggle_TRELLIS_FF_Q.CE
-Info:      setup  0.00  2.87 Source host_if.jtag_rx_toggle_TRELLIS_FF_Q.CE
-Info: 0.45 ns logic, 2.42 ns routing
+Info:      logic  0.14  1.24 Source host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2_D_LUT4_Z_1.F
+Info:    routing  0.55  1.79 Net host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2_D[3] (112,3) -> (113,3)
+Info:                          Sink host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2.D
+Info:                          Defined in:
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.14  1.93 Source host_if.led_4__o_LUT4_Z_D_LUT4_Z_D_LUT4_Z_2.F
+Info:    routing  0.54  2.47 Net host_if.led_4__o_LUT4_Z_D_LUT4_Z_D[3] (113,3) -> (113,3)
+Info:                          Sink host_if.led_4__o_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.14  2.61 Source host_if.led_4__o_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.42  3.03 Net host_if.led_4__o_LUT4_Z_D[2] (113,3) -> (113,3)
+Info:                          Sink host_if.led_4__o_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.14  3.17 Source host_if.led_4__o_LUT4_Z.F
+Info:    routing  0.63  3.80 Net led_4__o (113,3) -> (116,2)
+Info:                          Sink host_if.dbg_shift_pulse_TRELLIS_FF_Q_15_DI_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101
+Info:      logic  0.14  3.94 Source host_if.dbg_shift_pulse_TRELLIS_FF_Q_15_DI_LUT4_Z.F
+Info:    routing  0.11  4.05 Net host_if.dbg_shift_pulse_TRELLIS_FF_Q_15_DI (116,2) -> (116,2)
+Info:                          Sink host_if.dbg_shift_pulse_TRELLIS_FF_Q_15.DI
+Info:      setup  0.00  4.05 Source host_if.dbg_shift_pulse_TRELLIS_FF_Q_15.DI
+Info: 1.15 ns logic, 2.89 ns routing
 
 Info: Critical path report for clock '$glbnet$clk' (posedge -> posedge):
 Info:       type curr  total name
-Info:   clk-to-q  0.31  0.31 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6.Q
-Info:    routing  0.73  1.04 Net bcp.clause_id_valid_LUT4_Z_C_L6MUX21_Z_SD[4] (87,2) -> (87,3)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_COMB0.B
+Info:   clk-to-q  0.31  0.31 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5.Q
+Info:    routing  0.74  1.05 Net bcp.watch_mgr.output_count[0] (88,2) -> (86,2)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_2$CCU2_COMB0.B
 Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:88
-Info:      logic  0.28  1.32 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_COMB0.FCO
-Info:    routing  0.00  1.32 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_FCI_INT (87,3) -> (87,3)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_COMB1.FCI
-Info:      logic  0.23  1.55 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_COMB1.F
-Info:    routing  0.72  2.27 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0[1] (87,3) -> (87,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0$CCU2_COMB1.A
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.28  1.33 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_2$CCU2_COMB0.FCO
+Info:    routing  0.00  1.33 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_2$CCU2_FCI_INT (86,2) -> (86,2)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_2$CCU2_COMB1.FCI
+Info:      logic  0.00  1.33 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_2$CCU2_COMB1.FCO
+Info:    routing  0.00  1.33 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_2_COUT (86,2) -> (86,2)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.04  1.37 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  1.37 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_1$CCU2_FCI_INT (86,2) -> (86,2)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  1.37 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  1.37 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1_1_COUT (86,2) -> (86,2)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.26  1.63 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0_CCU2C_S1$CCU2_COMB0.F
+Info:    routing  0.87  2.49 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_A1_CCU2C_S1_S0[4] (86,2) -> (87,3)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.A
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:30.22-30.23
-Info:      logic  0.28  2.55 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0$CCU2_COMB1.FCO
-Info:    routing  0.00  2.55 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT (87,4) -> (87,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:      logic  0.28  2.77 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  2.77 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (87,3) -> (87,3)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  2.77 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  2.77 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (87,3) -> (88,3)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.04  2.59 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN$CCU2_COMB0.FCO
-Info:    routing  0.00  2.59 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN$CCU2_FCI_INT (87,4) -> (87,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN$CCU2_COMB1.FCI
-Info:      logic  0.00  2.59 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN$CCU2_COMB1.FCO
-Info:    routing  0.00  2.59 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT (87,4) -> (87,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
-Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.04  2.63 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
-Info:    routing  0.00  2.63 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (87,4) -> (87,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
-Info:      logic  0.00  2.63 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
-Info:    routing  0.00  2.63 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (87,4) -> (88,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
-Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:155
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.04  2.68 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
-Info:    routing  0.00  2.68 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (88,4) -> (88,4)
-Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
-Info:      logic  0.00  2.68 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_6_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
-Info:    routing  0.00  2.68 Net $nextpnr_CCU2C_23$CIN (88,4) -> (88,4)
-Info:                          Sink $nextpnr_CCU2C_23$CCU2_COMB0.FCI
-Info:      logic  0.26  2.93 Source $nextpnr_CCU2C_23$CCU2_COMB0.F
-Info:    routing  0.97  3.90 Net bcp.clause_id_valid_LUT4_Z_D_LUT4_D_Z[1] (88,4) -> (91,7)
+Info:      logic  0.04  2.82 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  2.82 Net bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (88,3) -> (88,3)
+Info:                          Sink bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  2.82 Source bcp.watch_mgr.output_count_TRELLIS_FF_Q_5_DI_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  2.82 Net $nextpnr_CCU2C_21$CIN (88,3) -> (88,3)
+Info:                          Sink $nextpnr_CCU2C_21$CCU2_COMB0.FCI
+Info:      logic  0.26  3.07 Source $nextpnr_CCU2C_21$CCU2_COMB0.F
+Info:    routing  0.16  3.23 Net bcp.watch_mem.len_rd__en_LUT4_Z_C[3] (88,3) -> (88,3)
 Info:                          Sink bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D_LUT4_Z.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  4.04 Source bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
-Info:    routing  0.43  4.47 Net bcp.watch_mem.len_rd__en_LUT4_Z_A_LUT4_Z_C[2] (91,7) -> (91,7)
-Info:                          Sink bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z.D
+Info:      logic  0.14  3.38 Source bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.46  3.84 Net bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D[3] (88,3) -> (89,6)
+Info:                          Sink bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D_LUT4_D.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  4.61 Source bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z.F
-Info:    routing  0.29  4.91 Net bcp.watch_mem.rd_idx_LUT4_Z_D[3] (91,7) -> (92,7)
-Info:                          Sink bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_D.D
+Info:      logic  0.14  3.98 Source bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D_LUT4_D.F
+Info:    routing  0.65  4.63 Net bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z[3] (89,6) -> (90,7)
+Info:                          Sink bcp.watch_mem.rd_lit_LUT4_Z_9.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  5.05 Source bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_D.F
-Info:    routing  0.57  5.62 Net bcp.watch_mem.rd_idx_LUT4_Z_D_LUT4_D_Z[3] (92,7) -> (92,7)
-Info:                          Sink bcp.watch_mem.rd_lit_LUT4_Z_7.D
-Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  5.76 Source bcp.watch_mem.rd_lit_LUT4_Z_7.F
-Info:    routing  1.01  6.76 Net bcp.rd_lit[4] (92,7) -> (88,10)
+Info:      logic  0.14  4.77 Source bcp.watch_mem.rd_lit_LUT4_Z_9.F
+Info:    routing  0.95  5.72 Net bcp.rd_lit[4] (90,7) -> (87,10)
 Info:                          Sink bcp.watch_mem.rd_lit_MULT18X18D_A9.A4
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/watch_list_manager.py:76
-Info:      logic  2.54  9.30 Source bcp.watch_mem.rd_lit_MULT18X18D_A9.P1
-Info:    routing  3.68  12.99 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_B1[1] (88,10) -> (55,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_COMB1.B
+Info:      logic  2.54  8.26 Source bcp.watch_mem.rd_lit_MULT18X18D_A9.P0
+Info:    routing  3.69  11.95 Net bcp.watch_mem.cid_rd__addr_CCU2C_S0_B0[0] (87,10) -> (55,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_COMB0.B
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:32.22-32.23
-Info:      logic  0.28  13.26 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_COMB1.FCO
-Info:    routing  0.00  13.26 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_COUT (55,52) -> (55,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB0.FCI
-Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.04  13.31 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB0.FCO
-Info:    routing  0.00  13.31 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_FCI_INT (55,52) -> (55,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB1.FCI
-Info:      logic  0.00  13.31 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB1.FCO
-Info:    routing  0.00  13.31 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_1_COUT (55,52) -> (55,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_4$CCU2_COMB0.FCI
-Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.04  13.35 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_4$CCU2_COMB0.FCO
-Info:    routing  0.00  13.35 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_4$CCU2_FCI_INT (55,52) -> (55,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_4$CCU2_COMB1.FCI
-Info:      logic  0.00  13.35 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_4$CCU2_COMB1.FCO
-Info:    routing  0.00  13.35 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_4_COUT (55,52) -> (56,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB0.FCI
-Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.04  13.39 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB0.FCO
-Info:    routing  0.00  13.39 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_FCI_INT (56,52) -> (56,52)
-Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB1.FCI
-Info:      logic  0.00  13.39 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB1.FCO
-Info:    routing  0.00  13.39 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_6_COUT (56,52) -> (56,52)
+Info:      logic  0.28  12.23 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  12.23 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_FCI_INT (55,52) -> (55,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  12.23 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  12.23 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_COUT (55,52) -> (55,52)
 Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_5$CCU2_COMB0.FCI
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
-Info:      logic  0.26  13.65 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_5$CCU2_COMB0.F
-Info:    routing  0.54  14.19 Net host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_PFUMX_Z_C0[1] (56,52) -> (56,51)
-Info:                          Sink host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.D
+Info:      logic  0.04  12.27 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_5$CCU2_COMB0.FCO
+Info:    routing  0.00  12.27 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_5$CCU2_FCI_INT (55,52) -> (55,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_5$CCU2_COMB1.FCI
+Info:      logic  0.00  12.27 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_5$CCU2_COMB1.FCO
+Info:    routing  0.00  12.27 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_5_COUT (55,52) -> (55,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.04  12.31 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  12.31 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_FCI_INT (55,52) -> (55,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  12.31 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  12.31 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_1_COUT (55,52) -> (56,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.04  12.35 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB0.FCO
+Info:    routing  0.00  12.35 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_FCI_INT (56,52) -> (56,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB1.FCI
+Info:      logic  0.00  12.35 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_6$CCU2_COMB1.FCO
+Info:    routing  0.00  12.35 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_6_COUT (56,52) -> (56,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:105
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.04  12.40 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_2$CCU2_COMB0.FCO
+Info:    routing  0.00  12.40 Net bcp.watch_mem.cid_rd__addr_CCU2C_S1_2$CCU2_FCI_INT (56,52) -> (56,52)
+Info:                          Sink bcp.watch_mem.cid_rd__addr_CCU2C_S1_2$CCU2_COMB1.FCI
+Info:      logic  0.23  12.63 Source bcp.watch_mem.cid_rd__addr_CCU2C_S1_2$CCU2_COMB1.F
+Info:    routing  2.78  15.40 Net bcp.watch_mem.cid_rd__addr[11] (56,52) -> (77,9)
+Info:                          Sink bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_3_D1_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_C_Z_PFUMX_ALUT_Z_L6MUX21_D1_Z_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/memory/watch_list_memory.py:102
+Info:      logic  0.14  15.54 Source bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_3_D1_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_C_Z_PFUMX_ALUT_Z_L6MUX21_D1_Z_LUT4_Z.F
+Info:    routing  0.27  15.82 Net bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_3_D1_PFUMX_Z_BLUT_LUT4_Z_B_LUT4_C_Z_PFUMX_ALUT_Z_L6MUX21_D1_Z[4] (77,9) -> (77,9)
+Info:                          Sink bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_4_D1_PFUMX_Z_BLUT_LUT4_Z.M
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  14.33 Source host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.F
-Info:    routing  0.00  14.33 Net host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT (56,51) -> (56,51)
-Info:                          Sink host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:      logic  0.15  15.97 Source bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_4_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  15.97 Net bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_4_D1 (77,9) -> (77,9)
+Info:                          Sink bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_4_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
 Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.30-157.32
-Info:      logic  0.10  14.43 Source host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
-Info:    routing  0.00  14.43 Net host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1 (56,51) -> (56,51)
-Info:                          Sink host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
-Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.54-157.56
-Info:      logic  0.14  14.57 Source host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
-Info:    routing  0.00  14.57 Net host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D0 (56,51) -> (56,51)
-Info:                          Sink host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXA
-Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.66-157.68
-Info:      logic  0.14  14.71 Source host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
-Info:    routing  1.38  16.09 Net host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1_D[3] (56,51) -> (74,40)
-Info:                          Sink host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1.D
+Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:141.38-141.40
+Info:      logic  0.14  16.11 Source bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_L6MUX21_Z_4_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.93  17.04 Net bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_SD[6] (77,9) -> (77,19)
+Info:                          Sink bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  16.23 Source host_if.wl_idx_r_TRELLIS_FF_DI_1_Q_LUT4_Z_1.F
-Info:    routing  1.82  18.05 Net host_if.wl_idx_r_TRELLIS_FF_DI_1_Q[5] (74,40) -> (83,14)
-Info:                          Sink bcp.watch_mem.cid_mem.0.86_DOB0_LUT4_C_Z_TRELLIS_FF_Q_1_DI_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
-Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.15  18.20 Source bcp.watch_mem.cid_mem.0.86_DOB0_LUT4_C_Z_TRELLIS_FF_Q_1_DI_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
-Info:    routing  0.25  18.44 Net bcp.watch_mem.cid_mem.0.86_DOB0_LUT4_C_Z_TRELLIS_FF_Q_1_DI (83,14) -> (83,14)
-Info:                          Sink bcp.watch_mem.cid_mem.0.86_DOB0_LUT4_C_Z_TRELLIS_FF_Q_1.M
-Info:      setup  0.00  18.44 Source bcp.watch_mem.cid_mem.0.86_DOB0_LUT4_C_Z_TRELLIS_FF_Q_1.M
-Info: 6.06 ns logic, 12.39 ns routing
+Info:      logic  0.15  17.19 Source bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.25  17.43 Net bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q_DI (77,19) -> (77,19)
+Info:                          Sink bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q.M
+Info:      setup  0.00  17.43 Source bcp.watch_mem.cid_mem.0.89_DOB0_LUT4_C_Z_TRELLIS_FF_Q.M
+Info: 5.69 ns logic, 11.74 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> '<async>':
 Info:       type curr  total name
 Info:     source  0.00  0.00 Source host_if.jtagg.JSHIFT
-Info:    routing  6.94  6.94 Net host_if.jshift (4,94) -> (74,13)
-Info:                          Sink host_if.jtdo1_LUT4_Z_D_LUT4_Z.C
+Info:    routing  5.98  5.98 Net host_if.jshift (4,94) -> (71,15)
+Info:                          Sink host_if.jce1_LUT4_D.C
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:152
+Info:      logic  0.14  6.12 Source host_if.jce1_LUT4_D.F
+Info:    routing  0.91  7.03 Net host_if.dbg_shift_pulse_TRELLIS_FF_Q_11_DI_LUT4_Z_C[0] (71,15) -> (74,11)
+Info:                          Sink host_if.jshift_prev_LUT4_C.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  7.08 Source host_if.jtdo1_LUT4_Z_D_LUT4_Z.F
-Info:    routing  2.45  9.53 Net host_if.jtdo1_LUT4_Z_D[2] (74,13) -> (51,37)
+Info:      logic  0.14  7.17 Source host_if.jshift_prev_LUT4_C.F
+Info:    routing  0.82  7.99 Net host_if.jshift_prev_LUT4_C_Z[3] (74,11) -> (71,12)
 Info:                          Sink host_if.jtdo1_LUT4_Z.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  9.67 Source host_if.jtdo1_LUT4_Z.F
-Info:    routing  4.55  14.22 Net host_if.jtdo1 (51,37) -> (4,94)
+Info:      logic  0.14  8.13 Source host_if.jtdo1_LUT4_Z.F
+Info:    routing  6.00  14.13 Net host_if.jtdo1 (71,12) -> (4,94)
 Info:                          Sink host_if.jtagg.JTDO1
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:159
-Info: 0.28 ns logic, 13.94 ns routing
+Info: 0.42 ns logic, 13.71 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk':
 Info:       type curr  total name
@@ -378,113 +399,108 @@ Info: 0.00 ns logic, 0.85 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$host_if.jtag_clk':
 Info:       type curr  total name
-Info:     source  0.00  0.00 Source host_if.jtagg.JSHIFT
-Info:    routing  6.71  6.71 Net host_if.jshift (4,94) -> (81,14)
-Info:                          Sink host_if.jce1_LUT4_D.C
+Info:     source  0.00  0.00 Source host_if.jtagg.JUPDATE
+Info:    routing  7.52  7.52 Net host_if.jce1_LUT4_D_Z[0] (4,94) -> (104,7)
+Info:                          Sink host_if.jupdate_LUT4_C.C
+Info:                          Defined in:
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:153
+Info:      logic  0.14  7.66 Source host_if.jupdate_LUT4_C.F
+Info:    routing  1.83  9.49 Net host_if.dbg_latch_pulse_TRELLIS_FF_Q_11_DI_LUT4_Z_C[0] (104,7) -> (71,11)
+Info:                          Sink host_if.jtag_rx_TRELLIS_FF_Q_4.CE
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  6.85 Source host_if.jce1_LUT4_D.F
-Info:    routing  2.45  9.30 Net host_if.jce1_LUT4_D_Z[2] (81,14) -> (107,4)
-Info:                          Sink host_if.rx_shift_TRELLIS_FF_Q_84.CE
-Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      setup  0.00  9.30 Source host_if.rx_shift_TRELLIS_FF_Q_84.CE
-Info: 0.14 ns logic, 9.16 ns routing
+Info:      setup  0.00  9.49 Source host_if.jtag_rx_TRELLIS_FF_Q_4.CE
+Info: 0.14 ns logic, 9.35 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk' -> '<async>':
 Info:       type curr  total name
-Info:   clk-to-q  0.31  0.31 Source host_if.jtag_shadow_TRELLIS_FF_Q_1.Q
-Info:    routing  0.16  0.47 Net host_if.jtag_shadow[0] (74,13) -> (74,13)
-Info:                          Sink host_if.jtdo1_LUT4_Z_D_LUT4_Z.D
+Info:   clk-to-q  0.31  0.31 Source host_if.jtag_shadow_TRELLIS_FF_Q.Q
+Info:    routing  0.59  0.89 Net host_if.jshift_prev_LUT4_C_Z[0] (70,12) -> (71,12)
+Info:                          Sink host_if.jtdo1_LUT4_Z.A
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:200
-Info:      logic  0.14  0.61 Source host_if.jtdo1_LUT4_Z_D_LUT4_Z.F
-Info:    routing  2.45  3.05 Net host_if.jtdo1_LUT4_Z_D[2] (74,13) -> (51,37)
-Info:                          Sink host_if.jtdo1_LUT4_Z.D
-Info:                          Defined in:
-Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  3.19 Source host_if.jtdo1_LUT4_Z.F
-Info:    routing  4.55  7.74 Net host_if.jtdo1 (51,37) -> (4,94)
+Info:      logic  0.14  1.04 Source host_if.jtdo1_LUT4_Z.F
+Info:    routing  6.00  7.04 Net host_if.jtdo1 (71,12) -> (4,94)
 Info:                          Sink host_if.jtagg.JTDO1
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:159
-Info: 0.59 ns logic, 7.15 ns routing
+Info: 0.45 ns logic, 6.59 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk' -> 'posedge $glbnet$host_if.jtag_clk':
 Info:       type curr  total name
-Info:   clk-to-q  0.31  0.31 Source host_if.jtag_shadow_TRELLIS_FF_Q_29.Q
-Info:    routing  0.47  0.77 Net host_if.jtag_shadow[111] (97,14) -> (96,14)
-Info:                          Sink host_if.jtdo1_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_26_BLUT_LUT4_Z.D
+Info:   clk-to-q  0.31  0.31 Source host_if.jtag_shadow_TRELLIS_FF_Q_28.Q
+Info:    routing  0.52  0.83 Net host_if.jtag_shadow[111] (82,9) -> (82,8)
+Info:                          Sink host_if.jtag_shadow_LUT4_C_28.C
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:200
-Info:      logic  0.24  1.01 Source host_if.jtdo1_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_26_BLUT_LUT4_Z.OFX
-Info:    routing  0.63  1.64 Net host_if.jtdo1_LUT4_Z_D_LUT4_D_Z[111] (96,14) -> (96,15)
-Info:                          Sink host_if.shift_reg_TRELLIS_FF_Q_46.M
-Info:      setup  0.00  1.64 Source host_if.shift_reg_TRELLIS_FF_Q_46.M
-Info: 0.55 ns logic, 1.10 ns routing
+Info:      logic  0.14  0.97 Source host_if.jtag_shadow_LUT4_C_28.F
+Info:    routing  0.11  1.07 Net host_if.shift_reg_TRELLIS_FF_Q_2_DI[111] (82,8) -> (82,8)
+Info:                          Sink host_if.shift_reg_TRELLIS_FF_Q_73.DI
+Info:      setup  0.00  1.07 Source host_if.shift_reg_TRELLIS_FF_Q_73.DI
+Info: 0.45 ns logic, 0.62 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$host_if.jtag_clk' -> '<async>':
 Info:       type curr  total name
 Info:   clk-to-q  0.31  0.31 Source host_if.jshift_prev_TRELLIS_FF_Q.Q
-Info:    routing  0.93  1.24 Net host_if.jshift_prev (86,14) -> (74,13)
-Info:                          Sink host_if.jtdo1_LUT4_Z_D_LUT4_Z.A
+Info:    routing  0.51  0.82 Net host_if.jshift_prev (75,13) -> (74,11)
+Info:                          Sink host_if.jshift_prev_LUT4_C.C
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:205
-Info:      logic  0.14  1.38 Source host_if.jtdo1_LUT4_Z_D_LUT4_Z.F
-Info:    routing  2.45  3.83 Net host_if.jtdo1_LUT4_Z_D[2] (74,13) -> (51,37)
+Info:      logic  0.14  0.96 Source host_if.jshift_prev_LUT4_C.F
+Info:    routing  0.82  1.78 Net host_if.jshift_prev_LUT4_C_Z[3] (74,11) -> (71,12)
 Info:                          Sink host_if.jtdo1_LUT4_Z.D
 Info:                          Defined in:
 Info:                               /Users/christianscaff/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
-Info:      logic  0.14  3.97 Source host_if.jtdo1_LUT4_Z.F
-Info:    routing  4.55  8.52 Net host_if.jtdo1 (51,37) -> (4,94)
+Info:      logic  0.14  1.93 Source host_if.jtdo1_LUT4_Z.F
+Info:    routing  6.00  7.93 Net host_if.jtdo1 (71,12) -> (4,94)
 Info:                          Sink host_if.jtagg.JTDO1
 Info:                          Defined in:
 Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:159
-Info: 0.59 ns logic, 7.93 ns routing
+Info: 0.59 ns logic, 7.34 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$host_if.jtag_clk' -> 'posedge $glbnet$clk':
 Info:       type curr  total name
-Info:   clk-to-q  0.31  0.31 Source host_if.jtag_rx_TRELLIS_FF_Q_34.Q
-Info:    routing  0.67  0.98 Net host_if.jtag_rx[38] (107,16) -> (107,17)
-Info:                          Sink host_if.rx_data_latched_TRELLIS_FF_Q_88.M
+Info:   clk-to-q  0.31  0.31 Source host_if.jtag_rx_TRELLIS_FF_Q_19.Q
+Info:    routing  0.66  0.97 Net host_if.jtag_rx[19] (116,16) -> (116,17)
+Info:                          Sink host_if.rx_data_latched_TRELLIS_FF_Q_53.M
 Info:                          Defined in:
-Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:223
-Info:      setup  0.00  0.98 Source host_if.rx_data_latched_TRELLIS_FF_Q_88.M
-Info: 0.31 ns logic, 0.67 ns routing
+Info:                               /Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:233
+Info:      setup  0.00  0.97 Source host_if.rx_data_latched_TRELLIS_FF_Q_53.M
+Info: 0.31 ns logic, 0.66 ns routing
 
-Info: Max frequency for clock '$glbnet$host_if.jtag_clk': 348.07 MHz (PASS at 12.00 MHz)
-Info: Max frequency for clock              '$glbnet$clk': 54.22 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$host_if.jtag_clk': 247.10 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock              '$glbnet$clk': 57.36 MHz (PASS at 12.00 MHz)
 
-Info: Max delay <async>                          -> <async>                         : 14.22 ns
+Info: Max delay <async>                          -> <async>                         : 14.13 ns
 Info: Max delay <async>                          -> posedge $glbnet$clk             : 0.85 ns
-Info: Max delay <async>                          -> posedge $glbnet$host_if.jtag_clk: 9.30 ns
-Info: Max delay posedge $glbnet$clk              -> <async>                         : 7.74 ns
-Info: Max delay posedge $glbnet$clk              -> posedge $glbnet$host_if.jtag_clk: 1.64 ns
-Info: Max delay posedge $glbnet$host_if.jtag_clk -> <async>                         : 8.52 ns
-Info: Max delay posedge $glbnet$host_if.jtag_clk -> posedge $glbnet$clk             : 0.98 ns
+Info: Max delay <async>                          -> posedge $glbnet$host_if.jtag_clk: 9.49 ns
+Info: Max delay posedge $glbnet$clk              -> <async>                         : 7.04 ns
+Info: Max delay posedge $glbnet$clk              -> posedge $glbnet$host_if.jtag_clk: 1.07 ns
+Info: Max delay posedge $glbnet$host_if.jtag_clk -> <async>                         : 7.93 ns
+Info: Max delay posedge $glbnet$host_if.jtag_clk -> posedge $glbnet$clk             : 0.97 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 24 endpoint(s)
-Info:          + represents [1,24) endpoint(s)
-Info: [ 64889,  65782) |+
-Info: [ 65782,  66675) |**+
-Info: [ 66675,  67568) |*******************+
-Info: [ 67568,  68461) |****************+
-Info: [ 68461,  69354) |*****+
-Info: [ 69354,  70247) |+
-Info: [ 70247,  71140) | 
-Info: [ 71140,  72033) | 
-Info: [ 72033,  72926) |*+
-Info: [ 72926,  73819) |**+
-Info: [ 73819,  74712) |***+
-Info: [ 74712,  75605) |***+
-Info: [ 75605,  76498) |***+
-Info: [ 76498,  77391) |********+
-Info: [ 77391,  78284) |*********************+
-Info: [ 78284,  79177) |***********************+
-Info: [ 79177,  80070) |**************************************+
-Info: [ 80070,  80963) |*************************************+
-Info: [ 80963,  81856) |************************************************************ 
-Info: [ 81856,  82749) |*****************************************+
+Info:  legend: * represents 21 endpoint(s)
+Info:          + represents [1,21) endpoint(s)
+Info: [ 65900,  66743) |+
+Info: [ 66743,  67586) |****+
+Info: [ 67586,  68429) |*******************+
+Info: [ 68429,  69272) |********************+
+Info: [ 69272,  70115) |*****+
+Info: [ 70115,  70958) |+
+Info: [ 70958,  71801) | 
+Info: [ 71801,  72644) | 
+Info: [ 72644,  73487) |+
+Info: [ 73487,  74330) |**+
+Info: [ 74330,  75173) |****+
+Info: [ 75173,  76016) |******+
+Info: [ 76016,  76859) |*****+
+Info: [ 76859,  77702) |************+
+Info: [ 77702,  78545) |**************************+
+Info: [ 78545,  79388) |**********************************+
+Info: [ 79388,  80231) |************************************+
+Info: [ 80231,  81074) |************************************************************ 
+Info: [ 81074,  81917) |*****************************************************+
+Info: [ 81917,  82760) |*******************************************+
 
 Info: Program finished normally.

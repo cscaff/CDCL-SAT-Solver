@@ -233,16 +233,12 @@ module \bcp_accel_jtag
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/top_jtag.py:34"
   cell \bcp_accel_jtag.host_if \host_if
-    connect \led_7__o \led_7__o [0]
     connect \led_6__o \led_6__o [0]
     connect \led_5__o \led_5__o [0]
     connect \led_4__o \led_4__o [0]
     connect \led_3__o \led_3__o [0]
-    connect \led_2__o \led_2__o [0]
-    connect \led_1__o \led_1__o [0]
-    connect \led_0__o \led_0__o [0]
     connect \impl_valid \impl_valid [0]
-    connect \port$285$0 $1 [22:0]
+    connect \port$293$0 $1 [22:0]
     connect \clk \clk [0]
     connect \clause_wr_addr \clause_wr_addr [12:0]
     connect \clause_wr_size \clause_wr_size [2:0]
@@ -265,6 +261,10 @@ module \bcp_accel_jtag
     connect \bcp_false_lit \false_lit [9:0]
     connect \bcp_start \start [0]
     connect \impl_ready \impl_ready [0]
+    connect \led_2__o \led_2__o [0]
+    connect \led_1__o \led_1__o [0]
+    connect \led_0__o \led_0__o [0]
+    connect \led_7__o \led_7__o [0]
     connect \bcp_done \bcp_done [0]
     connect \bcp_conflict \bcp_conflict [0]
     connect \bcp_conflict_id \bcp_conflict_id [12:0]
@@ -273,7 +273,7 @@ module \bcp_accel_jtag
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/top_jtag.py:35"
   cell \bcp_accel_jtag.bcp \bcp
     connect \impl_valid \impl_valid [0]
-    connect \port$285$0 $1 [22:0]
+    connect \port$293$0 $1 [22:0]
     connect \clk \clk [0]
     connect \wr_addr \clause_wr_addr [12:0]
     connect \wr_data_size \clause_wr_size [2:0]
@@ -413,15 +413,15 @@ module \bcp_accel_jtag.host_if
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:150"
   wire width 1 \jtck
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:155"
-  wire width 1 \jce1
-
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:152"
   wire width 1 \jshift
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:205"
   attribute \init 1'0
   wire width 1 \jshift_prev
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:155"
+  wire width 1 \jce1
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:159"
   wire width 1 \jtdo1
@@ -434,121 +434,121 @@ module \bcp_accel_jtag.host_if
   attribute \init 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   wire width 128 \shift_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_0
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:248"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:258"
   attribute \init 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   wire width 128 \rx_data_latched
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_3
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_4
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_5
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_6
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_7
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_8
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_9
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_10
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_11
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_12
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:267"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
   wire width 8 \pbyte_13
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:293"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:303"
   attribute \init 1'0
   wire width 1 \clause_wr_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:273"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:283"
   attribute \init 13'0000000000000
   wire width 13 \clause_addr_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:274"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:284"
   attribute \init 3'000
   wire width 3 \clause_size_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:275"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:285"
   attribute \init 1'0
   wire width 1 \clause_sat_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:276"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:286"
   attribute \init 16'0000000000000000
   wire width 16 \clause_lit0_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:287"
   attribute \init 16'0000000000000000
   wire width 16 \clause_lit1_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:278"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:288"
   attribute \init 16'0000000000000000
   wire width 16 \clause_lit2_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:279"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:289"
   attribute \init 16'0000000000000000
   wire width 16 \clause_lit3_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:280"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:290"
   attribute \init 16'0000000000000000
   wire width 16 \clause_lit4_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:294"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:304"
   attribute \init 1'0
   wire width 1 \wl_wr_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:282"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:292"
   attribute \init 10'0000000000
   wire width 10 \wl_lit_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:283"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:293"
   attribute \init 7'0000000
   wire width 7 \wl_idx_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:284"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:294"
   attribute \init 13'0000000000000
   wire width 13 \wl_data_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:295"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:305"
   attribute \init 1'0
   wire width 1 \wl_len_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:285"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:295"
   attribute \init 7'0000000
   wire width 7 \wl_len_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:296"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:306"
   attribute \init 1'0
   wire width 1 \assign_wr_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:287"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:297"
   attribute \init 9'000000000
   wire width 9 \assign_addr_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:288"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:298"
   attribute \init 2'00
   wire width 2 \assign_data_r
 
@@ -556,19 +556,19 @@ module \bcp_accel_jtag.host_if
   attribute \init 3'000
   wire width 3 \fsm_state
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:297"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:307"
   attribute \init 1'0
   wire width 1 \bcp_start_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:290"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:300"
   attribute \init 10'0000000000
   wire width 10 \bcp_false_lit_r
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:298"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:308"
   attribute \init 1'0
   wire width 1 \ack_impl_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:299"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:309"
   attribute \init 1'0
   wire width 1 \any_cmd_processed
 
@@ -576,41 +576,61 @@ module \bcp_accel_jtag.host_if
   attribute \init 1'0
   wire width 1 \conflict_reg
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:545"
-  attribute \init 8'00000000
-  wire width 8 \last_cmd_byte
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:566"
+  attribute \init 24'000000000000000000000000
+  wire width 24 \heartbeat
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:546"
-  attribute \init 28'0000000000000000000000000000
-  wire width 28 \cmd_hold_counter
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:570"
+  attribute \init 26'00000000000000000000000000
+  wire width 26 \dbg_latch_pulse
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:245"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:580"
+  attribute \init 26'00000000000000000000000000
+  wire width 26 \dbg_cmd_pulse
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:587"
+  attribute \init 26'00000000000000000000000000
+  wire width 26 \dbg_shift_pulse
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:594"
+  attribute \init 26'00000000000000000000000000
+  wire width 26 \dbg_proc_pulse
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:422"
+  attribute \init 1'0
+  wire width 1 \in_bcp_wait
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:423"
+  attribute \init 1'0
+  wire width 1 \in_impl_ready
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:424"
+  attribute \init 1'0
+  wire width 1 \in_done_ready
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:255"
   attribute \init 1'0
   wire width 1 \toggle_sync1
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:224"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:234"
   attribute \init 1'0
   wire width 1 \jtag_rx_toggle
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:246"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:256"
   attribute \init 1'0
   wire width 1 \toggle_sync2
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:247"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:257"
   attribute \init 1'0
   wire width 1 \toggle_prev
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:254"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:264"
   attribute \init 1'0
   wire width 1 \cmd_pending
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:223"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:233"
   attribute \init 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   wire width 128 \jtag_rx
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:412"
-  attribute \init 1'0
-  wire width 1 \in_bcp_wait
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:186"
   attribute \init 13'0000000000000
@@ -625,13 +645,9 @@ module \bcp_accel_jtag.host_if
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:117"
   wire width 13 \impl_reason
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:413"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:577"
   attribute \init 1'0
-  wire width 1 \in_impl_ready
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:414"
-  attribute \init 1'0
-  wire width 1 \in_done_ready
+  wire width 1 \cmd_pending_prev
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:206"
   wire width 1 \jtag_rst
@@ -639,11 +655,11 @@ module \bcp_accel_jtag.host_if
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:153"
   wire width 1 \jupdate
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:227"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:237"
   attribute \init 1'0
   wire width 1 \er1_was_selected
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:222"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:232"
   attribute \init 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   wire width 128 \rx_shift
 
@@ -651,99 +667,102 @@ module \bcp_accel_jtag.host_if
   wire width 1 \jtdi
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 0  \led_7__o
+  wire width 1 output 0  \led_6__o
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 1  \led_6__o
+  wire width 1 output 1  \led_5__o
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 2  \led_5__o
+  wire width 1 output 2  \led_4__o
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 3  \led_4__o
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 4  \led_3__o
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 5  \led_2__o
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 6  \led_1__o
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
-  wire width 1 output 7  \led_0__o
+  wire width 1 output 3  \led_3__o
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:114"
-  wire width 1 input 8  \impl_valid
+  wire width 1 input 4  \impl_valid
 
-  wire width 23 input 9  \port$285$0
+  wire width 23 input 5  \port$293$0
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
-  wire width 1 input 10  \clk
+  wire width 1 input 6  \clk
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:121"
-  wire width 13 output 11  \clause_wr_addr
+  wire width 13 output 7  \clause_wr_addr
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:123"
-  wire width 3 output 12  \clause_wr_size
+  wire width 3 output 8  \clause_wr_size
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:122"
-  wire width 1 output 13  \clause_wr_sat_bit
+  wire width 1 output 9  \clause_wr_sat_bit
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:124"
-  wire width 16 output 14  \clause_wr_lit0
+  wire width 16 output 10  \clause_wr_lit0
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:125"
-  wire width 16 output 15  \clause_wr_lit1
+  wire width 16 output 11  \clause_wr_lit1
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:126"
-  wire width 16 output 16  \clause_wr_lit2
+  wire width 16 output 12  \clause_wr_lit2
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:127"
-  wire width 16 output 17  \clause_wr_lit3
+  wire width 16 output 13  \clause_wr_lit3
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:128"
-  wire width 16 output 18  \clause_wr_lit4
+  wire width 16 output 14  \clause_wr_lit4
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:129"
-  wire width 1 output 19  \clause_wr_en
+  wire width 1 output 15  \clause_wr_en
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:132"
-  wire width 10 output 20  \wl_wr_lit
+  wire width 10 output 16  \wl_wr_lit
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:133"
-  wire width 7 output 21  \wl_wr_idx
+  wire width 7 output 17  \wl_wr_idx
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:134"
-  wire width 13 output 22  \wl_wr_data
+  wire width 13 output 18  \wl_wr_data
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:136"
-  wire width 1 output 23  \wl_wr_en
+  wire width 1 output 19  \wl_wr_en
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:135"
-  wire width 7 output 24  \wl_wr_len
+  wire width 7 output 20  \wl_wr_len
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:137"
-  wire width 1 output 25  \wl_wr_len_en
+  wire width 1 output 21  \wl_wr_len_en
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:140"
-  wire width 9 output 26  \assign_wr_addr
+  wire width 9 output 22  \assign_wr_addr
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:141"
-  wire width 2 output 27  \assign_wr_data
+  wire width 2 output 23  \assign_wr_data
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:142"
-  wire width 1 output 28  \assign_wr_en
+  wire width 1 output 24  \assign_wr_en
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:108"
-  wire width 10 output 29  \bcp_false_lit
+  wire width 10 output 25  \bcp_false_lit
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:107"
-  wire width 1 output 30  \bcp_start
+  wire width 1 output 26  \bcp_start
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:118"
-  wire width 1 output 31  \impl_ready
+  wire width 1 output 27  \impl_ready
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:422"
+  attribute \init 1'0
+  wire width 1 output 28  \led_2__o
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:423"
+  attribute \init 1'0
+  wire width 1 output 29  \led_1__o
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:424"
+  attribute \init 1'0
+  wire width 1 output 30  \led_0__o
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/lib/io.py:1101"
+  wire width 1 output 31  \led_7__o
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:109"
   wire width 1 input 32  \bcp_done
@@ -762,9 +781,9 @@ module \bcp_accel_jtag.host_if
 
   wire width 1 $4
 
-  wire width 8 $5
+  wire width 1 $5
 
-  wire width 1 $6
+  wire width 8 $6
 
   wire width 1 $7
 
@@ -784,7 +803,7 @@ module \bcp_accel_jtag.host_if
 
   wire width 1 $15
 
-  wire width 1 $16
+  wire width 25 $16
 
   wire width 1 $17
 
@@ -792,15 +811,15 @@ module \bcp_accel_jtag.host_if
 
   wire width 1 $19
 
-  wire width 1 $20
+  wire width 27 $20
 
   wire width 1 $21
 
-  wire width 1 $22
+  wire width 27 $22
 
   wire width 1 $23
 
-  wire width 29 $24
+  wire width 1 $24
 
   wire width 1 $25
 
@@ -820,98 +839,112 @@ module \bcp_accel_jtag.host_if
 
   wire width 1 $33
 
-  wire width 1 $34
+  wire width 27 $34
 
   wire width 1 $35
 
   wire width 1 $36
 
-  wire width 1 $37
+  wire width 27 $37
 
-  wire width 128 $38
+  wire width 1 $38
 
   wire width 1 $39
 
-  wire width 8 $40
+  wire width 1 $40
 
-  wire width 13 $41
+  wire width 1 $41
 
-  wire width 3 $42
+  wire width 1 $42
 
-  wire width 1 $43
+  wire width 128 $43
 
-  wire width 16 $44
+  wire width 1 $44
 
-  wire width 16 $45
+  wire width 8 $45
 
-  wire width 16 $46
+  wire width 13 $46
 
-  wire width 16 $47
+  wire width 3 $47
 
-  wire width 16 $48
+  wire width 1 $48
 
-  wire width 1 $49
+  wire width 16 $49
 
-  wire width 10 $50
+  wire width 16 $50
 
-  wire width 7 $51
+  wire width 16 $51
 
-  wire width 13 $52
+  wire width 16 $52
 
-  wire width 1 $53
+  wire width 16 $53
 
-  wire width 7 $54
+  wire width 1 $54
 
-  wire width 1 $55
+  wire width 10 $55
 
-  wire width 9 $56
+  wire width 7 $56
 
-  wire width 2 $57
+  wire width 13 $57
 
   wire width 1 $58
 
-  wire width 10 $59
+  wire width 7 $59
 
   wire width 1 $60
 
-  wire width 1 $61
+  wire width 9 $61
 
-  wire width 3 $62
+  wire width 2 $62
 
   wire width 1 $63
 
-  wire width 1 $64
+  wire width 10 $64
 
-  wire width 13 $65
+  wire width 1 $65
 
-  wire width 16 $66
+  wire width 1 $66
 
-  wire width 8 $67
+  wire width 3 $67
 
-  wire width 16 $68
+  wire width 1 $68
 
   wire width 1 $69
 
-  wire width 1 $70
+  wire width 13 $70
 
-  wire width 8 $71
+  wire width 16 $71
 
-  wire width 28 $72
+  wire width 8 $72
 
-  wire width 1 $73
+  wire width 16 $73
 
-  wire width 128 $74
+  wire width 1 $74
 
   wire width 1 $75
 
-  wire width 128 $76
+  wire width 26 $76
 
-  wire width 128 $77
+  wire width 26 $77
 
   wire width 1 $78
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:211"
-  cell $not $79
+  wire width 128 $79
+
+  wire width 1 $80
+
+  wire width 128 $81
+
+  wire width 128 $82
+
+  wire width 1 $83
+
+  wire width 26 $84
+
+  wire width 26 $85
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:216"
+  cell $not $86
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
@@ -919,8 +952,8 @@ module \bcp_accel_jtag.host_if
     connect \Y $1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:211"
-  cell $and $80
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:216"
+  cell $and $87
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
@@ -931,230 +964,98 @@ module \bcp_accel_jtag.host_if
     connect \Y $2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:217"
-  cell $not $81
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:221"
+  cell $and $88
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \jce1 [0]
+    connect \B \jshift [0]
+    connect \Y $3
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:225"
+  cell $not $89
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \jshift [0]
-    connect \Y $3
+    connect \Y $4
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:217"
-  cell $and $82
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:225"
+  cell $and $90
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $3 [0]
+    connect \A $4 [0]
     connect \B \jshift_prev [0]
-    connect \Y $4
+    connect \Y $5
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:466"
-  cell $mux $83
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:476"
+  cell $mux $91
     parameter \WIDTH 8
     connect \S \conflict_reg [0]
     connect \A 8'11000000
     connect \B 8'11000001
-    connect \Y $5
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:562"
-  cell $ne $84
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 0
-    parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
-    connect \B {  }
     connect \Y $6
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:562"
-  cell $and $85
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [7]
-    connect \B $6 [0]
-    connect \Y \led_7__o
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:563"
-  cell $ne $86
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 0
-    parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
-    connect \B {  }
-    connect \Y $7
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:563"
-  cell $and $87
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [6]
-    connect \B $7 [0]
-    connect \Y \led_6__o
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:564"
-  cell $ne $88
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 0
-    parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
-    connect \B {  }
-    connect \Y $8
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:564"
-  cell $and $89
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [5]
-    connect \B $8 [0]
-    connect \Y \led_5__o
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:565"
-  cell $ne $90
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 0
-    parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
-    connect \B {  }
-    connect \Y $9
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:565"
-  cell $and $91
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [4]
-    connect \B $9 [0]
-    connect \Y \led_4__o
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:566"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:605"
   cell $ne $92
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
+    parameter \A_WIDTH 26
     parameter \B_WIDTH 0
     parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
+    connect \A \dbg_latch_pulse [25:0]
     connect \B {  }
-    connect \Y $10
+    connect \Y \led_6__o
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:566"
-  cell $and $93
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:606"
+  cell $ne $93
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 0
     parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [3]
-    connect \B $10 [0]
-    connect \Y \led_3__o
+    connect \A \dbg_cmd_pulse [25:0]
+    connect \B {  }
+    connect \Y \led_5__o
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:567"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:607"
   cell $ne $94
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
+    parameter \A_WIDTH 26
     parameter \B_WIDTH 0
     parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
+    connect \A \dbg_shift_pulse [25:0]
     connect \B {  }
-    connect \Y $11
+    connect \Y \led_4__o
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:567"
-  cell $and $95
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:608"
+  cell $ne $95
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [2]
-    connect \B $11 [0]
-    connect \Y \led_2__o
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:568"
-  cell $ne $96
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
+    parameter \A_WIDTH 26
     parameter \B_WIDTH 0
     parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
+    connect \A \dbg_proc_pulse [25:0]
     connect \B {  }
-    connect \Y $12
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:568"
-  cell $and $97
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [1]
-    connect \B $12 [0]
-    connect \Y \led_1__o
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:569"
-  cell $ne $98
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 0
-    parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
-    connect \B {  }
-    connect \Y $13
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:569"
-  cell $and $99
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \last_cmd_byte [0]
-    connect \B $13 [0]
-    connect \Y \led_0__o
+    connect \Y \led_3__o
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/hdl/_dsl.py:486"
-  cell $eq $100
+  cell $eq $96
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 3
@@ -1162,11 +1063,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \fsm_state [2:0]
     connect \B {  }
-    connect \Y $14
+    connect \Y $7
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/hdl/_dsl.py:486"
-  cell $eq $101
+  cell $eq $97
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 3
@@ -1174,11 +1075,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \fsm_state [2:0]
     connect \B 1'1
-    connect \Y $15
+    connect \Y $8
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/hdl/_dsl.py:486"
-  cell $eq $102
+  cell $eq $98
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 3
@@ -1186,11 +1087,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \fsm_state [2:0]
     connect \B 2'10
-    connect \Y $16
+    connect \Y $9
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/hdl/_dsl.py:486"
-  cell $eq $103
+  cell $eq $99
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 3
@@ -1198,11 +1099,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \fsm_state [2:0]
     connect \B 2'11
-    connect \Y $17
+    connect \Y $10
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/hdl/_dsl.py:486"
-  cell $eq $104
+  cell $eq $100
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 3
@@ -1210,11 +1111,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \fsm_state [2:0]
     connect \B 3'100
-    connect \Y $18
+    connect \Y $11
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:255"
-  cell $xor $105
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:265"
+  cell $xor $101
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
@@ -1222,11 +1123,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \toggle_sync2 [0]
     connect \B \toggle_prev [0]
-    connect \Y $19
+    connect \Y $12
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:312"
-  cell $ge $106
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:322"
+  cell $ge $102
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 8
@@ -1234,11 +1135,11 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \rx_data_latched [127:120]
     connect \B 1'1
-    connect \Y $20
+    connect \Y $13
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:312"
-  cell $le $107
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:322"
+  cell $le $103
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 8
@@ -1246,89 +1147,170 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \rx_data_latched [127:120]
     connect \B 3'111
-    connect \Y $21
+    connect \Y $14
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:312"
-  cell $and $108
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:322"
+  cell $and $104
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $20 [0]
-    connect \B $21 [0]
+    connect \A $13 [0]
+    connect \B $14 [0]
+    connect \Y $15
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:567"
+  cell $add $105
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 24
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 25
+    connect \A \heartbeat [23:0]
+    connect \B 1'1
+    connect \Y $16
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:581"
+  cell $not $106
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \cmd_pending_prev [0]
+    connect \Y $17
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:581"
+  cell $and $107
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \cmd_pending [0]
+    connect \B $17 [0]
+    connect \Y $18
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:583"
+  cell $ne $108
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 0
+    parameter \Y_WIDTH 1
+    connect \A \dbg_cmd_pulse [25:0]
+    connect \B {  }
+    connect \Y $19
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:584"
+  cell $sub $109
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 27
+    connect \A \dbg_cmd_pulse [25:0]
+    connect \B 1'1
+    connect \Y $20
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:597"
+  cell $ne $110
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 0
+    parameter \Y_WIDTH 1
+    connect \A \dbg_proc_pulse [25:0]
+    connect \B {  }
+    connect \Y $21
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:598"
+  cell $sub $111
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 27
+    connect \A \dbg_proc_pulse [25:0]
+    connect \B 1'1
     connect \Y $22
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:555"
-  cell $ne $109
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 0
-    parameter \Y_WIDTH 1
-    connect \A \cmd_hold_counter [27:0]
-    connect \B {  }
-    connect \Y $23
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:556"
-  cell $sub $110
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 28
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 29
-    connect \A \cmd_hold_counter [27:0]
-    connect \B 1'1
-    connect \Y $24
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:211"
-  cell $not $111
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:216"
+  cell $not $112
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \jshift_prev [0]
-    connect \Y $25
+    connect \Y $23
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:211"
-  cell $and $112
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:216"
+  cell $and $113
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \jshift [0]
-    connect \B $25 [0]
-    connect \Y $26
+    connect \B $23 [0]
+    connect \Y $24
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:217"
-  cell $not $113
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \jshift [0]
-    connect \Y $27
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:217"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:221"
   cell $and $114
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $27 [0]
+    connect \A \jce1 [0]
+    connect \B \jshift [0]
+    connect \Y $25
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:225"
+  cell $not $115
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \jshift [0]
+    connect \Y $26
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:225"
+  cell $and $116
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A $26 [0]
     connect \B \jshift_prev [0]
+    connect \Y $27
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:238"
+  cell $and $117
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \jce1 [0]
+    connect \B \jshift [0]
     connect \Y $28
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:228"
-  cell $and $115
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:244"
+  cell $and $118
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
@@ -1339,20 +1321,8 @@ module \bcp_accel_jtag.host_if
     connect \Y $29
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:234"
-  cell $and $116
-    parameter \A_SIGNED 0
-    parameter \B_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \jce1 [0]
-    connect \B \jshift [0]
-    connect \Y $30
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:238"
-  cell $and $117
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:248"
+  cell $and $119
     parameter \A_SIGNED 0
     parameter \B_SIGNED 0
     parameter \A_WIDTH 1
@@ -1360,16 +1330,88 @@ module \bcp_accel_jtag.host_if
     parameter \Y_WIDTH 1
     connect \A \jupdate [0]
     connect \B \er1_was_selected [0]
-    connect \Y $31
+    connect \Y $30
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:241"
-  cell $not $118
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:251"
+  cell $not $120
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \jtag_rx_toggle [0]
+    connect \Y $31
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:571"
+  cell $and $121
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \jupdate [0]
+    connect \B \er1_was_selected [0]
     connect \Y $32
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:573"
+  cell $ne $122
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 0
+    parameter \Y_WIDTH 1
+    connect \A \dbg_latch_pulse [25:0]
+    connect \B {  }
+    connect \Y $33
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:574"
+  cell $sub $123
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 27
+    connect \A \dbg_latch_pulse [25:0]
+    connect \B 1'1
+    connect \Y $34
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:588"
+  cell $and $124
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \jce1 [0]
+    connect \B \jshift [0]
+    connect \Y $35
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:590"
+  cell $ne $125
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 0
+    parameter \Y_WIDTH 1
+    connect \A \dbg_shift_pulse [25:0]
+    connect \B {  }
+    connect \Y $36
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:591"
+  cell $sub $126
+    parameter \A_SIGNED 0
+    parameter \B_SIGNED 0
+    parameter \A_WIDTH 26
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 27
+    connect \A \dbg_shift_pulse [25:0]
+    connect \B 1'1
+    connect \Y $37
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:162"
@@ -1380,30 +1422,27 @@ module \bcp_accel_jtag.host_if
     connect \JTDI \jtdi
     connect \JSHIFT \jshift
     connect \JUPDATE \jupdate
-    connect \JRSTN $33
+    connect \JRSTN $38
     connect \JCE1 \jce1
-    connect \JCE2 $34
-    connect \JRTI1 $35
-    connect \JRTI2 $36
+    connect \JCE2 $39
+    connect \JRTI1 $40
+    connect \JRTI2 $41
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:159"
-  process $119
+  process $127
     assign \jtdo1 [0] 1'0
-    switch \jce1 [0]
-      case 1'1
-        switch { $4 [0] \jshift [0] $2 [0] }
-          case 3'--1
-            assign \jtdo1 [0] \jtag_shadow [0]
-          case 3'-1-
-            assign \jtdo1 [0] \shift_reg [0]
-          case 3'1--
-        end
+    switch { $5 [0] $3 [0] $2 [0] }
+      case 3'--1
+        assign \jtdo1 [0] \jtag_shadow [0]
+      case 3'-1-
+        assign \jtdo1 [0] \shift_reg [0]
+      case 3'1--
     end
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:121"
-  process $120
+  process $128
     assign \clause_wr_addr [12:0] 13'0000000000000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1412,7 +1451,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:123"
-  process $121
+  process $129
     assign \clause_wr_size [2:0] 3'000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1421,7 +1460,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:122"
-  process $122
+  process $130
     assign \clause_wr_sat_bit [0] 1'0
     switch \clause_wr_pending [0]
       case 1'1
@@ -1430,7 +1469,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:124"
-  process $123
+  process $131
     assign \clause_wr_lit0 [15:0] 16'0000000000000000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1439,7 +1478,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:125"
-  process $124
+  process $132
     assign \clause_wr_lit1 [15:0] 16'0000000000000000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1448,7 +1487,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:126"
-  process $125
+  process $133
     assign \clause_wr_lit2 [15:0] 16'0000000000000000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1457,7 +1496,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:127"
-  process $126
+  process $134
     assign \clause_wr_lit3 [15:0] 16'0000000000000000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1466,7 +1505,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:128"
-  process $127
+  process $135
     assign \clause_wr_lit4 [15:0] 16'0000000000000000
     switch \clause_wr_pending [0]
       case 1'1
@@ -1475,7 +1514,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:129"
-  process $128
+  process $136
     assign \clause_wr_en [0] 1'0
     switch \clause_wr_pending [0]
       case 1'1
@@ -1484,7 +1523,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:132"
-  process $129
+  process $137
     assign \wl_wr_lit [9:0] 10'0000000000
     switch \wl_wr_pending [0]
       case 1'1
@@ -1497,7 +1536,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:133"
-  process $130
+  process $138
     assign \wl_wr_idx [6:0] 7'0000000
     switch \wl_wr_pending [0]
       case 1'1
@@ -1506,7 +1545,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:134"
-  process $131
+  process $139
     assign \wl_wr_data [12:0] 13'0000000000000
     switch \wl_wr_pending [0]
       case 1'1
@@ -1515,7 +1554,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:136"
-  process $132
+  process $140
     assign \wl_wr_en [0] 1'0
     switch \wl_wr_pending [0]
       case 1'1
@@ -1524,7 +1563,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:135"
-  process $133
+  process $141
     assign \wl_wr_len [6:0] 7'0000000
     switch \wl_len_pending [0]
       case 1'1
@@ -1533,7 +1572,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:137"
-  process $134
+  process $142
     assign \wl_wr_len_en [0] 1'0
     switch \wl_len_pending [0]
       case 1'1
@@ -1542,7 +1581,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:140"
-  process $135
+  process $143
     assign \assign_wr_addr [8:0] 9'000000000
     switch \assign_wr_pending [0]
       case 1'1
@@ -1551,7 +1590,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:141"
-  process $136
+  process $144
     assign \assign_wr_data [1:0] 2'00
     switch \assign_wr_pending [0]
       case 1'1
@@ -1560,7 +1599,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:142"
-  process $137
+  process $145
     assign \assign_wr_en [0] 1'0
     switch \assign_wr_pending [0]
       case 1'1
@@ -1569,7 +1608,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:180"
-  process $138
+  process $146
     assign \rsp_status [7:0] 8'00000000
     switch \fsm_state [2:0]
       case 3'000
@@ -1581,12 +1620,12 @@ module \bcp_accel_jtag.host_if
       case 3'011
         assign \rsp_status [7:0] 8'10110000
       case 3'100
-        assign \rsp_status [7:0] $5 [7:0]
+        assign \rsp_status [7:0] $6 [7:0]
     end
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:108"
-  process $139
+  process $147
     assign \bcp_false_lit [9:0] 10'0000000000
     switch \fsm_state [2:0]
       case 3'000
@@ -1607,7 +1646,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:107"
-  process $140
+  process $148
     assign \bcp_start [0] 1'0
     switch \fsm_state [2:0]
       case 3'000
@@ -1628,7 +1667,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:118"
-  process $141
+  process $149
     assign \impl_ready [0] 1'0
     switch \fsm_state [2:0]
       case 3'000
@@ -1645,7 +1684,7 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:200"
-  cell $dff $142
+  cell $dff $150
     parameter \WIDTH 128
     parameter \CLK_POLARITY 1
     connect \D { \rsp_status [7:0] \rsp_var [15:0] \rsp_val [7:0] \rsp_reason_id [15:0] 72'000000000000000000000000000000000000000000000000000000000000000000000000 \ack_seq [7:0] }
@@ -1653,8 +1692,8 @@ module \bcp_accel_jtag.host_if
     connect \Q \jtag_shadow
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:245"
-  cell $dff $143
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:255"
+  cell $dff $151
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
     connect \D \jtag_rx_toggle [0]
@@ -1662,8 +1701,8 @@ module \bcp_accel_jtag.host_if
     connect \Q \toggle_sync1
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:246"
-  cell $dff $144
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:256"
+  cell $dff $152
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
     connect \D \toggle_sync1 [0]
@@ -1671,8 +1710,8 @@ module \bcp_accel_jtag.host_if
     connect \Q \toggle_sync2
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:247"
-  cell $dff $145
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:257"
+  cell $dff $153
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
     connect \D \toggle_sync2 [0]
@@ -1680,96 +1719,96 @@ module \bcp_accel_jtag.host_if
     connect \Q \toggle_prev
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:254"
-  process $146
-    assign $37 [0] \cmd_pending [0]
-    switch $19 [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:264"
+  process $154
+    assign $42 [0] \cmd_pending [0]
+    switch $12 [0]
       case 1'1
-        assign $37 [0] 1'1
+        assign $42 [0] 1'1
     end
     switch \cmd_pending [0]
       case 1'1
-        assign $37 [0] 1'0
+        assign $42 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:254"
-  cell $dff $147
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:264"
+  cell $dff $155
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $37 [0]
+    connect \D $42 [0]
     connect \CLK \clk [0]
     connect \Q \cmd_pending
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:248"
-  process $148
-    assign $38 [127:0] \rx_data_latched [127:0]
-    switch $19 [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:258"
+  process $156
+    assign $43 [127:0] \rx_data_latched [127:0]
+    switch $12 [0]
       case 1'1
-        assign $38 [127:0] \jtag_rx [127:0]
+        assign $43 [127:0] \jtag_rx [127:0]
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:248"
-  cell $dff $149
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:258"
+  cell $dff $157
     parameter \WIDTH 128
     parameter \CLK_POLARITY 1
-    connect \D $38 [127:0]
+    connect \D $43 [127:0]
     connect \CLK \clk [0]
     connect \Q \rx_data_latched
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:299"
-  process $150
-    assign $39 [0] 1'0
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:309"
+  process $158
+    assign $44 [0] 1'0
     switch \cmd_pending [0]
       case 1'1
-        switch $22 [0]
+        switch $15 [0]
           case 1'1
-            assign $39 [0] 1'1
+            assign $44 [0] 1'1
         end
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:299"
-  cell $dff $151
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:309"
+  cell $dff $159
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $39 [0]
+    connect \D $44 [0]
     connect \CLK \clk [0]
     connect \Q \any_cmd_processed
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:184"
-  process $152
-    assign $40 [7:0] \ack_seq [7:0]
+  process $160
+    assign $45 [7:0] \ack_seq [7:0]
     switch \cmd_pending [0]
       case 1'1
-        switch $22 [0]
+        switch $15 [0]
           case 1'1
-            assign $40 [7:0] \rx_data_latched [7:0]
+            assign $45 [7:0] \rx_data_latched [7:0]
         end
     end
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:184"
-  cell $dff $153
+  cell $dff $161
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
-    connect \D $40 [7:0]
+    connect \D $45 [7:0]
     connect \CLK \clk [0]
     connect \Q \ack_seq
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:273"
-  process $154
-    assign $41 [12:0] \clause_addr_r [12:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:283"
+  process $162
+    assign $46 [12:0] \clause_addr_r [12:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $41 [12:0] \rx_data_latched [116:104]
+            assign $46 [12:0] \rx_data_latched [116:104]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1780,23 +1819,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:273"
-  cell $dff $155
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:283"
+  cell $dff $163
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
-    connect \D $41 [12:0]
+    connect \D $46 [12:0]
     connect \CLK \clk [0]
     connect \Q \clause_addr_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:274"
-  process $156
-    assign $42 [2:0] \clause_size_r [2:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:284"
+  process $164
+    assign $47 [2:0] \clause_size_r [2:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $42 [2:0] \rx_data_latched [98:96]
+            assign $47 [2:0] \rx_data_latched [98:96]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1807,23 +1846,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:274"
-  cell $dff $157
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:284"
+  cell $dff $165
     parameter \WIDTH 3
     parameter \CLK_POLARITY 1
-    connect \D $42 [2:0]
+    connect \D $47 [2:0]
     connect \CLK \clk [0]
     connect \Q \clause_size_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:275"
-  process $158
-    assign $43 [0] \clause_sat_r [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:285"
+  process $166
+    assign $48 [0] \clause_sat_r [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $43 [0] \rx_data_latched [88]
+            assign $48 [0] \rx_data_latched [88]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1834,23 +1873,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:275"
-  cell $dff $159
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:285"
+  cell $dff $167
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $43 [0]
+    connect \D $48 [0]
     connect \CLK \clk [0]
     connect \Q \clause_sat_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:276"
-  process $160
-    assign $44 [15:0] \clause_lit0_r [15:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:286"
+  process $168
+    assign $49 [15:0] \clause_lit0_r [15:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $44 [15:0] \rx_data_latched [87:72]
+            assign $49 [15:0] \rx_data_latched [87:72]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1861,23 +1900,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:276"
-  cell $dff $161
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:286"
+  cell $dff $169
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $44 [15:0]
+    connect \D $49 [15:0]
     connect \CLK \clk [0]
     connect \Q \clause_lit0_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
-  process $162
-    assign $45 [15:0] \clause_lit1_r [15:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:287"
+  process $170
+    assign $50 [15:0] \clause_lit1_r [15:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $45 [15:0] \rx_data_latched [71:56]
+            assign $50 [15:0] \rx_data_latched [71:56]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1888,23 +1927,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:277"
-  cell $dff $163
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:287"
+  cell $dff $171
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $45 [15:0]
+    connect \D $50 [15:0]
     connect \CLK \clk [0]
     connect \Q \clause_lit1_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:278"
-  process $164
-    assign $46 [15:0] \clause_lit2_r [15:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:288"
+  process $172
+    assign $51 [15:0] \clause_lit2_r [15:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $46 [15:0] \rx_data_latched [55:40]
+            assign $51 [15:0] \rx_data_latched [55:40]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1915,23 +1954,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:278"
-  cell $dff $165
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:288"
+  cell $dff $173
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $46 [15:0]
+    connect \D $51 [15:0]
     connect \CLK \clk [0]
     connect \Q \clause_lit2_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:279"
-  process $166
-    assign $47 [15:0] \clause_lit3_r [15:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:289"
+  process $174
+    assign $52 [15:0] \clause_lit3_r [15:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $47 [15:0] \rx_data_latched [39:24]
+            assign $52 [15:0] \rx_data_latched [39:24]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1942,23 +1981,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:279"
-  cell $dff $167
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:289"
+  cell $dff $175
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $47 [15:0]
+    connect \D $52 [15:0]
     connect \CLK \clk [0]
     connect \Q \clause_lit3_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:280"
-  process $168
-    assign $48 [15:0] \clause_lit4_r [15:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:290"
+  process $176
+    assign $53 [15:0] \clause_lit4_r [15:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $48 [15:0] \rx_data_latched [23:8]
+            assign $53 [15:0] \rx_data_latched [23:8]
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1969,23 +2008,23 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:280"
-  cell $dff $169
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:290"
+  cell $dff $177
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $48 [15:0]
+    connect \D $53 [15:0]
     connect \CLK \clk [0]
     connect \Q \clause_lit4_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:293"
-  process $170
-    assign $49 [0] \clause_wr_pending [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:303"
+  process $178
+    assign $54 [0] \clause_wr_pending [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
-            assign $49 [0] 1'1
+            assign $54 [0] 1'1
           case 8'00000010
           case 8'00000011
           case 8'00000100
@@ -1996,30 +2035,30 @@ module \bcp_accel_jtag.host_if
     end
     switch \clause_wr_pending [0]
       case 1'1
-        assign $49 [0] 1'0
+        assign $54 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:293"
-  cell $dff $171
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:303"
+  cell $dff $179
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $49 [0]
+    connect \D $54 [0]
     connect \CLK \clk [0]
     connect \Q \clause_wr_pending
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:282"
-  process $172
-    assign $50 [9:0] \wl_lit_r [9:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:292"
+  process $180
+    assign $55 [9:0] \wl_lit_r [9:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
           case 8'00000010
-            assign $50 [9:0] \rx_data_latched [113:104]
+            assign $55 [9:0] \rx_data_latched [113:104]
           case 8'00000011
-            assign $50 [9:0] \rx_data_latched [113:104]
+            assign $55 [9:0] \rx_data_latched [113:104]
           case 8'00000100
           case 8'00000101
           case 8'00000111
@@ -2028,24 +2067,24 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:282"
-  cell $dff $173
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:292"
+  cell $dff $181
     parameter \WIDTH 10
     parameter \CLK_POLARITY 1
-    connect \D $50 [9:0]
+    connect \D $55 [9:0]
     connect \CLK \clk [0]
     connect \Q \wl_lit_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:283"
-  process $174
-    assign $51 [6:0] \wl_idx_r [6:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:293"
+  process $182
+    assign $56 [6:0] \wl_idx_r [6:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
           case 8'00000010
-            assign $51 [6:0] \rx_data_latched [102:96]
+            assign $56 [6:0] \rx_data_latched [102:96]
           case 8'00000011
           case 8'00000100
           case 8'00000101
@@ -2055,24 +2094,24 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:283"
-  cell $dff $175
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:293"
+  cell $dff $183
     parameter \WIDTH 7
     parameter \CLK_POLARITY 1
-    connect \D $51 [6:0]
+    connect \D $56 [6:0]
     connect \CLK \clk [0]
     connect \Q \wl_idx_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:284"
-  process $176
-    assign $52 [12:0] \wl_data_r [12:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:294"
+  process $184
+    assign $57 [12:0] \wl_data_r [12:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
           case 8'00000010
-            assign $52 [12:0] \rx_data_latched [92:80]
+            assign $57 [12:0] \rx_data_latched [92:80]
           case 8'00000011
           case 8'00000100
           case 8'00000101
@@ -2082,24 +2121,24 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:284"
-  cell $dff $177
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:294"
+  cell $dff $185
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
-    connect \D $52 [12:0]
+    connect \D $57 [12:0]
     connect \CLK \clk [0]
     connect \Q \wl_data_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:294"
-  process $178
-    assign $53 [0] \wl_wr_pending [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:304"
+  process $186
+    assign $58 [0] \wl_wr_pending [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
           case 8'00000010
-            assign $53 [0] 1'1
+            assign $58 [0] 1'1
           case 8'00000011
           case 8'00000100
           case 8'00000101
@@ -2109,29 +2148,29 @@ module \bcp_accel_jtag.host_if
     end
     switch \wl_wr_pending [0]
       case 1'1
-        assign $53 [0] 1'0
+        assign $58 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:294"
-  cell $dff $179
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:304"
+  cell $dff $187
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $53 [0]
+    connect \D $58 [0]
     connect \CLK \clk [0]
     connect \Q \wl_wr_pending
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:285"
-  process $180
-    assign $54 [6:0] \wl_len_r [6:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:295"
+  process $188
+    assign $59 [6:0] \wl_len_r [6:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
           case 8'00000010
           case 8'00000011
-            assign $54 [6:0] \rx_data_latched [102:96]
+            assign $59 [6:0] \rx_data_latched [102:96]
           case 8'00000100
           case 8'00000101
           case 8'00000111
@@ -2140,25 +2179,25 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:285"
-  cell $dff $181
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:295"
+  cell $dff $189
     parameter \WIDTH 7
     parameter \CLK_POLARITY 1
-    connect \D $54 [6:0]
+    connect \D $59 [6:0]
     connect \CLK \clk [0]
     connect \Q \wl_len_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:295"
-  process $182
-    assign $55 [0] \wl_len_pending [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:305"
+  process $190
+    assign $60 [0] \wl_len_pending [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
           case 8'00000001
           case 8'00000010
           case 8'00000011
-            assign $55 [0] 1'1
+            assign $60 [0] 1'1
           case 8'00000100
           case 8'00000101
           case 8'00000111
@@ -2167,22 +2206,22 @@ module \bcp_accel_jtag.host_if
     end
     switch \wl_len_pending [0]
       case 1'1
-        assign $55 [0] 1'0
+        assign $60 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:295"
-  cell $dff $183
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:305"
+  cell $dff $191
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $55 [0]
+    connect \D $60 [0]
     connect \CLK \clk [0]
     connect \Q \wl_len_pending
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:287"
-  process $184
-    assign $56 [8:0] \assign_addr_r [8:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:297"
+  process $192
+    assign $61 [8:0] \assign_addr_r [8:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
@@ -2190,7 +2229,7 @@ module \bcp_accel_jtag.host_if
           case 8'00000010
           case 8'00000011
           case 8'00000100
-            assign $56 [8:0] \rx_data_latched [112:104]
+            assign $61 [8:0] \rx_data_latched [112:104]
           case 8'00000101
           case 8'00000111
           case 8'00000110
@@ -2198,18 +2237,18 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:287"
-  cell $dff $185
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:297"
+  cell $dff $193
     parameter \WIDTH 9
     parameter \CLK_POLARITY 1
-    connect \D $56 [8:0]
+    connect \D $61 [8:0]
     connect \CLK \clk [0]
     connect \Q \assign_addr_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:288"
-  process $186
-    assign $57 [1:0] \assign_data_r [1:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:298"
+  process $194
+    assign $62 [1:0] \assign_data_r [1:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
@@ -2217,7 +2256,7 @@ module \bcp_accel_jtag.host_if
           case 8'00000010
           case 8'00000011
           case 8'00000100
-            assign $57 [1:0] \rx_data_latched [97:96]
+            assign $62 [1:0] \rx_data_latched [97:96]
           case 8'00000101
           case 8'00000111
           case 8'00000110
@@ -2225,18 +2264,18 @@ module \bcp_accel_jtag.host_if
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:288"
-  cell $dff $187
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:298"
+  cell $dff $195
     parameter \WIDTH 2
     parameter \CLK_POLARITY 1
-    connect \D $57 [1:0]
+    connect \D $62 [1:0]
     connect \CLK \clk [0]
     connect \Q \assign_data_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:296"
-  process $188
-    assign $58 [0] \assign_wr_pending [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:306"
+  process $196
+    assign $63 [0] \assign_wr_pending [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
@@ -2244,7 +2283,7 @@ module \bcp_accel_jtag.host_if
           case 8'00000010
           case 8'00000011
           case 8'00000100
-            assign $58 [0] 1'1
+            assign $63 [0] 1'1
           case 8'00000101
           case 8'00000111
           case 8'00000110
@@ -2252,22 +2291,22 @@ module \bcp_accel_jtag.host_if
     end
     switch \assign_wr_pending [0]
       case 1'1
-        assign $58 [0] 1'0
+        assign $63 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:296"
-  cell $dff $189
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:306"
+  cell $dff $197
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $58 [0]
+    connect \D $63 [0]
     connect \CLK \clk [0]
     connect \Q \assign_wr_pending
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:290"
-  process $190
-    assign $59 [9:0] \bcp_false_lit_r [9:0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:300"
+  process $198
+    assign $64 [9:0] \bcp_false_lit_r [9:0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
@@ -2276,25 +2315,25 @@ module \bcp_accel_jtag.host_if
           case 8'00000011
           case 8'00000100
           case 8'00000101
-            assign $59 [9:0] \rx_data_latched [113:104]
+            assign $64 [9:0] \rx_data_latched [113:104]
           case 8'00000111
           case 8'00000110
         end
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:290"
-  cell $dff $191
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:300"
+  cell $dff $199
     parameter \WIDTH 10
     parameter \CLK_POLARITY 1
-    connect \D $59 [9:0]
+    connect \D $64 [9:0]
     connect \CLK \clk [0]
     connect \Q \bcp_false_lit_r
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:297"
-  process $192
-    assign $60 [0] \bcp_start_pending [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:307"
+  process $200
+    assign $65 [0] \bcp_start_pending [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
@@ -2303,7 +2342,7 @@ module \bcp_accel_jtag.host_if
           case 8'00000011
           case 8'00000100
           case 8'00000101
-            assign $60 [0] 1'1
+            assign $65 [0] 1'1
           case 8'00000111
           case 8'00000110
         end
@@ -2312,7 +2351,7 @@ module \bcp_accel_jtag.host_if
       case 3'000
         switch \bcp_start_pending [0]
           case 1'1
-            assign $60 [0] 1'0
+            assign $65 [0] 1'0
         end
       case 3'001
       case 3'010
@@ -2320,24 +2359,24 @@ module \bcp_accel_jtag.host_if
       case 3'100
         switch { \any_cmd_processed [0] \bcp_start_pending [0] }
           case 2'-1
-            assign $60 [0] 1'0
+            assign $65 [0] 1'0
           case 2'1-
         end
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:297"
-  cell $dff $193
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:307"
+  cell $dff $201
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $60 [0]
+    connect \D $65 [0]
     connect \CLK \clk [0]
     connect \Q \bcp_start_pending
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:298"
-  process $194
-    assign $61 [0] \ack_impl_pending [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:308"
+  process $202
+    assign $66 [0] \ack_impl_pending [0]
     switch \cmd_pending [0]
       case 1'1
         switch \rx_data_latched [127:120]
@@ -2347,7 +2386,7 @@ module \bcp_accel_jtag.host_if
           case 8'00000100
           case 8'00000101
           case 8'00000111
-            assign $61 [0] 1'1
+            assign $66 [0] 1'1
           case 8'00000110
         end
     end
@@ -2358,100 +2397,100 @@ module \bcp_accel_jtag.host_if
       case 3'011
         switch { \any_cmd_processed [0] \ack_impl_pending [0] }
           case 2'-1
-            assign $61 [0] 1'0
+            assign $66 [0] 1'0
           case 2'1-
         end
       case 3'100
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:298"
-  cell $dff $195
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:308"
+  cell $dff $203
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $61 [0]
+    connect \D $66 [0]
     connect \CLK \clk [0]
     connect \Q \ack_impl_pending
   end
 
   attribute \src "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/contextlib.py:148"
-  process $196
-    assign $62 [2:0] \fsm_state [2:0]
+  process $204
+    assign $67 [2:0] \fsm_state [2:0]
     switch \fsm_state [2:0]
       case 3'000
         switch \bcp_start_pending [0]
           case 1'1
-            assign $62 [2:0] 3'001
+            assign $67 [2:0] 3'001
         end
       case 3'001
         switch \bcp_done [0]
           case 1'1
-            assign $62 [2:0] 3'010
+            assign $67 [2:0] 3'010
         end
       case 3'010
         switch \impl_valid [0]
           case 1'1
-            assign $62 [2:0] 3'011
+            assign $67 [2:0] 3'011
           case
-            assign $62 [2:0] 3'100
+            assign $67 [2:0] 3'100
         end
       case 3'011
         switch { \any_cmd_processed [0] \ack_impl_pending [0] }
           case 2'-1
-            assign $62 [2:0] 3'010
+            assign $67 [2:0] 3'010
           case 2'1-
-            assign $62 [2:0] 3'000
+            assign $67 [2:0] 3'000
         end
       case 3'100
         switch { \any_cmd_processed [0] \bcp_start_pending [0] }
           case 2'-1
-            assign $62 [2:0] 3'001
+            assign $67 [2:0] 3'001
           case 2'1-
-            assign $62 [2:0] 3'000
+            assign $67 [2:0] 3'000
         end
     end
   end
 
   attribute \src "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/contextlib.py:148"
-  cell $dff $197
+  cell $dff $205
     parameter \WIDTH 3
     parameter \CLK_POLARITY 1
-    connect \D $62 [2:0]
+    connect \D $67 [2:0]
     connect \CLK \clk [0]
     connect \Q \fsm_state
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:412"
-  process $198
-    assign $63 [0] \in_bcp_wait [0]
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:422"
+  process $206
+    assign $68 [0] \led_2__o [0]
     switch \fsm_state [2:0]
       case 3'000
       case 3'001
-        assign $63 [0] 1'1
+        assign $68 [0] 1'1
       case 3'010
       case 3'011
       case 3'100
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:412"
-  cell $dff $199
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:422"
+  cell $dff $207
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $63 [0]
+    connect \D $68 [0]
     connect \CLK \clk [0]
-    connect \Q \in_bcp_wait
+    connect \Q \led_2__o
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:185"
-  process $200
-    assign $64 [0] \conflict_reg [0]
+  process $208
+    assign $69 [0] \conflict_reg [0]
     switch \fsm_state [2:0]
       case 3'000
       case 3'001
         switch \bcp_done [0]
           case 1'1
-            assign $64 [0] \bcp_conflict [0]
+            assign $69 [0] \bcp_conflict [0]
         end
       case 3'010
       case 3'011
@@ -2460,23 +2499,23 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:185"
-  cell $dff $201
+  cell $dff $209
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $64 [0]
+    connect \D $69 [0]
     connect \CLK \clk [0]
     connect \Q \conflict_reg
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:186"
-  process $202
-    assign $65 [12:0] \conflict_id_reg [12:0]
+  process $210
+    assign $70 [12:0] \conflict_id_reg [12:0]
     switch \fsm_state [2:0]
       case 3'000
       case 3'001
         switch \bcp_done [0]
           case 1'1
-            assign $65 [12:0] \bcp_conflict_id [12:0]
+            assign $70 [12:0] \bcp_conflict_id [12:0]
         end
       case 3'010
       case 3'011
@@ -2485,26 +2524,26 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:186"
-  cell $dff $203
+  cell $dff $211
     parameter \WIDTH 13
     parameter \CLK_POLARITY 1
-    connect \D $65 [12:0]
+    connect \D $70 [12:0]
     connect \CLK \clk [0]
     connect \Q \conflict_id_reg
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:181"
-  process $204
-    assign $66 [15:0] \rsp_var [15:0]
+  process $212
+    assign $71 [15:0] \rsp_var [15:0]
     switch \fsm_state [2:0]
       case 3'000
       case 3'001
       case 3'010
         switch \impl_valid [0]
           case 1'1
-            assign $66 [15:0] { 7'0000000 \port$285$0 [8:0] }
+            assign $71 [15:0] { 7'0000000 \port$293$0 [8:0] }
           case
-            assign $66 [15:0] 16'0000000000000000
+            assign $71 [15:0] 16'0000000000000000
         end
       case 3'011
       case 3'100
@@ -2512,26 +2551,26 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:181"
-  cell $dff $205
+  cell $dff $213
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $66 [15:0]
+    connect \D $71 [15:0]
     connect \CLK \clk [0]
     connect \Q \rsp_var
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:182"
-  process $206
-    assign $67 [7:0] \rsp_val [7:0]
+  process $214
+    assign $72 [7:0] \rsp_val [7:0]
     switch \fsm_state [2:0]
       case 3'000
       case 3'001
       case 3'010
         switch \impl_valid [0]
           case 1'1
-            assign $67 [7:0] { 7'0000000 \port$285$0 [9] }
+            assign $72 [7:0] { 7'0000000 \port$293$0 [9] }
           case
-            assign $67 [7:0] 8'00000000
+            assign $72 [7:0] 8'00000000
         end
       case 3'011
       case 3'100
@@ -2539,26 +2578,26 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:182"
-  cell $dff $207
+  cell $dff $215
     parameter \WIDTH 8
     parameter \CLK_POLARITY 1
-    connect \D $67 [7:0]
+    connect \D $72 [7:0]
     connect \CLK \clk [0]
     connect \Q \rsp_val
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:183"
-  process $208
-    assign $68 [15:0] \rsp_reason_id [15:0]
+  process $216
+    assign $73 [15:0] \rsp_reason_id [15:0]
     switch \fsm_state [2:0]
       case 3'000
       case 3'001
       case 3'010
         switch \impl_valid [0]
           case 1'1
-            assign $68 [15:0] { 3'000 \port$285$0 [22:10] }
+            assign $73 [15:0] { 3'000 \port$293$0 [22:10] }
           case
-            assign $68 [15:0] { 3'000 \conflict_id_reg [12:0] }
+            assign $73 [15:0] { 3'000 \conflict_id_reg [12:0] }
         end
       case 3'011
       case 3'100
@@ -2566,232 +2605,296 @@ module \bcp_accel_jtag.host_if
   end
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:183"
-  cell $dff $209
+  cell $dff $217
     parameter \WIDTH 16
     parameter \CLK_POLARITY 1
-    connect \D $68 [15:0]
+    connect \D $73 [15:0]
     connect \CLK \clk [0]
     connect \Q \rsp_reason_id
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:413"
-  process $210
-    assign $69 [0] \in_impl_ready [0]
-    switch \fsm_state [2:0]
-      case 3'000
-      case 3'001
-      case 3'010
-      case 3'011
-        assign $69 [0] 1'1
-      case 3'100
-    end
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:413"
-  cell $dff $211
-    parameter \WIDTH 1
-    parameter \CLK_POLARITY 1
-    connect \D $69 [0]
-    connect \CLK \clk [0]
-    connect \Q \in_impl_ready
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:414"
-  process $212
-    assign $70 [0] \in_done_ready [0]
-    switch \fsm_state [2:0]
-      case 3'000
-      case 3'001
-      case 3'010
-      case 3'011
-      case 3'100
-        assign $70 [0] 1'1
-    end
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:414"
-  cell $dff $213
-    parameter \WIDTH 1
-    parameter \CLK_POLARITY 1
-    connect \D $70 [0]
-    connect \CLK \clk [0]
-    connect \Q \in_done_ready
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:545"
-  process $214
-    assign $71 [7:0] \last_cmd_byte [7:0]
-    switch { $23 [0] \cmd_pending [0] }
-      case 2'-1
-        assign $71 [7:0] \rx_data_latched [127:120]
-      case 2'1-
-    end
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:545"
-  cell $dff $215
-    parameter \WIDTH 8
-    parameter \CLK_POLARITY 1
-    connect \D $71 [7:0]
-    connect \CLK \clk [0]
-    connect \Q \last_cmd_byte
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:546"
-  process $216
-    assign $72 [27:0] \cmd_hold_counter [27:0]
-    switch { $23 [0] \cmd_pending [0] }
-      case 2'-1
-        assign $72 [27:0] 28'1111111111111111111111111111
-      case 2'1-
-        assign $72 [27:0] $24 [27:0]
-    end
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:546"
-  cell $dff $217
-    parameter \WIDTH 28
-    parameter \CLK_POLARITY 1
-    connect \D $72 [27:0]
-    connect \CLK \clk [0]
-    connect \Q \cmd_hold_counter
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:205"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:423"
   process $218
-    assign $73 [0] \jshift [0]
-    switch 1'0
-      case 1'1
-        assign $73 [0] 1'0
+    assign $74 [0] \led_1__o [0]
+    switch \fsm_state [2:0]
+      case 3'000
+      case 3'001
+      case 3'010
+      case 3'011
+        assign $74 [0] 1'1
+      case 3'100
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:205"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:423"
   cell $dff $219
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
-    connect \D $73 [0]
-    connect \CLK \jtag_clk [0]
-    connect \Q \jshift_prev
+    connect \D $74 [0]
+    connect \CLK \clk [0]
+    connect \Q \led_1__o
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:204"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:424"
   process $220
-    assign $74 [127:0] \shift_reg [127:0]
-    switch \jce1 [0]
-      case 1'1
-        switch { $28 [0] \jshift [0] $26 [0] }
-          case 3'--1
-            assign $74 [127:0] { \jtag_shadow [0] \jtag_shadow [127:1] }
-          case 3'-1-
-            assign $74 [127:0] { \shift_reg [0] \shift_reg [127:1] }
-          case 3'1--
-            assign $74 [127:0] \jtag_shadow [127:0]
-        end
-    end
-    switch 1'0
-      case 1'1
-        assign $74 [127:0] 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    end
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:204"
-  cell $dff $221
-    parameter \WIDTH 128
-    parameter \CLK_POLARITY 1
-    connect \D $74 [127:0]
-    connect \CLK \jtag_clk [0]
-    connect \Q \shift_reg
-  end
-
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:227"
-  process $222
-    assign $75 [0] \er1_was_selected [0]
-    switch { \jupdate [0] $29 [0] }
-      case 2'-1
+    assign $75 [0] \led_0__o [0]
+    switch \fsm_state [2:0]
+      case 3'000
+      case 3'001
+      case 3'010
+      case 3'011
+      case 3'100
         assign $75 [0] 1'1
-      case 2'1-
-        assign $75 [0] 1'0
-    end
-    switch 1'0
-      case 1'1
-        assign $75 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:227"
-  cell $dff $223
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:424"
+  cell $dff $221
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
     connect \D $75 [0]
-    connect \CLK \jtag_clk [0]
-    connect \Q \er1_was_selected
+    connect \CLK \clk [0]
+    connect \Q \led_0__o
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:222"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:566"
+  cell $dff $222
+    parameter \WIDTH 24
+    parameter \CLK_POLARITY 1
+    connect \D $16 [23:0]
+    connect \CLK \clk [0]
+    connect \Q \heartbeat
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:577"
+  cell $dff $223
+    parameter \WIDTH 1
+    parameter \CLK_POLARITY 1
+    connect \D \cmd_pending [0]
+    connect \CLK \clk [0]
+    connect \Q \cmd_pending_prev
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:580"
   process $224
-    assign $76 [127:0] \rx_shift [127:0]
-    switch $30 [0]
-      case 1'1
-        assign $76 [127:0] { \jtdi [0] \rx_shift [127:1] }
-    end
-    switch 1'0
-      case 1'1
-        assign $76 [127:0] 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    assign $76 [25:0] \dbg_cmd_pulse [25:0]
+    switch { $19 [0] $18 [0] }
+      case 2'-1
+        assign $76 [25:0] 26'10111110101111000010000000
+      case 2'1-
+        assign $76 [25:0] $20 [25:0]
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:222"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:580"
   cell $dff $225
-    parameter \WIDTH 128
+    parameter \WIDTH 26
     parameter \CLK_POLARITY 1
-    connect \D $76 [127:0]
-    connect \CLK \jtag_clk [0]
-    connect \Q \rx_shift
+    connect \D $76 [25:0]
+    connect \CLK \clk [0]
+    connect \Q \dbg_cmd_pulse
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:223"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:594"
   process $226
-    assign $77 [127:0] \jtag_rx [127:0]
-    switch $31 [0]
-      case 1'1
-        assign $77 [127:0] \rx_shift [127:0]
-    end
-    switch 1'0
-      case 1'1
-        assign $77 [127:0] 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    assign $77 [25:0] \dbg_proc_pulse [25:0]
+    switch { $21 [0] \any_cmd_processed [0] }
+      case 2'-1
+        assign $77 [25:0] 26'10111110101111000010000000
+      case 2'1-
+        assign $77 [25:0] $22 [25:0]
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:223"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:594"
   cell $dff $227
-    parameter \WIDTH 128
+    parameter \WIDTH 26
     parameter \CLK_POLARITY 1
-    connect \D $77 [127:0]
-    connect \CLK \jtag_clk [0]
-    connect \Q \jtag_rx
+    connect \D $77 [25:0]
+    connect \CLK \clk [0]
+    connect \Q \dbg_proc_pulse
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:224"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:205"
   process $228
-    assign $78 [0] \jtag_rx_toggle [0]
-    switch $31 [0]
-      case 1'1
-        assign $78 [0] $32 [0]
-    end
+    assign $78 [0] \jshift [0]
     switch 1'0
       case 1'1
         assign $78 [0] 1'0
     end
   end
 
-  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:224"
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:205"
   cell $dff $229
     parameter \WIDTH 1
     parameter \CLK_POLARITY 1
     connect \D $78 [0]
     connect \CLK \jtag_clk [0]
+    connect \Q \jshift_prev
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:204"
+  process $230
+    assign $79 [127:0] \shift_reg [127:0]
+    switch { $27 [0] $25 [0] $24 [0] }
+      case 3'--1
+        assign $79 [127:0] \jtag_shadow [127:0]
+      case 3'-1-
+        assign $79 [127:0] { \shift_reg [0] \shift_reg [127:1] }
+      case 3'1--
+        assign $79 [127:0] \jtag_shadow [127:0]
+    end
+    switch 1'0
+      case 1'1
+        assign $79 [127:0] 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:204"
+  cell $dff $231
+    parameter \WIDTH 128
+    parameter \CLK_POLARITY 1
+    connect \D $79 [127:0]
+    connect \CLK \jtag_clk [0]
+    connect \Q \shift_reg
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:237"
+  process $232
+    assign $80 [0] \er1_was_selected [0]
+    switch { \jupdate [0] $28 [0] }
+      case 2'-1
+        assign $80 [0] 1'1
+      case 2'1-
+        assign $80 [0] 1'0
+    end
+    switch 1'0
+      case 1'1
+        assign $80 [0] 1'0
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:237"
+  cell $dff $233
+    parameter \WIDTH 1
+    parameter \CLK_POLARITY 1
+    connect \D $80 [0]
+    connect \CLK \jtag_clk [0]
+    connect \Q \er1_was_selected
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:232"
+  process $234
+    assign $81 [127:0] \rx_shift [127:0]
+    switch $29 [0]
+      case 1'1
+        assign $81 [127:0] { \jtdi [0] \rx_shift [127:1] }
+    end
+    switch 1'0
+      case 1'1
+        assign $81 [127:0] 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:232"
+  cell $dff $235
+    parameter \WIDTH 128
+    parameter \CLK_POLARITY 1
+    connect \D $81 [127:0]
+    connect \CLK \jtag_clk [0]
+    connect \Q \rx_shift
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:233"
+  process $236
+    assign $82 [127:0] \jtag_rx [127:0]
+    switch $30 [0]
+      case 1'1
+        assign $82 [127:0] \rx_shift [127:0]
+    end
+    switch 1'0
+      case 1'1
+        assign $82 [127:0] 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:233"
+  cell $dff $237
+    parameter \WIDTH 128
+    parameter \CLK_POLARITY 1
+    connect \D $82 [127:0]
+    connect \CLK \jtag_clk [0]
+    connect \Q \jtag_rx
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:234"
+  process $238
+    assign $83 [0] \jtag_rx_toggle [0]
+    switch $30 [0]
+      case 1'1
+        assign $83 [0] $31 [0]
+    end
+    switch 1'0
+      case 1'1
+        assign $83 [0] 1'0
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:234"
+  cell $dff $239
+    parameter \WIDTH 1
+    parameter \CLK_POLARITY 1
+    connect \D $83 [0]
+    connect \CLK \jtag_clk [0]
     connect \Q \jtag_rx_toggle
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:570"
+  process $240
+    assign $84 [25:0] \dbg_latch_pulse [25:0]
+    switch { $33 [0] $32 [0] }
+      case 2'-1
+        assign $84 [25:0] 26'10111110101111000010000000
+      case 2'1-
+        assign $84 [25:0] $34 [25:0]
+    end
+    switch 1'0
+      case 1'1
+        assign $84 [25:0] 26'00000000000000000000000000
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:570"
+  cell $dff $241
+    parameter \WIDTH 26
+    parameter \CLK_POLARITY 1
+    connect \D $84 [25:0]
+    connect \CLK \jtag_clk [0]
+    connect \Q \dbg_latch_pulse
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:587"
+  process $242
+    assign $85 [25:0] \dbg_shift_pulse [25:0]
+    switch { $36 [0] $35 [0] }
+      case 2'-1
+        assign $85 [25:0] 26'10111110101111000010000000
+      case 2'1-
+        assign $85 [25:0] $37 [25:0]
+    end
+    switch 1'0
+      case 1'1
+        assign $85 [25:0] 26'00000000000000000000000000
+    end
+  end
+
+  attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/communication/jtag_host_interface.py:587"
+  cell $dff $243
+    parameter \WIDTH 26
+    parameter \CLK_POLARITY 1
+    connect \D $85 [25:0]
+    connect \CLK \jtag_clk [0]
+    connect \Q \dbg_shift_pulse
   end
 
 connect \jtag_data { \rsp_status [7:0] \rsp_var [15:0] \rsp_val [7:0] \rsp_reason_id [15:0] 72'000000000000000000000000000000000000000000000000000000000000000000000000 \ack_seq [7:0] }
@@ -2810,10 +2913,14 @@ connect \pbyte_10 \rx_data_latched [39:32]
 connect \pbyte_11 \rx_data_latched [31:24]
 connect \pbyte_12 \rx_data_latched [23:16]
 connect \pbyte_13 \rx_data_latched [15:8]
-connect \impl_var \port$285$0 [8:0]
-connect \impl_value \port$285$0 [9]
-connect \impl_reason \port$285$0 [22:10]
+connect \in_bcp_wait \led_2__o [0]
+connect \in_impl_ready \led_1__o [0]
+connect \in_done_ready \led_0__o [0]
+connect \impl_var \port$293$0 [8:0]
+connect \impl_value \port$293$0 [9]
+connect \impl_reason \port$293$0 [22:10]
 connect \jtag_rst 1'0
+connect \led_7__o \heartbeat [23]
 
 end
 
@@ -3132,7 +3239,7 @@ module \bcp_accel_jtag.bcp
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/implication_fifo.py:71"
   wire width 1 output 0  \impl_valid
 
-  wire width 23 output 1  \port$285$0
+  wire width 23 output 1  \port$293$0
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 2  \clk
@@ -3327,7 +3434,7 @@ module \bcp_accel_jtag.bcp
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/bcp_accelerator.py:124"
   cell \bcp_accel_jtag.bcp.prefetcher \prefetcher
     connect \clk \clk [0]
-    connect \port$446$0 $26 [83:0]
+    connect \port$460$0 $26 [83:0]
     connect \clause_rd_addr \clause_id_in [12:0]
     connect \clause_rd_en \clause_id_valid [0]
     connect \clause_id_out \clause_id_in$36 [12:0]
@@ -3339,7 +3446,7 @@ module \bcp_accel_jtag.bcp
     connect \assign_rd_data \assign_rd_data [1:0]
     connect \assign_rd_addr \rd_addr$54 [8:0]
     connect \clk \clk [0]
-    connect \port$446$0 $26 [83:0]
+    connect \port$460$0 $26 [83:0]
     connect \clause_id_in \clause_id_in$36 [12:0]
     connect \meta_valid \meta_valid [0]
     connect \result_valid \result_valid [0]
@@ -3842,7 +3949,7 @@ connect \assign_wr_data \wr_data$109 [1:0]
 connect \assign_wr_en \wr_en$111 [0]
 connect \conflict_reg \conflict [0]
 connect \conflict_cid_reg \conflict_clause_id [12:0]
-connect \port$285$0 $27 [22:0]
+connect \port$293$0 $27 [22:0]
 
 end
 
@@ -5265,7 +5372,7 @@ module \bcp_accel_jtag.bcp.prefetcher
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 0  \clk
 
-  wire width 84 input 1  \port$446$0
+  wire width 84 input 1  \port$460$0
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_prefetcher.py:56"
   wire width 13 input 2  \clause_rd_addr
@@ -5321,20 +5428,20 @@ connect \clause_id_in \clause_rd_addr [12:0]
 connect \clause_id_valid \clause_rd_en [0]
 connect \stage2_valid \meta_valid [0]
 connect \stage2_cid \clause_id_out [12:0]
-connect \out_sat_bit \port$446$0 [0]
-connect \clause_rd_sat_bit \port$446$0 [0]
-connect \out_size \port$446$0 [3:1]
-connect \clause_rd_size \port$446$0 [3:1]
-connect \out_lit0 \port$446$0 [19:4]
-connect \clause_rd_lit0 \port$446$0 [19:4]
-connect \out_lit1 \port$446$0 [35:20]
-connect \clause_rd_lit1 \port$446$0 [35:20]
-connect \out_lit2 \port$446$0 [51:36]
-connect \clause_rd_lit2 \port$446$0 [51:36]
-connect \out_lit3 \port$446$0 [67:52]
-connect \clause_rd_lit3 \port$446$0 [67:52]
-connect \out_lit4 \port$446$0 [83:68]
-connect \clause_rd_lit4 \port$446$0 [83:68]
+connect \out_sat_bit \port$460$0 [0]
+connect \clause_rd_sat_bit \port$460$0 [0]
+connect \out_size \port$460$0 [3:1]
+connect \clause_rd_size \port$460$0 [3:1]
+connect \out_lit0 \port$460$0 [19:4]
+connect \clause_rd_lit0 \port$460$0 [19:4]
+connect \out_lit1 \port$460$0 [35:20]
+connect \clause_rd_lit1 \port$460$0 [35:20]
+connect \out_lit2 \port$460$0 [51:36]
+connect \clause_rd_lit2 \port$460$0 [51:36]
+connect \out_lit3 \port$460$0 [67:52]
+connect \clause_rd_lit3 \port$460$0 [67:52]
+connect \out_lit4 \port$460$0 [83:68]
+connect \clause_rd_lit4 \port$460$0 [83:68]
 
 end
 
@@ -5429,7 +5536,7 @@ module \bcp_accel_jtag.bcp.evaluator
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/venv/lib/python3.13/site-packages/amaranth/vendor/_lattice.py:1009"
   wire width 1 input 2  \clk
 
-  wire width 84 input 3  \port$446$0
+  wire width 84 input 3  \port$460$0
 
   attribute \src "/Users/christianscaff/Documents/Academics/Columbia/Barnard-PL-Lab/Modular SAT Acceleration Platform (TreeSAP)/CDCL_Accelerator/src/hardware/modules/clause_evaluator.py:68"
   wire width 13 input 4  \clause_id_in
@@ -5882,7 +5989,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            assign $21 [2:0] \port$446$0 [3:1]
+            assign $21 [2:0] \port$460$0 [3:1]
         end
       case 2'10
       case 2'01
@@ -5905,7 +6012,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            assign $22 [15:0] \port$446$0 [19:4]
+            assign $22 [15:0] \port$460$0 [19:4]
         end
       case 2'10
       case 2'01
@@ -5928,7 +6035,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            assign $23 [15:0] \port$446$0 [35:20]
+            assign $23 [15:0] \port$460$0 [35:20]
         end
       case 2'10
       case 2'01
@@ -5951,7 +6058,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            assign $24 [15:0] \port$446$0 [51:36]
+            assign $24 [15:0] \port$460$0 [51:36]
         end
       case 2'10
       case 2'01
@@ -5974,7 +6081,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            assign $25 [15:0] \port$446$0 [67:52]
+            assign $25 [15:0] \port$460$0 [67:52]
         end
       case 2'10
       case 2'01
@@ -5997,7 +6104,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            assign $26 [15:0] \port$446$0 [83:68]
+            assign $26 [15:0] \port$460$0 [83:68]
         end
       case 2'10
       case 2'01
@@ -6074,7 +6181,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            switch \port$446$0 [0]
+            switch \port$460$0 [0]
               case 1'1
                 assign $29 [0] 1'1
               case
@@ -6106,7 +6213,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            switch \port$446$0 [0]
+            switch \port$460$0 [0]
               case 1'1
                 assign $30 [1:0] 2'01
               case
@@ -6140,7 +6247,7 @@ module \bcp_accel_jtag.bcp.evaluator
       case 2'00
         switch \meta_valid [0]
           case 1'1
-            switch \port$446$0 [0]
+            switch \port$460$0 [0]
               case 1'1
               case
                 assign $31 [2:0] 3'000
@@ -6165,13 +6272,13 @@ module \bcp_accel_jtag.bcp.evaluator
     connect \Q \lit_idx
   end
 
-connect \size \port$446$0 [3:1]
-connect \lit0 \port$446$0 [19:4]
-connect \lit1 \port$446$0 [35:20]
-connect \lit2 \port$446$0 [51:36]
-connect \lit3 \port$446$0 [67:52]
-connect \lit4 \port$446$0 [83:68]
-connect \sat_bit \port$446$0 [0]
+connect \size \port$460$0 [3:1]
+connect \lit0 \port$460$0 [19:4]
+connect \lit1 \port$460$0 [35:20]
+connect \lit2 \port$460$0 [51:36]
+connect \lit3 \port$460$0 [67:52]
+connect \lit4 \port$460$0 [83:68]
+connect \sat_bit \port$460$0 [0]
 connect \assign_rd_addr $1 [8:0]
 
 end

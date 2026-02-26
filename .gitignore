@@ -12,3 +12,7 @@ __pycache__/
 
 # VCD waveform dumps
 *.vcd
+
+# Benchmarks (downloaded SATLIB data)
+bench/benchmarks/
+bench/results/
